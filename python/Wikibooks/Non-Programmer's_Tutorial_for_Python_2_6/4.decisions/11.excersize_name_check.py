@@ -1,5 +1,5 @@
 #/user/bin/python
-# take two numbers add them 
+# interaction based on name 
 
 name1 = raw_input("what is your name: ")
 if name1 == "John Cleese":

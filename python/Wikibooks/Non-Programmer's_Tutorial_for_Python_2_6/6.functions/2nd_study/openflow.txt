@@ -1,0 +1,70 @@
+What is the real implications of OpenFlow and SDN on Cisco and it's channel partners?
+
+Let's start with OpenFlow commoditizing Cisco LAN switches in the Data Center. First and foremost there are two dimensions to OpenFlow. The first dimension is the exposure of a standards based northbound API for the instantiation and monitoring of network topologies. This northbound API (currently in the 1.0 spec) provides a unified interface northbound applications, allowing a simpler code set to be used to control your network. The promise is that this will replace the hodgepodge of protocols and interfaces necessary to control the mix of equipment in your Data Center today. 
+
+The OpenFlow standard (currently at 1.1) is evolving towards a 1.2 release. This means that pretty common things like support for multi-pathing and basic tunneling have just gotten rolled in.. The reasoning behind this is that the current consumers of OpenFlow have been computer science departments, and some very specialized web service providers such as Google.
+
+It is important to understand that the promise of a standards based, northbound protocol is extremely enticing. The promise of taking all the intelligence in a complex networking topology and allowing a commodity devices to do smart things is doubly enticing.
+
+The reality is that it is extremely hard to implement an OpenFlow enabled switch that operates faster then 1 Gigabit per second. The primary limitation is that OpenFlow is very granular in what it inspects. The most common layer of inspection is a TCP connection. The challenge that even this level of control brings is this.
+
+As I am writing this on my laptop, there are 32 open TCP connections (as inspected through netstat). There is only one MAC address associated with the network. Of my connections only two connections are to devices on my local lab (I am writing this from home, this is likely to be less in a Data Center or campus). In this simple example the "flows" that a classic mac address based switch has to monitor are 2. This is my connection to my default gateway, and in this case a connection to a file share on my LAN. 
+
+If I was using OpenFlow for switching decisions, I would be tracking at minimum 32 connections. In simple terms the edge switch would have to maintain at least 16 times more information, either in a controller, or in the switch itself to provide a simple switching function. If I wanted to utilize all of the neat stuff that OpenFlow 1.1 spec can do, I could possibly be inspecting 15 different fields for each of those flows.
+
+Here lies the root of the problem. To make this simple scenario work in a speedy manner, I have this data located close to my forwarding ASIC. This is commonly implemented in what is called TCAM memory. This memory is very expensive, is used in current architectures to enable high speed low latency switching. 
+
+Here is the rub an OpenFlow switch operating at 10 Gig or higher will have to have huge amounts of TCAM memory to support the current 1.1 spec. The 1.2 spec is looking at adding 20 new features and their associated fields. This will only exaggerate the problem, consuming more flow tables for the same amount of hosts. Effectively this kills the possibility of using OpenFlow as a tool to make "dumb" switches smart.
+
+While it is not financially feasible to create a OpenFlow switch that functions at 10Gig and above, it is feasible to create a controller which exports the OpenFlow API and translates it for consumption of southbound network devices. This is in effect what Cisco and other are doing. They are creating servers which sit in the control plane of the network, that capture the software requests to establish adjacency of nodes and flows and translate it into languages and protocols that are currently implemented in hardware today.
+
+When you separate the control plane from the forwarding plane functions you end up with the optimal levels of control PLUS scaleability. This is the direction that Cisco and the overall market is moving in right now. With the exception of controlling software switches in virtualization layers, the competitive OpenFlow controllers are moving to a hybrid model where they export the OpenFlow API northbound and translate into whatever protocol is appropriate southbound (OSPF, BGP, ISIS, TRILL, etc).
+
+This is where Cisco comes into the picture. You may have heard of Cisco ONE (or OnePK). This is more then just an answer to OpenFlow. This is the result of a movement that I have been aware of since 2008 to create a unified programability layer across all Cisco networking devices. Over the years this movement has resulted in a number of NorthBound XML interfaces in networking and systems components. This was great, however the challenge was that you needed to change your automation code each time you connected to products from a different business unit.
+
+Cisco One not only address's this issue, but also comes to fruition at an inflection point in our market. OpenFlow is capturing the buzz around this, but in its purest essence we are entering a time where networks are being configured primarily through programatic means, vs manual means. This in a nutshell is Software Defined Networking (SDN).
+
+What this means for CIsco and it's channel partners is that the purchasing criteria and decision makers are shifting away from the classic IT networking decision maker. In the past, management and operations elements like command line interfaces and staff training levels were key and critical to winning a sale. Now the ability of this gear to be controlled and integrated into application stacks (currently virtualization stacks in the datacenter are emerging as primary purchasing decisions. 
+
+What is emerging is that hardware infrastructure is being consumed as a "library" by applications. Developers are becoming both capable and used to requesting and provisioning things like load balancers, firewalls, VLAN's and routers all via software in places like Amazon EC2. Software development teams (the NEW CUSTOMER) are demanding that this same level of programability is available to them in the enterprise Data Center. When it is not, they are voting with code and consuming services at places like Amazon and others.
+
+What this means for us as a channel partner, is that there is a shift happening in our market place. Shifts can be good or bad depending on how you react to them. If you are afraid of change and you stick your head in the sand, Well, then shifts will destroy your company. 
+
+If however you accept that change is inevitable, and that this change presents an opportunity for growth then change is your biggest asset. Here at Nexus we have embraced change. Over the lifetime of the company we have leverage the asset of being lean and agile to identify and execute on key technology shifts to grow our business. Shifts like the convergence of voice and video fueled the initial growth of our business. Shifts like the programatic consumption of Data Center resources have fueled the latest growth. 
+
+These shifts have left others in the dust. What we have been able to do here at Nexus is clearly identify shifts roughly 18-24 months and execute on the hard work to prepare our sales and engineering forces to execute. Currently we have been preparing for two significant shifts. The first being the programatic configuration and consumption of network and systems resources (SDN). The second shift we have been preparing for is the emergence of OpenSource Amazon clones such as OpenStack, and their integration with the programatic control shift.
+
+Both of these shift require a massive change of how and what we do. They also provide a great opportunity expand our reach both into new groups in our current customer base, as well as move us into new up market customers. Our history of agility in embracing new markets and technology, as well as the commitment of our executive team allows us to execute this change faster then our competition.  In short, "shift happens". We embrace this shift and feel that it will lead to the continued year over year growth that we have enjoyed over the life of this company.
+
+
+
+##### Snippet for our investors ######
+
+OpenFlow and SDN have considerable impact on Cisco and the architectures that we design and recommend to our customers.  The primary impact isn't the hardware that we use in our designs. It is in who makes the purchasing decision, how these decisions are made, and how we integrate it.
+
+What we are seeing is a shift, both the purchasing criteria and the technical decision maker in our customer base. In the past Cisco and the Channel would focus on performing against technical criteria specified from organization that managed either Voice, Video, Networking or Data Center infrastructure. What we are seeing today (led by cloud applications in the Data Center) is that our "customer" is shifting from the IT infrastructure teams to the Application Development teams. 
+
+The purchasing decision in the past would have been based on Operations and Management functions such as the CLI. Or many times based on performance and scalability numbers. What is emerging is a purchasing decision based on the ability of network and systems infrastructure to be deployed and controlled through programatic means.
+
+OpenFlow is one of the protocols to make this happen in a segment of infrastructure (Switching and Routing). To have an accurate discussion about the impact of OpenFlow,  you have to separate the Control Plane function (northbound API) and Forwarding Plane function. OpenFlow as a forwarding plane protocol for hardware switches is dead on its feet. There are significant technical limitations (tied to consumption of TCAM memory) it in the Forwarding Plane that effectively limit its use to 1 gig interfaces.
+
+If you look closely at any of the 10 gig offerings released (IBM for example), you will notice that their switches run multiple modes. These are a classic mode, and a OpenFlow mode.This is confirmed by looking at the direction OpenFlow companies like BigSwitch are taking. Their focus is  selling software adapters to switch manufacturers that allow a northbound OpenFlow API to control a classic switching plane. 
+
+OpenFlow as a Control Plane function however is alive and well. There is a shift to layer 7 application devices controlling and influencing networking elements to allow for a higher level of throughput and control in complex network topologies. OpenFlow being an open standard is emerging as a default integration point for these network applications and the switching platforms they run on. 
+
+An important thing to note, is this shift is larger then OpenFlow. Fundamentally, application developers have gotten a taste how a software defined Data Center should operate from the likes of Amazon. The flexibility and availability of consuming network and systems elements through programatic means is emerging as a key driver enterprise infrastructure design. 
+
+What this means for us as a channel partner, is that there is a shift happening in our market place. This shift is demanding that we both maintain our current capacity to integrate systems and networks using todays protocols, as well as create new capabilities of programatic management and integration. 
+
+This change is inevitable. It presents both an opportunity for growth as well as a risk of erosion of our current customer base if we don't act promptly. I personally believe that change is our biggest asset. Here at Nexus we have embraced change. Over the lifetime of the company we have leverage the asset of being lean and agile to identify and execute on key technology shifts to grow our business. Shifts like the convergence of voice and video fueled the initial growth of our business. Shifts like the programatic consumption of Data Center resources have fueled the latest growth. These shifts have left others in the dust. What we have been able to do here at Nexus is clearly identify shifts roughly 18-24 months early and execute on the hard work to prepare our sales and engineering forces to use these shifts to our advantage. 
+
+Currently we are aligning for two significant shifts. The first being the programatic configuration and consumption of network and systems resources (SDN). The second shift we have been preparing for is the emergence of Amazon and OpenSource clones such as OpenStack, and the integration of these platforms into enterprise application stacks.
+
+Both of these shift require a massive change of how and what we do. They also provide a great opportunity expand our reach both into new groups in our current customer base, as well as move us into new up market customers. Our history of agility in embracing new markets and technology, as well as the commitment of our executive team allows us to execute this change faster then our competition.  In short, "shift happens". We embrace this shift and feel that it will lead to the continued year over year growth that we have enjoyed over the life of this company.
+
+
+
+
+
+
+

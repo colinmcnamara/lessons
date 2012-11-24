@@ -76,19 +76,3 @@ while choice != "q":
         print_options()
     choice = raw_input("option:")
 
-#name = raw_input('Your Name: ')
-#hello(),
-#print_welcome(name)
-#print
-#print 'to find the area of a rectangle,'
-#print 'enter the width and the height below.'
-#print
-#w = input('width: ')
-#while w <= 0:
-#    print 'must be a positive number'
-#    w = input('width: ')
-#h = input('height ')
-#while h <= 0:
-#    h = input('height: ')
-    
-#print 'width =', w, 'height = ', h, 'so area =', area(w, h)

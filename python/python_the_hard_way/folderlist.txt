@@ -1,54 +1,54 @@
-echo "= Lesson Notes" > Exercise_0_The_Setup/notes.asc
-echo "= Lesson Notes" > Exercise_10_What_Was_That?/notes.asc
-echo "= Lesson Notes" > Exercise_11_Asking_Questions/notes.asc
-echo "= Lesson Notes" > Exercise_12_Prompting_People/notes.asc
-echo "= Lesson Notes" > Exercise_13_Parameters,_Unpacking,_Variables/notes.asc
-echo "= Lesson Notes" > Exercise_14_Prompting_And_Passing/notes.asc
-echo "= Lesson Notes" > Exercise_15_Reading_Files/notes.asc
-echo "= Lesson Notes" > Exercise_16_Reading_And_Writing_Files/notes.asc
-echo "= Lesson Notes" > Exercise_17_More_Files/notes.asc
-echo "= Lesson Notes" > Exercise_18_Names,_Variables,_Code,_Functions/notes.asc
-echo "= Lesson Notes" > Exercise_19_Functions_And_Variables/notes.asc
-echo "= Lesson Notes" > Exercise_1_A_Good_First_Program/notes.asc
-echo "= Lesson Notes" > Exercise_20_Functions_And_Files/notes.asc
-echo "= Lesson Notes" > Exercise_21_Functions_Can_Return_Something/notes.asc
-echo "= Lesson Notes" > Exercise_22_What_Do_You_Know_So_Far?/notes.asc
-echo "= Lesson Notes" > Exercise_23_Read_Some_Code/notes.asc
-echo "= Lesson Notes" > Exercise_24_More_Practice/notes.asc
-echo "= Lesson Notes" > Exercise_25_Even_More_Practice/notes.asc
-echo "= Lesson Notes" > Exercise_27_Memorizing_Logic/notes.asc
-echo "= Lesson Notes" > Exercise_28_Boolean_Practice/notes.asc
-echo "= Lesson Notes" > Exercise_29_What_If/notes.asc
-echo "= Lesson Notes" > Exercise_2_Comments_And_Pound_Characters/notes.asc
-echo "= Lesson Notes" > Exercise_30_Else_And_If/notes.asc
-echo "= Lesson Notes" > Exercise_31_Making_Decisions/notes.asc
-echo "= Lesson Notes" > Exercise_32_Loops_And_Lists/notes.asc
-echo "= Lesson Notes" > Exercise_33_While_Loops/notes.asc
-echo "= Lesson Notes" > Exercise_34_Accessing_Elements_Of_Lists/notes.asc
-echo "= Lesson Notes" > Exercise_35_Branches_and_Functions/notes.asc
-echo "= Lesson Notes" > Exercise_36_Designing_and_Debugging/notes.asc
-echo "= Lesson Notes" > Exercise_37_Symbol_Review/notes.asc
-echo "= Lesson Notes" > Exercise_38_Doing_Things_To_Lists/notes.asc
-echo "= Lesson Notes" > Exercise_39_Dictionaries,_Oh_Lovely_Dictionaries/notes.asc
-echo "= Lesson Notes" > Exercise_3_Numbers_And_Math/notes.asc
-echo "= Lesson Notes" > Exercise_40_Modules,_Classes,_And_Objects/notes.asc
-echo "= Lesson Notes" > Exercise_41_Learning_To_Speak_Object_Oriented/notes.asc
-echo "= Lesson Notes" > Exercise_42_Is-A,_Has-A,_Objects,_and_Classes/notes.asc
-echo "= Lesson Notes" > Exercise_43_Gothons_From_Planet_Percal_#25/notes.asc
-echo "= Lesson Notes" > Exercise_44_Inheritance_Vs._Composition/notes.asc
-echo "= Lesson Notes" > Exercise_45_You_Make_A_Game/notes.asc
-echo "= Lesson Notes" > Exercise_46_A_Project_Skeleton/notes.asc
-echo "= Lesson Notes" > Exercise_47_Automated_Testing/notes.asc
-echo "= Lesson Notes" > Exercise_48_Advanced_User_Input/notes.asc
-echo "= Lesson Notes" > Exercise_49_Making_Sentences/notes.asc
-echo "= Lesson Notes" > Exercise_4_Variables_And_Names/notes.asc
-echo "= Lesson Notes" > Exercise_50_Your_First_Website/notes.asc
-echo "= Lesson Notes" > Exercise_51_Getting_Input_From_A_Browser/notes.asc
-echo "= Lesson Notes" > Exercise_52_The_Start_Of_Your_Web_Game/notes.asc
-echo "= Lesson Notes" > Exercise_5_More_Variables_And_Printing/notes.asc
-echo "= Lesson Notes" > Exercise_6_Strings_And_Text/notes.asc
-echo "= Lesson Notes" > Exercise_7_More_Printing/notes.asc
-echo "= Lesson Notes" > Exercise_8_Printing,_Printing/notes.asc
-echo "= Lesson Notes" > Exercise_9_Printing,_Printing,_Printing/notes.asc
-echo "= Lesson Notes" > README.asc/notes.asc
-echo "= Lesson Notes" > folderlist.txt/notes.asc
+rm -rf Exercise_0_The_Setup/README.asc
+rm -rf Exercise_10_What_Was_That?/README.asc
+rm -rf Exercise_11_Asking_Questions/README.asc
+rm -rf Exercise_12_Prompting_People/README.asc
+rm -rf Exercise_13_Parameters,_Unpacking,_Variables/README.asc
+rm -rf Exercise_14_Prompting_And_Passing/README.asc
+rm -rf Exercise_15_Reading_Files/README.asc
+rm -rf Exercise_16_Reading_And_Writing_Files/README.asc
+rm -rf Exercise_17_More_Files/README.asc
+rm -rf Exercise_18_Names,_Variables,_Code,_Functions/README.asc
+rm -rf Exercise_19_Functions_And_Variables/README.asc
+rm -rf Exercise_1_A_Good_First_Program/README.asc
+rm -rf Exercise_20_Functions_And_Files/README.asc
+rm -rf Exercise_21_Functions_Can_Return_Something/README.asc
+rm -rf Exercise_22_What_Do_You_Know_So_Far?/README.asc
+rm -rf Exercise_23_Read_Some_Code/README.asc
+rm -rf Exercise_24_More_Practice/README.asc
+rm -rf Exercise_25_Even_More_Practice/README.asc
+rm -rf Exercise_27_Memorizing_Logic/README.asc
+rm -rf Exercise_28_Boolean_Practice/README.asc
+rm -rf Exercise_29_What_If/README.asc
+rm -rf Exercise_2_Comments_And_Pound_Characters/README.asc
+rm -rf Exercise_30_Else_And_If/README.asc
+rm -rf Exercise_31_Making_Decisions/README.asc
+rm -rf Exercise_32_Loops_And_Lists/README.asc
+rm -rf Exercise_33_While_Loops/README.asc
+rm -rf Exercise_34_Accessing_Elements_Of_Lists/README.asc
+rm -rf Exercise_35_Branches_and_Functions/README.asc
+rm -rf Exercise_36_Designing_and_Debugging/README.asc
+rm -rf Exercise_37_Symbol_Review/README.asc
+rm -rf Exercise_38_Doing_Things_To_Lists/README.asc
+rm -rf Exercise_39_Dictionaries,_Oh_Lovely_Dictionaries/README.asc
+rm -rf Exercise_3_Numbers_And_Math/README.asc
+rm -rf Exercise_40_Modules,_Classes,_And_Objects/README.asc
+rm -rf Exercise_41_Learning_To_Speak_Object_Oriented/README.asc
+rm -rf Exercise_42_Is-A,_Has-A,_Objects,_and_Classes/README.asc
+rm -rf Exercise_43_Gothons_From_Planet_Percal_#25/README.asc
+rm -rf Exercise_44_Inheritance_Vs._Composition/README.asc
+rm -rf Exercise_45_You_Make_A_Game/README.asc
+rm -rf Exercise_46_A_Project_Skeleton/README.asc
+rm -rf Exercise_47_Automated_Testing/README.asc
+rm -rf Exercise_48_Advanced_User_Input/README.asc
+rm -rf Exercise_49_Making_Sentences/README.asc
+rm -rf Exercise_4_Variables_And_Names/README.asc
+rm -rf Exercise_50_Your_First_Website/README.asc
+rm -rf Exercise_51_Getting_Input_From_A_Browser/README.asc
+rm -rf Exercise_52_The_Start_Of_Your_Web_Game/README.asc
+rm -rf Exercise_5_More_Variables_And_Printing/README.asc
+rm -rf Exercise_6_Strings_And_Text/README.asc
+rm -rf Exercise_7_More_Printing/README.asc
+rm -rf Exercise_8_Printing,_Printing/README.asc
+rm -rf Exercise_9_Printing,_Printing,_Printing/README.asc
+rm -rf README.asc/README.asc
+rm -rf folderlist.txt/README.asc

@@ -13,3 +13,7 @@ print "There will be", cars_not_driven, "empty cars today."
 print "We can transport", carpool_capacity, "people today."
 print "We have", passengers, "to carpool today."
 print "We need to put about", average_passengers_per_car, "in each car."
+
+# Excersize
+# in line 8 (in the example) carpool_capacity was replaced with car_pool_capacity
+# since that variable was not defined, the script errored out

@@ -30,7 +30,7 @@ print "We need to put about", average_passengers_per_car, "in each car."
 # 3. Comments above each variable
 # 4. = maps a value to a variable
 # 5. _ underscore
-# 6. -- 
+# 6. -
 # Python 2.7.5 (default, Aug 25 2013, 00:04:04) 
 # [GCC 4.2.1 Compatible Apple LLVM 5.0 (clang-500.0.68)] on darwin
 # Type "help", "copyright", "credits" or "license" for more information.
@@ -45,3 +45,4 @@ print "We need to put about", average_passengers_per_car, "in each car."
 # >>> x * y * z
 # 18
 # >>> 
+#

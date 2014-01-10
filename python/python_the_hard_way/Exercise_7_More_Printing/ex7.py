@@ -1,10 +1,15 @@
+# printing text
 print "Mary had a little lamb."
+# printing text subbing variable snow
 print "Its fleece was white as %s." % 'snow'
+# printing text
 print "And everywhere that Mary went."
+#printing text and then repeating it 10 times
 print "." * 10 #what'd that do? - it took the line it was told to print and 
 # excuted that 10 times e.g.
 # .........
 
+#setting variables, each one as a letter
 end1 = "C"
 end2 = "h"
 end3 = "e"
@@ -19,5 +24,7 @@ end11 = "e"
 end12 = "r"
 
 #watch that comma at the end. Try removing it and see what happens
-print end1 + end2 + end3 + end4 + end5 + end6
+#grabbing the vairables, adding together to make cheese
+print end1 + end2 + end3 + end4 + end5 + end6,
+#grabbing the vairables, adding together to make burger
 print end7 + end8 + end9 + end10 + end11 + end12

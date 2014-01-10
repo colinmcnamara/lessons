@@ -7,6 +7,6 @@ print formatter % (formatter, formatter, formatter, formatter)
 print formatter % (
 	"I had this thing.",
 	"That you could type up right.",
-	"But it didnt sing.",
+	"But it didn't sing.",
 	"So I said goonight.",
 	)

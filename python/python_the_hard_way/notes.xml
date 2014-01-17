@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+
+<book lang="en">
+<bookinfo>
+    <date>2014-01-11</date>
+</bookinfo>
+<simpara>Colin&#8217;s Notes from Python the Hard Way</simpara>
+<informalexample>
+<simpara>My notes and thoughts d</simpara>
+<simpara>Set up my current dev environment w/</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+Mac OSX Maverics
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Python already installed via MacPorts
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+SublimeText IDE (V3)
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Populated subdirectories based on each less
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Added these directories to my Lesson&#8217;s github repository
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Mirrored the book localy to ~/code/pythonthehardway/book/
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Stripped out annoying add text
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Used Subl to change the "home" pointer across all 53 files to /book/index.html
+</simpara>
+</listitem>
+</itemizedlist>
+<simpara>SublimeText is very powerful. Need to set time to get to know all of it&#8217;s features</simpara>
+<simpara>Set up my current dev environment w/</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+Mac OSX Maverics
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Python already installed via MacPorts
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+SublimeText IDE (V3)
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Populated subdirectories based on each less
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Added these directories to my Lesson&#8217;s github repository
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Mirrored the book localy to ~/code/pythonthehardway/book/
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Stripped out annoying add text
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Used Subl to change the "home" pointer across all 53 files to /book/index.html
+</simpara>
+</listitem>
+</itemizedlist>
+<simpara>SublimeText is very powerful. Need to set time to get to know all of it&#8217;s features
+= Lesson Notes
+Escape sequences</simpara>
+<informaltable
+frame="all"
+rowsep="1" colsep="1"
+>
+<tgroup cols="2">
+<colspec colname="col_1" colwidth="50*"/>
+<colspec colname="col_2" colwidth="50*"/>
+<thead>
+<row>
+<entry align="left" valign="top"> Sequence </entry>
+<entry align="left" valign="top"> explanation</entry>
+</row>
+</thead>
+<tfoot>
+<row>
+<entry align="left" valign="top"><simpara>Character with the octal value ooo</simpara></entry>
+<entry align="left" valign="top"><simpara>\xhh</simpara></entry>
+</row>
+</tfoot>
+<tbody>
+<row>
+<entry align="left" valign="top"><simpara>\\</simpara></entry>
+<entry align="left" valign="top"><simpara>Backslash ()</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>\'</simpara></entry>
+<entry align="left" valign="top"><simpara>Single-qoute (')</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>\"</simpara></entry>
+<entry align="left" valign="top"><simpara>Double-quote(")</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>\a</simpara></entry>
+<entry align="left" valign="top"><simpara>ASCII bel (BEL)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>\b</simpara></entry>
+<entry align="left" valign="top"><simpara>ASCII backspace (BS)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>\f</simpara></entry>
+<entry align="left" valign="top"><simpara>ASCII formfeed (FF)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>\n</simpara></entry>
+<entry align="left" valign="top"><simpara>ASCII linefeed (LF)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>character named name in the Unicoode Database (unicode only)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>\r ASCII</simpara></entry>
+<entry align="left" valign="top"><simpara>Carraige Return (CR)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>\t ASCII</simpara></entry>
+<entry align="left" valign="top"><simpara>Horizontal tab (TAB)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>\uxxxx</simpara></entry>
+<entry align="left" valign="top"><simpara>Character with 16-bit hex value xxxx (Unicode only)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>\Uxxxxxxxx Character with 32-bit hex value xxxxxxxx (Unicode only)</simpara></entry>
+<entry align="left" valign="top"><simpara>\v</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Ascii vertical tab</simpara></entry>
+<entry align="left" valign="top"><simpara>\ooo</simpara></entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+<simpara>Lesson 1 notes - not much to write
+= Lesson Notes
+= Lesson Notes
+= Lesson Notes
+= Lesson Notes
+= Lesson Notes
+= Lesson Notes
+= Lesson Notes
+= Lesson Notes
+= Lesson Notes
+= Lesson Notes
+= Lesson Notes
+= Lesson Notes
+= Lesson Notes
+= Lesson Notes
+= Lesson Notes
+= Lesson Notes
+= Lesson Notes
+= Lesson Notes
+= Lesson Notes
+= Lesson Notes
+= Lesson Notes
+Keyboard shortcuts on the mac are interfering w/ sublimetext
+had to disable the mission control shortcuts to use the insert new line function</simpara>
+<simpara>I reallly don&#8217;t get the % modulous
+= Lesson Notes
+= Lesson Notes
+= Lesson Notes
+= Lesson Notes
+= Lesson Notes
+= Lesson Notes
+= Lesson Notes
+= Lesson Notes
+= Lesson Notes
+= Lesson Notes
+= Lesson Notes</simpara>
+<simpara>terminal</simpara>
+<screen>git commit -a
+commit message
+:wq
+git push</screen>
+<simpara>shift + command + p
+git commit or ammend commit (depending if it&#8217;s WIP or a new task)
+close file to commit</simpara>
+<simpara><ulink url="https://github.com/kemayo/sublime-text-git/wiki">reference on how to use it</ulink></simpara>
+<simpara>The build window was filling up</simpara>
+<screen>git config --global push.default matching</screen>
+<simpara>I have been up since 2:30 am this morning. It is now 8 at night. WTF am I thinking.</simpara>
+<simpara>Format characters %r %d</simpara>
+<simpara>% = modulo that marks the start of the specifier</simpara>
+<simpara><ulink url="http://docs.python.org/library/stdtypes.html#string-formatting">Old Python string formatting</ulink></simpara>
+<simpara><ulink url="http://docs.python.org/2/tutorial/inputoutput.html#fancier-output-formatting">python fancy output tutorial</ulink></simpara>
+<informaltable
+frame="all"
+rowsep="1" colsep="1"
+>
+<tgroup cols="2">
+<colspec colname="col_1" colwidth="50*"/>
+<colspec colname="col_2" colwidth="50*"/>
+<tbody>
+<row>
+<entry align="left" valign="top"><simpara>Conversion</simpara></entry>
+<entry align="left" valign="top"><simpara>Meaning</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><emphasis>d</emphasis></simpara></entry>
+<entry align="left" valign="top"><simpara>Signed integer decimal</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><emphasis>i</emphasis></simpara></entry>
+<entry align="left" valign="top"><simpara>Signed integer decimal</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><emphasis>o</emphasis></simpara></entry>
+<entry align="left" valign="top"><simpara>Signed octal value.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><emphasis>u</emphasis></simpara></entry>
+<entry align="left" valign="top"><simpara>Obsolete type – it is identical to <emphasis>d</emphasis>.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><emphasis>x</emphasis></simpara></entry>
+<entry align="left" valign="top"><simpara>Signed hexadecimal (lowercase).</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><emphasis>X</emphasis></simpara></entry>
+<entry align="left" valign="top"><simpara>Signed hexadecimal (uppercase).</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><emphasis>e</emphasis></simpara></entry>
+<entry align="left" valign="top"><simpara>Floating point exponential format (lowercase).</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><emphasis>E</emphasis></simpara></entry>
+<entry align="left" valign="top"><simpara>Floating point exponential format (uppercase).</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><emphasis>f</emphasis></simpara></entry>
+<entry align="left" valign="top"><simpara>Floating point decimal format.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><emphasis>F</emphasis></simpara></entry>
+<entry align="left" valign="top"><simpara>Floating point decimal format.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><emphasis>g</emphasis></simpara></entry>
+<entry align="left" valign="top"><simpara>Floating point format. Uses lowercase exponential format if exponent is less than -4 or not less than precision, decimal format otherwise.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><emphasis>G</emphasis></simpara></entry>
+<entry align="left" valign="top"><simpara>Floating point format. Uses uppercase exponential format if exponent is less than -4 or not less than precision, decimal format otherwise.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><emphasis>c</emphasis></simpara></entry>
+<entry align="left" valign="top"><simpara>Single character (accepts integer or single character string)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><emphasis>r</emphasis></simpara></entry>
+<entry align="left" valign="top"><simpara>String (converts any Python object using repr()).</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><emphasis>s</emphasis></simpara></entry>
+<entry align="left" valign="top"><simpara>String (converts any Python object using str()).</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><emphasis>%</emphasis></simpara></entry>
+<entry align="left" valign="top"><simpara>No argument is converted, results in a <emphasis>%</emphasis> character in the result</simpara></entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+<simpara>1 inch = 2.54 centimeters</simpara>
+<simpara>1 lb = 0.453592 kilogram
+= Lesson Notes</simpara>
+<screen>joke_evaluation = "Isn't that joke so funny?! %r"
+print joke_evaluation % hilarious</screen>
+<simpara>you can set a variable with a variable inside. This variable however doesn&#8217;t have to be set. you can call this at run time.</simpara>
+<simpara>Example (have to clean up the strings)</simpara>
+<simpara>port_config =</simpara>
+<screen>int G0/1/1
+        switchport mode on
+        vlan %r
+        description host access vlan %r</screen>
+<simpara>Then a second portion of the code would say</simpara>
+<screen>vlan = 101
+
+print port_config % vlan</screen>
+<simpara>the output would be</simpara>
+<screen>int G0/1/1
+        switchport mode on
+        vlan 101
+        description host access vlan 101</screen>
+<simpara>The four places where strings are inside of strings -
+. line 10 - y = "Those who know %s and those who %s." % (binary,do_not)
+. line 13 - print x
+. line 15 - print y
+. line 31 - print joke_evaluation % hilarious</simpara>
+<simpara>Yes line 39 is technically a string w + 3 a strings</simpara>
+<simpara>this makes a longer string because it is taking the string defined in w and the adding the contents in it to e.</simpara>
+<simpara>This math function is the content of w plus the content of e.</simpara>
+<simpara>adding a , at the end of a printed line
+concatenates it to the next</simpara>
+<simpara>first mistake I made was using $s instead of %s in line 4
+forgot I was on lesson 7 not 6 editing commit
+= Lesson Notes</simpara>
+<simpara>not sure if it is a mistake, but I needed to save the file (using command + s before building)</simpara>
+<simpara>double quotes vs single quote on thelast line was because of the apostrophy in don&#8217;t
+= Lesson Notes</simpara>
+<simpara>\n is highlighted, guessing that is throwing a <emphasis>newline</emphasis> into the mix</simpara>
+<simpara>Thats a big ass string where we don&#8217;t have to escape stuff</simpara>
+<simpara>could for example us that to substitute a configuration</simpara>
+<simpara>could us the %r variable substitution method also. this could be powerful for config management</simpara>
+</informalexample>
+</book>

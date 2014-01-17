@@ -11,7 +11,7 @@ I have the following parts:
 \t * drivers compartment
 \t * tires\n\t * wheels
 """
-print tabbed_car 
+print tabbed_car
 print split_car
 print slashed_car
 print giant_car

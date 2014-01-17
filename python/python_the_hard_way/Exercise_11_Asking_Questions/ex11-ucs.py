@@ -7,7 +7,7 @@ notes = raw_input()
 
 print """
 # system configuration information
-Welcome to %r documentation
-System IP is %r 
-%r is something important to remember
-""" % (hostname,sys_ip,notes) 
+Welcome to %s documentation
+System IP is %s 
+%s is something important to remember
+""" %(hostname,sys_ip,notes) 

@@ -43,12 +43,12 @@ current_line = 1
 print_a_line(current_line, current_file)
 
 #increment the current_line counter so that the next function can read the next line
-current_line - current_line + 1
+current_line += 1
 #read the next line
 print_a_line(current_line, current_file)
 
 #incriment the line again
-current_line = current_line + 1
+current_line += 1
 #print the final line
 print_a_line(current_line, current_file)
 

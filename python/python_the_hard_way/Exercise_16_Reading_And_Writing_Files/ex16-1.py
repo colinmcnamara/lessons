@@ -22,12 +22,14 @@ line3 = raw_input("Line 3:")
 
 print "Let's write out the file"
 
-txt.write(line1)
-txt.write("\n")
-txt.write(line2)
-txt.write("\n")
-txt.write(line3)
-txt.write("\n")
+#concatenated_lines = (line1, "\n",line2, "\n",line3 "\n")
+txt.write ("%s\n%s\n%s\n" % (line1, line2, line3))
+#txt.write(line1)
+#txt.write("\n")
+#txt.write(line2)
+#txt.write("\n")
+#txt.write(line3)
+#txt.write("\n")
 
 #close the file 
 txt.close()

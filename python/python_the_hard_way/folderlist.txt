@@ -1,54 +1,54 @@
-include::Exercise_0_The_Setup/notes.asc[]
-include::Exercise_10_What_Was_That?/notes.asc[]
-include::Exercise_11_Asking_Questions/notes.asc[]
-include::Exercise_12_Prompting_People/notes.asc[]
-include::Exercise_13_Parameters,_Unpacking,_Variables/notes.asc[]
-include::Exercise_14_Prompting_And_Passing/notes.asc[]
-include::Exercise_15_Reading_Files/notes.asc[]
-include::Exercise_16_Reading_And_Writing_Files/notes.asc[]
-include::Exercise_17_More_Files/notes.asc[]
-include::Exercise_18_Names,_Variables,_Code,_Functions/notes.asc[]
-include::Exercise_19_Functions_And_Variables/notes.asc[]
-include::Exercise_1_A_Good_First_Program/notes.asc[]
-include::Exercise_20_Functions_And_Files/notes.asc[]
-include::Exercise_21_Functions_Can_Return_Something/notes.asc[]
-include::Exercise_22_What_Do_You_Know_So_Far?/notes.asc[]
-include::Exercise_23_Read_Some_Code/notes.asc[]
-include::Exercise_24_More_Practice/notes.asc[]
-include::Exercise_25_Even_More_Practice/notes.asc[]
-include::Exercise_27_Memorizing_Logic/notes.asc[]
-include::Exercise_28_Boolean_Practice/notes.asc[]
-include::Exercise_29_What_If/notes.asc[]
-include::Exercise_2_Comments_And_Pound_Characters/notes.asc[]
-include::Exercise_30_Else_And_If/notes.asc[]
-include::Exercise_31_Making_Decisions/notes.asc[]
-include::Exercise_32_Loops_And_Lists/notes.asc[]
-include::Exercise_33_While_Loops/notes.asc[]
-include::Exercise_34_Accessing_Elements_Of_Lists/notes.asc[]
-include::Exercise_35_Branches_and_Functions/notes.asc[]
-include::Exercise_36_Designing_and_Debugging/notes.asc[]
-include::Exercise_37_Symbol_Review/notes.asc[]
-include::Exercise_38_Doing_Things_To_Lists/notes.asc[]
-include::Exercise_39_Dictionaries,_Oh_Lovely_Dictionaries/notes.asc[]
-include::Exercise_3_Numbers_And_Math/notes.asc[]
-include::Exercise_40_Modules,_Classes,_And_Objects/notes.asc[]
-include::Exercise_41_Learning_To_Speak_Object_Oriented/notes.asc[]
-include::Exercise_42_Is-A,_Has-A,_Objects,_and_Classes/notes.asc[]
-include::Exercise_43_Gothons_From_Planet_Percal_#25/notes.asc[]
-include::Exercise_44_Inheritance_Vs._Composition/notes.asc[]
-include::Exercise_45_You_Make_A_Game/notes.asc[]
-include::Exercise_46_A_Project_Skeleton/notes.asc[]
-include::Exercise_47_Automated_Testing/notes.asc[]
-include::Exercise_48_Advanced_User_Input/notes.asc[]
-include::Exercise_49_Making_Sentences/notes.asc[]
-include::Exercise_4_Variables_And_Names/notes.asc[]
-include::Exercise_50_Your_First_Website/notes.asc[]
-include::Exercise_51_Getting_Input_From_A_Browser/notes.asc[]
-include::Exercise_52_The_Start_Of_Your_Web_Game/notes.asc[]
-include::Exercise_5_More_Variables_And_Printing/notes.asc[]
-include::Exercise_6_Strings_And_Text/notes.asc[]
-include::Exercise_7_More_Printing/notes.asc[]
-include::Exercise_8_Printing,_Printing/notes.asc[]
-include::Exercise_9_Printing,_Printing,_Printing/notes.asc[]
-include::notes.asc/notes.asc[]
-include::folderlist.txt/notes.asc[]
+subl Exercise_0_The_Setup/notes.asc
+subl Exercise_10_What_Was_That?/notes.asc
+subl Exercise_11_Asking_Questions/notes.asc
+subl Exercise_12_Prompting_People/notes.asc
+subl Exercise_13_Parameters,_Unpacking,_Variables/notes.asc
+subl Exercise_14_Prompting_And_Passing/notes.asc
+subl Exercise_15_Reading_Files/notes.asc
+subl Exercise_16_Reading_And_Writing_Files/notes.asc
+subl Exercise_17_More_Files/notes.asc
+subl Exercise_18_Names,_Variables,_Code,_Functions/notes.asc
+subl Exercise_19_Functions_And_Variables/notes.asc
+subl Exercise_1_A_Good_First_Program/notes.asc
+subl Exercise_20_Functions_And_Files/notes.asc
+subl Exercise_21_Functions_Can_Return_Something/notes.asc
+subl Exercise_22_What_Do_You_Know_So_Far?/notes.asc
+subl Exercise_23_Read_Some_Code/notes.asc
+subl Exercise_24_More_Practice/notes.asc
+subl Exercise_25_Even_More_Practice/notes.asc
+subl Exercise_27_Memorizing_Logic/notes.asc
+subl Exercise_28_Boolean_Practice/notes.asc
+subl Exercise_29_What_If/notes.asc
+subl Exercise_2_Comments_And_Pound_Characters/notes.asc
+subl Exercise_30_Else_And_If/notes.asc
+subl Exercise_31_Making_Decisions/notes.asc
+subl Exercise_32_Loops_And_Lists/notes.asc
+subl Exercise_33_While_Loops/notes.asc
+subl Exercise_34_Accessing_Elements_Of_Lists/notes.asc
+subl Exercise_35_Branches_and_Functions/notes.asc
+subl Exercise_36_Designing_and_Debugging/notes.asc
+subl Exercise_37_Symbol_Review/notes.asc
+subl Exercise_38_Doing_Things_To_Lists/notes.asc
+subl Exercise_39_Dictionaries,_Oh_Lovely_Dictionaries/notes.asc
+subl Exercise_3_Numbers_And_Math/notes.asc
+subl Exercise_40_Modules,_Classes,_And_Objects/notes.asc
+subl Exercise_41_Learning_To_Speak_Object_Oriented/notes.asc
+subl Exercise_42_Is-A,_Has-A,_Objects,_and_Classes/notes.asc
+subl Exercise_43_Gothons_From_Planet_Percal_#25/notes.asc
+subl Exercise_44_Inheritance_Vs._Composition/notes.asc
+subl Exercise_45_You_Make_A_Game/notes.asc
+subl Exercise_46_A_Project_Skeleton/notes.asc
+subl Exercise_47_Automated_Testing/notes.asc
+subl Exercise_48_Advanced_User_Input/notes.asc
+subl Exercise_49_Making_Sentences/notes.asc
+subl Exercise_4_Variables_And_Names/notes.asc
+subl Exercise_50_Your_First_Website/notes.asc
+subl Exercise_51_Getting_Input_From_A_Browser/notes.asc
+subl Exercise_52_The_Start_Of_Your_Web_Game/notes.asc
+subl Exercise_5_More_Variables_And_Printing/notes.asc
+subl Exercise_6_Strings_And_Text/notes.asc
+subl Exercise_7_More_Printing/notes.asc
+subl Exercise_8_Printing,_Printing/notes.asc
+subl Exercise_9_Printing,_Printing,_Printing/notes.asc
+
+

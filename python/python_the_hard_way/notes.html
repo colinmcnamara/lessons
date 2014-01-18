@@ -827,44 +827,197 @@ Used Subl to change the "home" pointer across all 53 files to /book/index.html
 </li>
 </ul></div>
 <div class="paragraph"><p>SublimeText is very powerful. Need to set time to get to know all of it&#8217;s features
-= Lesson Notes
+== Lesson Notes
 Escape sequences</p></div>
+<div class="paragraph"><p>I think I just internallized a key point. While you can
+just modify the sample code for each lesson. Your get the most
+value when you take each lesson and write up something yourself.</p></div>
+<div class="paragraph"><p>For whatever reason I am facing a block here. action item = watching the videos. getting past the vapor lock in my mind.</p></div>
+<div class="paragraph"><p>fixed it referenced stackexchange
+link::http://stackoverflow.com/questions/7791150/learn-python-the-hard-way-exercise-10-4</p></div>
+<div class="paragraph"><p>%s executes the operation, where %r passes the string natively</p></div>
+<div class="tableblock">
+<table rules="all"
+width="100%"
+frame="border"
+cellspacing="0" cellpadding="4">
+<col width="50%" />
+<col width="50%" />
+<thead>
+<tr>
+<th align="left" valign="top"> Sequence </th>
+<th align="left" valign="top"> explanation</th>
+</tr>
+</thead>
+<tfoot>
+<tr>
+<td align="left" valign="top"><p class="table">Character with the octal value ooo</p></td>
+<td align="left" valign="top"><p class="table">\xhh</p></td>
+</tr>
+</tfoot>
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">\\</p></td>
+<td align="left" valign="top"><p class="table">Backslash ()</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">\'</p></td>
+<td align="left" valign="top"><p class="table">Single-qoute (')</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">\"</p></td>
+<td align="left" valign="top"><p class="table">Double-quote(")</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">\a</p></td>
+<td align="left" valign="top"><p class="table">ASCII bel (BEL)</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">\b</p></td>
+<td align="left" valign="top"><p class="table">ASCII backspace (BS)</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">\f</p></td>
+<td align="left" valign="top"><p class="table">ASCII formfeed (FF)</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">\n</p></td>
+<td align="left" valign="top"><p class="table">ASCII linefeed (LF)</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table"></p></td>
+<td align="left" valign="top"><p class="table">character named name in the Unicoode Database (unicode only)</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">\r ASCII</p></td>
+<td align="left" valign="top"><p class="table">Carraige Return (CR)</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">\t ASCII</p></td>
+<td align="left" valign="top"><p class="table">Horizontal tab (TAB)</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">\uxxxx</p></td>
+<td align="left" valign="top"><p class="table">Character with 16-bit hex value xxxx (Unicode only)</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">\Uxxxxxxxx Character with 32-bit hex value xxxxxxxx (Unicode only)</p></td>
+<td align="left" valign="top"><p class="table">\v</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">Ascii vertical tab</p></td>
+<td align="left" valign="top"><p class="table">\ooo</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="paragraph"><p>What does raw_input do?</p></div>
+<div class="paragraph"><p>It presents a prompt to the user (the optional arg of raw_input([arg])), gets input from the user and returns the data input by the user in a string. See the docs for raw_input().</p></div>
+<div class="paragraph"><p>Example:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>name = raw_input("What is your name? ")
+print "Hello, %s." % name</code></pre>
+</div></div>
+<div class="paragraph"><p>The difference with input() is that it tries to interpret the input given by the user; it is usually best to avoid input() and to stick with raw_input() and custom parsing/conversion code.</p></div>
+<div class="paragraph"><p>input is interpretted, raw_input is passed cleanly through the system</p></div>
+<div class="paragraph"><p>the tick in 6' 4" resulted in the following</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>cmcnamara@colin-mbp  (master) $ python ex11.py
+How old are you? 34
+how tall are you?
+6' 4"
+Traceback (most recent call last):
+  File "ex11.py", line 4, in &lt;module&gt;
+    height = input()
+  File "&lt;string&gt;", line 1
+    6' 4"
+        ^
+SyntaxError: EOL while scanning string literal</code></pre>
+</div></div>
+<div class="paragraph"><p>changing from %r to %s took the '' from around the printed output. raw vs string.
+== Lesson Notes</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>raw_input([prompt]) -&gt; string</code></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>Read a string from standard input.  The trailing newline is stripped.
+If the user hits EOF (Unix: Ctl-D, Windows: Ctl-Z+Return), raise EOFError.
+On Unix, GNU readline is used if enabled.  The prompt string, if given,
+is printed without a trailing newline before reading.</code></pre>
+</div></div>
+<div class="paragraph"><p><a href=":http://docs.python.org/2/library/pydoc.html">pydoc online documentation</a></p></div>
+<div class="paragraph"><p>pydoc is basically man for python modules.</p></div>
+<div class="paragraph"><p>the prefered way to open a file
+=== file
+pretty powerful way for filemanipulation
+=== os
+exports all the os functions to python
+        using this ensures portability between platforms. e.g. mac to win</p></div>
+<div class="paragraph"><p>stuff that hooks into the interpretoer. Detailed debugging, etc.
+= Lesson Notes
+the nexus config excersize I went a bit past the requirements, but feel pretty good about it.
+== Lesson Notes
+== Lesson Notes</p></div>
+<div class="paragraph"><p>readline(2) read 2 lines of file
+== Lesson Notes</p></div>
+<div class="paragraph"><p>Adding a w to the end of the open command</p></div>
+<div class="paragraph"><p>example</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>txt = open(filename, 'w')</code></pre>
+</div></div>
+<div class="paragraph"><p>open with a w opens in write mode</p></div>
+<div class="paragraph"><p>from <a href=":http://docs.python.org/2/library/functions.html#open">Python docs - Open Modes</a></p></div>
+<div class="paragraph"><p>Open a file, returning an object of the file type described in section File Objects. If the file cannot be opened, IOError is raised. When opening a file, it’s preferable to use open() instead of invoking the file constructor directly.</p></div>
+<div class="paragraph"><p>The first two arguments are the same as for stdio‘s fopen(): name is the file name to be opened, and mode is a string indicating how the file is to be opened.</p></div>
+<div class="paragraph"><p>The most commonly-used values of mode are <em>r</em> for reading, <em>w</em> for writing (truncating the file if it already exists), and <em>a</em> for appending (which on some Unix systems means that all writes append to the end of the file regardless of the current seek position). If mode is omitted, it defaults to <em>r</em>. The default is to use text mode, which may convert <em>\n</em> characters to a platform-specific representation on writing and back on reading. Thus, when opening a binary file, you should append <em>b</em> to the mode value to open the file in binary mode, which will improve portability. (Appending <em>b</em> is useful even on systems that don’t treat binary and text files differently, where it serves as documentation.) See below for more possible values of mode.</p></div>
+<div class="paragraph"><p>The optional buffering argument specifies the file’s desired buffer size: 0 means unbuffered, 1 means line buffered, any other positive value means use a buffer of (approximately) that size (in bytes). A negative buffering means to use the system default, which is usually line buffered for tty devices and fully buffered for other files. If omitted, the system default is used. [2]</p></div>
+<div class="paragraph"><p>Modes <em>r+</em>, <em>w+</em> and <em>a+</em> open the file for updating (note that <em>w+</em> truncates the file). Append <em>b</em> to the mode to open the file in binary mode, on systems that differentiate between binary and text files; on systems that don’t have this distinction, adding the <em>b</em> has no effect.</p></div>
+<div class="paragraph"><p>In addition to the standard fopen() values mode may be <em>U</em> or <em>rU</em>. Python is usually built with universal newlines support; supplying <em>U</em> opens the file as a text file, but lines may be terminated by any of the following: the Unix end-of-line convention <em>\n</em>, the Macintosh convention <em>\r</em>, or the Windows convention <em>\r\n</em>. All of these external representations are seen as <em>\n</em> by the Python program. If Python is built without universal newlines support a mode with <em>U</em> is the same as normal text mode. Note that file objects so opened also have an attribute called newlines which has a value of None (if no newlines have yet been seen), <em>\n</em>, <em>\r</em>, <em>\r\n</em>, or a tuple containing all the newline types seen.</p></div>
+<div class="paragraph"><p>Python enforces that the mode, after stripping <em>U</em>, begins with <em>r</em>, <em>w</em> or <em>a</em>.</p></div>
+<div class="paragraph"><p>Python provides many file handling modules including fileinput, os, os.path, tempfile, and shutil.</p></div>
+<div class="paragraph"><p>Changed in version 2.5: Restriction on first letter of mode string introduced.</p></div>
+<div class="paragraph"><p>false, truncate handles the file in w mode by default</p></div>
 <div class="paragraph"><p>Lesson 1 notes - not much to write
+== Lesson Notes
+== Lesson Notes
+== Lesson Notes
+== Lesson Notes
+== Lesson Notes
+== Lesson Notes
+== Lesson Notes
+== Lesson Notes
 = Lesson Notes
+== Lesson Notes
+== Lesson Notes
 = Lesson Notes
-= Lesson Notes
-= Lesson Notes
-= Lesson Notes
-= Lesson Notes
-= Lesson Notes
-= Lesson Notes
-= Lesson Notes
-= Lesson Notes
-= Lesson Notes
-= Lesson Notes
-= Lesson Notes
-= Lesson Notes
-= Lesson Notes
-= Lesson Notes
-= Lesson Notes
-= Lesson Notes
-= Lesson Notes
-= Lesson Notes
-= Lesson Notes
+== Lesson Notes
+== Lesson Notes
+== Lesson Notes
+== Lesson Notes
+== Lesson Notes
+== Lesson Notes
+== Lesson Notes
+== Lesson Notes
+== Lesson Notes
 Keyboard shortcuts on the mac are interfering w/ sublimetext
 had to disable the mission control shortcuts to use the insert new line function</p></div>
 <div class="paragraph"><p>I reallly don&#8217;t get the % modulous
-= Lesson Notes
-= Lesson Notes
-= Lesson Notes
-= Lesson Notes
-= Lesson Notes
-= Lesson Notes
-= Lesson Notes
-= Lesson Notes
-= Lesson Notes
-= Lesson Notes
-= Lesson Notes</p></div>
+== Lesson Notes
+== Lesson Notes
+== Lesson Notes
+== Lesson Notes
+== Lesson Notes
+== Lesson Notes
+== Lesson Notes
+== Lesson Notes
+== Lesson Notes
+== Lesson Notes
+== Lesson Notes</p></div>
 <div class="paragraph"><p>terminal</p></div>
 <div class="listingblock">
 <div class="content">
@@ -968,7 +1121,7 @@ cellspacing="0" cellpadding="4">
 </div>
 <div class="paragraph"><p>1 inch = 2.54 centimeters</p></div>
 <div class="paragraph"><p>1 lb = 0.453592 kilogram
-= Lesson Notes</p></div>
+== Lesson Notes</p></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>joke_evaluation = "Isn't that joke so funny?! %r"
@@ -1011,10 +1164,10 @@ print port_config % vlan</code></pre>
 concatenates it to the next</p></div>
 <div class="paragraph"><p>first mistake I made was using $s instead of %s in line 4
 forgot I was on lesson 7 not 6 editing commit
-= Lesson Notes</p></div>
+== Lesson Notes</p></div>
 <div class="paragraph"><p>not sure if it is a mistake, but I needed to save the file (using command + s before building)</p></div>
 <div class="paragraph"><p>double quotes vs single quote on thelast line was because of the apostrophy in don&#8217;t
-= Lesson Notes</p></div>
+== Lesson Notes</p></div>
 <div class="paragraph"><p>\n is highlighted, guessing that is throwing a <em>newline</em> into the mix</p></div>
 <div class="paragraph"><p>Thats a big ass string where we don&#8217;t have to escape stuff</p></div>
 <div class="paragraph"><p>could for example us that to substitute a configuration</p></div>
@@ -1024,7 +1177,7 @@ forgot I was on lesson 7 not 6 editing commit
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-01-11 12:54:59 PST
+Last updated 2014-01-18 06:31:28 PST
 </div>
 </div>
 </body>

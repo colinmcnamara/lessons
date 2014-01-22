@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="Asciidoctor 0.1.4">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson Notes</title>
+<link rel="stylesheet" href="./asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_lesson_notes">Lesson Notes</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_building_help_files_into_your_module">building help files into your module</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Example  -</p>
+</div>
+<div class="paragraph">
+<p>help(ex25)</p>
+</div>
+<div class="paragraph">
+<p>or</p>
+</div>
+<div class="paragraph">
+<p>help(ex25.break_words)</p>
+</div>
+<div class="paragraph">
+<p>this one is the help command on the specific help function</p>
+</div>
+<div class="paragraph">
+<p>We define that by putting """ below the def statement.
+This is built into a help file</p>
+</div>
+<div class="paragraph">
+<p>def break_words(stuff):
+	"""This function will break up words for us."""
+	words = stuff.split(' ')
+	return words</p>
+</div>
+<div class="paragraph">
+<p>outputs</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&gt;&gt;&gt; help(ex25)
+
+Help on module ex25:
+
+NAME
+    ex25
+
+FILE
+    /Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_25_Even_More_Practice/ex25.py
+
+FUNCTIONS
+    break_words(stuff)
+        This function will break up words for us.
+
+    print_first_and_last(sentence)
+
+    print_first_and_last_sorted(sentence)
+        Sorts the words then prints the first and last one.
+
+    print_first_word(words)
+        Prints the first word after popping it off.
+
+    print_last_word(words)
+        prints the last word after popping it off.
+
+    sort_sentence(sentence)
+        Takes in a full sentence and returns the sorted words.
+
+    sort_words(words)
+        Sorts the words.
+
+(END)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2014-01-19 08:50:27 PST
+</div>
+</div>
+</body>
+</html>

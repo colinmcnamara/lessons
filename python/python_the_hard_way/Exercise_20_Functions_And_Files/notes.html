@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="Asciidoctor 0.1.4">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson Notes</title>
+<link rel="stylesheet" href="./asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_lesson_notes">Lesson Notes</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_seek">seek</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>seek(	offset[, whence])
+Set the file&#8217;s current position, like stdio&#8217;s fseek(). The whence argument is optional and defaults to 0 (absolute file positioning); other values are 1 (seek relative to the current position) and 2 (seek relative to the file&#8217;s end). There is no return value. Note that if the file is opened for appending (mode <em>a</em> or <em>a+</em>), any seek() operations will be undone at the next write. If the file is only opened for writing in append mode (mode <em>a</em>), this method is essentially a no-op, but it remains useful for files opened in append mode with reading enabled (mode <em>a+</em>). If the file is opened in text mode (without <em>b</em>), only offsets returned by tell() are legal. Use of other offsets causes undefined behavio</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_file">file</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The file object attributes:
+Once a file is opened and you have one file object, you can get various information related to that file.</p>
+</div>
+<div class="paragraph">
+<p>Here is a list of all attributes related to file object:</p>
+</div>
+<div class="paragraph">
+<p>Attribute	Description
+file.closed	Returns true if file is closed, false otherwise.
+file.mode	Returns access mode with which file was opened.
+file.name	Returns name of the file.
+file.softspace	Returns false if space explicitly required with print, true otherwise.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_shorthand_notation">shorthand notation +=</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>adds another value to the variables value and assigns the new value to the variable</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>x = 2
+x = x += 1
+print x
+3</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_other_shorthand_math">other shorthand math</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>-=, *=, /= does similar for subtraction, multiplication and division.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_good_links">good links</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="http://www.tutorialspoint.com/python/python_files_io.htm">http://www.tutorialspoint.com/python/python_files_io.htm</a></p>
+</div>
+<div class="paragraph">
+<p><a href="http://stackoverflow.com/questions/4841436/what-exactly-does-do-in-python">http://stackoverflow.com/questions/4841436/what-exactly-does-do-in-python</a></p>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2014-01-18 15:23:01 PST
+</div>
+</div>
+</body>
+</html>

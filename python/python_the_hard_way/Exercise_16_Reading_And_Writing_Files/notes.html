@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="Asciidoctor 0.1.4">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson Notes</title>
+<link rel="stylesheet" href="./asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_lesson_notes">Lesson Notes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Adding a w to the end of the open command</p>
+</div>
+<div class="paragraph">
+<p>example</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>txt = open(filename, 'w')</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>open with a w opens in write mode</p>
+</div>
+<div class="paragraph">
+<p>from <a href=":http://docs.python.org/2/library/functions.html#open">Python docs - Open Modes</a></p>
+</div>
+<div class="paragraph">
+<p>Open a file, returning an object of the file type described in section File Objects. If the file cannot be opened, IOError is raised. When opening a file, it’s preferable to use open() instead of invoking the file constructor directly.</p>
+</div>
+<div class="paragraph">
+<p>The first two arguments are the same as for stdio‘s fopen(): name is the file name to be opened, and mode is a string indicating how the file is to be opened.</p>
+</div>
+<div class="paragraph">
+<p>The most commonly-used values of mode are <em>r</em> for reading, <em>w</em> for writing (truncating the file if it already exists), and <em>a</em> for appending (which on some Unix systems means that all writes append to the end of the file regardless of the current seek position). If mode is omitted, it defaults to <em>r</em>. The default is to use text mode, which may convert <em>\n</em> characters to a platform-specific representation on writing and back on reading. Thus, when opening a binary file, you should append <em>b</em> to the mode value to open the file in binary mode, which will improve portability. (Appending <em>b</em> is useful even on systems that don’t treat binary and text files differently, where it serves as documentation.) See below for more possible values of mode.</p>
+</div>
+<div class="paragraph">
+<p>The optional buffering argument specifies the file’s desired buffer size: 0 means unbuffered, 1 means line buffered, any other positive value means use a buffer of (approximately) that size (in bytes). A negative buffering means to use the system default, which is usually line buffered for tty devices and fully buffered for other files. If omitted, the system default is used. [2]</p>
+</div>
+<div class="paragraph">
+<p>Modes <em>r+</em>, <em>w+</em> and <em>a+</em> open the file for updating (note that <em>w+</em> truncates the file). Append <em>b</em> to the mode to open the file in binary mode, on systems that differentiate between binary and text files; on systems that don’t have this distinction, adding the <em>b</em> has no effect.</p>
+</div>
+<div class="paragraph">
+<p>In addition to the standard fopen() values mode may be <em>U</em> or <em>rU</em>. Python is usually built with universal newlines support; supplying <em>U</em> opens the file as a text file, but lines may be terminated by any of the following: the Unix end-of-line convention <em>\n</em>, the Macintosh convention <em>\r</em>, or the Windows convention <em>\r\n</em>. All of these external representations are seen as <em>\n</em> by the Python program. If Python is built without universal newlines support a mode with <em>U</em> is the same as normal text mode. Note that file objects so opened also have an attribute called newlines which has a value of None (if no newlines have yet been seen), <em>\n</em>, <em>\r</em>, <em>\r\n</em>, or a tuple containing all the newline types seen.</p>
+</div>
+<div class="paragraph">
+<p>Python enforces that the mode, after stripping <em>U</em>, begins with <em>r</em>, <em>w</em> or <em>a</em>.</p>
+</div>
+<div class="paragraph">
+<p>Python provides many file handling modules including fileinput, os, os.path, tempfile, and shutil.</p>
+</div>
+<div class="paragraph">
+<p>Changed in version 2.5: Restriction on first letter of mode string introduced.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_true_or_false_w_necessary_for_open_when_you_execute_target_truncate">true or false w necessary for open when you execute target.truncate</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>false, truncate handles the file in w mode by default</p>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2014-01-18 06:30:07 PST
+</div>
+</div>
+</body>
+</html>

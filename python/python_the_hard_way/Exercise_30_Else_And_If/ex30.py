@@ -1,4 +1,4 @@
-people = 30
+people = 10
 cars = 40
 buses = 15
 

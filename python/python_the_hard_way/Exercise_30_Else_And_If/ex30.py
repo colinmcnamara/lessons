@@ -1,6 +1,6 @@
 people = 10
-cars = 40
-buses = 15
+cars = 30
+buses = 10
 
 if cars > people:
 	print "We should take cars"

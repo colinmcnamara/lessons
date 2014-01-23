@@ -735,41 +735,68 @@ asciidoc.install();
 <div id="header">
 </div>
 <div id="content">
-<div class="sect1">
-<h2 id="_lesson_notes">Lesson Notes</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_nesting_elif">nesting elif</h3>
-<div class="paragraph"><p>you can nest first level elif statements, and then end them with an if statment.</p></div>
-<div class="paragraph"><p>Be sure to end your elif == blah with a : (colon)</p></div>
-</div>
-<div class="sect2">
-<h3 id="_double_nesting_elif">double nesting elif</h3>
-<div class="paragraph"><p>you can&#8217;t do that natively, but you can do that cleaner by using a <em>function+return</em> pattern</p></div>
-<div class="listingblock">
+<div class="paragraph"><p>print "You enter a dark room with three doors. Do you go through door #1, #2, #3 or door #4?"</p></div>
+<div class="paragraph"><p>door = raw_input("&gt; ")</p></div>
+<div class="paragraph"><p>if door == "1":
+        print "There&#8217;s a giant bear here eating a cheese cake. what do you do?"
+        print "1. Take the cake"
+        print "2. Scream at the bear."
+        print "3. Hit the bear with a bat"
+        print "4. Grab a giant gun"</p></div>
+<div class="literalblock">
 <div class="content">
-<pre><code>unhandled = True
-if a &gt; 1:
-  if b == 2:
-    doSomething()
-    unhandled = False
-  if unhandled and b == 3:
-    doSomethingElse()
-    unhandled = False
-if unhandled and a == 2: # Note: NO elif!
-  doDefaultForA2()
-  unhandled = False
-if unhandled:
-  showError("Unknown command")</code></pre>
+<pre><code>bear = raw_input("&gt; ")</code></pre>
 </div></div>
-</div>
-</div>
-</div>
+<div class="literalblock">
+<div class="content">
+<pre><code>if bear == "1":
+        print "The bear eats your face off. Good job!"
+elif bear == "2":
+        print "The bear eats your legs off. Good Job!"
+elif bear == "3":
+        print "Are you stupid. That's a bear. He kills you."
+else:
+        print "Well, doing %s is probably better. Bear runs away" % bear</code></pre>
+</div></div>
+<div class="paragraph"><p>elif door == "2":
+        print "You stare into the endless abyss at Cthulhu&#8217;s retina."
+        print "1. Blueberrries."
+        print "2. Yellow jacket clothespins."
+        print "3. Understanding revolvers yelling melodies."</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>insanity = raw_input("&gt; ")</code></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>if insanity == "1" or insanity == "2":
+        print "Your body survives powered by a mind of jello. Good job!"
+else:
+        print "The insanity rots your eyes into a pool of muck. Good job!"</code></pre>
+</div></div>
+<div class="paragraph"><p>elif door == "3":
+        print "You have stepped into a space ship"
+        print "1. Press the red button"
+        print "2. Press the blue button"
+        print "3. Turn around and go back through the door"</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>hatch = raw_input("&gt; ")</code></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>if hatch == "1" or hatch == "2":
+        print "You have released the chritens, you have been eaten"
+else:
+        print "You walked into the cold vacum of space and died"</code></pre>
+</div></div>
+<div class="paragraph"><p>else:
+        print "You stublme around and fall on a knife and die. Good job!"</p></div>
 </div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-01-23 05:34:21 PST
+Last updated 2014-01-23 05:32:10 PST
 </div>
 </div>
 </body>

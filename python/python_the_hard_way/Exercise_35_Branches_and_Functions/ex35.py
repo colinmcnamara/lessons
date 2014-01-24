@@ -1,15 +1,31 @@
 from sys import exit
 
+def RepresentesInt(s):
+	""" helper function to test whether a string is an integer """
+	try:
+		int(s)
+		return(True) 
+	except ValueError:
+		return False
+
 def gold_room():
 	""" exit of game. if you type in anything other than an integer you die. also 
 	evaluates the integer to see if it is greater than or less than 50 """
 	print "This room is full of gold. How much do you take?"
 
 	next = raw_input("> ")
-	if "0" in next or "1" in next:
+## troubleshooting block	
+## validate what we entered
+#	print next
+##print out whether it is an integer or not
+#	print RepresentesInt(next)
+## end troubleshooting block
+
+#Compare the status. If True set it as an integer
+	if RepresentesInt(next) == True:
 		how_much = int(next)
 	else:
-		dead("Man, learn to type a number.")
+		dead("Man, learn to type a number")
 	if how_much < 50:
 		print "Nice, you're not greedy, you win!"
 		exit(0)
@@ -87,6 +103,9 @@ def start():
 		cthulhu_room()
 	if next == "straight":
 		colin_room()
+# secret code to bypass and go directly to the gold room		
+	if next == "1":
+		gold_room()
 	else:
 		dead("You stumble around the room until you starve.")
 

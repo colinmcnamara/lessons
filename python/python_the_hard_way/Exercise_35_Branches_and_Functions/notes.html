@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="generator" content="Asciidoctor 0.1.4">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lesson Notes</title>
+<title>branches and functions</title>
 <link rel="stylesheet" href="./asciidoctor.css">
 </head>
 <body class="article">
@@ -12,13 +12,181 @@
 </div>
 <div id="content">
 <div class="sect2">
-<h3 id="_lesson_notes">Lesson Notes</h3>
+<h3 id="_branches_and_functions">branches and functions</h3>
+<div class="paragraph">
+<p>Apparently my mind is going to get bent</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pydoc">pydoc</h3>
+<div class="paragraph">
+<p>need to figure out how to interact with pydoc</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_kind_off_stuck_of_the_final_gold_room">kind off stuck of the final gold room</h3>
+<div class="paragraph">
+<p>integer statements</p>
+</div>
+<div class="paragraph">
+<p>line 8-10 looked for numbers 0 and 1. if if found those it change</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="python language-python">raw_input
+# to
+int(raw_input("&gt; "))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>easy way to validate if this is an integer is to define a function that tests</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="python language-python">def RepresentesInt(s):
+	try:
+		int(s)
+		return(True)
+	except ValueError:
+		return False</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then you can call it later within a function</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="python language-python">	if RepresentesInt(next) == True:
+		how_much = int(next)
+	else:
+		dead("Man, learn to type a number")</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_exercise_code">Exercise Code</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="python language-python">from sys import exit
 
+def RepresentesInt(s):
+	""" helper function to test whether a string is an integer """
+	try:
+		int(s)
+		return(True)
+	except ValueError:
+		return False
+
+def gold_room():
+	""" exit of game. if you type in anything other than an integer you die. also
+	evaluates the integer to see if it is greater than or less than 50 """
+	print "This room is full of gold. How much do you take?"
+
+	next = raw_input("&gt; ")
+## troubleshooting block
+## validate what we entered
+#	print next
+##print out whether it is an integer or not
+#	print RepresentesInt(next)
+## end troubleshooting block
+
+#Compare the status. If True set it as an integer
+	if RepresentesInt(next) == True:
+		how_much = int(next)
+	else:
+		dead("Man, learn to type a number")
+	if how_much &lt; 50:
+		print "Nice, you're not greedy, you win!"
+		exit(0)
+	else:
+		dead("You greedy bastard!")
+
+def bear_room():
+	""" room before the gold_room. checks if taunt bear is entered twice """
+	print "There is a bear here."
+	print "The bear has a bunch of honey."
+	print "The fat bear is in front of another door."
+	print "How are you going to move the bear?"
+	bear_moved = False
+
+	while True:
+		next = raw_input("&gt; ")
+		if next == "take honey":
+			dead("The bear looks at you then slaps your face off.")
+		elif next == "taunt bear" and not bear_moved:
+			print "The bear has moved from the door. You can go through it now."
+			bear_moved = True
+		elif next == "taunt bear" and bear_moved:
+			dead("The bear gets pissed off and chews your leg off.")
+		elif next == "open door" and bear_moved:
+			gold_room()
+		else:
+			print "I got no idea what that means."
+
+def cthulhu_room():
+	""" loop where if you choose wisely you return to start"""
+	print "Here you see the great evil cthulhu."
+	print "He, it, whatever stares at you and you go insane."
+	print "Do you flee for your life or eat your head?"
+
+	next = raw_input("&gt; ")
+
+	if "flee" in next:
+		start()
+	elif "head" in next:
+		dead("Well that was tasty!")
+	else:
+		cthulhu_room()
+
+def colin_room():
+	""" loop where if you choose wisely you return to start"""
+	print "Here you see the great and nerdy Colin."
+	print "He stares at you and your beard grows."
+	print "Do you shave, or grow a beard?"
+
+	next = raw_input("&gt; ")
+
+	if "grow" or "beard" in next:
+		start()
+	elif "shave" in next:
+		dead("Men don't shave!")
+	else:
+		colin_room()
+
+def dead(why):
+	""" output that kills the player"""
+	print why, "Good job!"
+	exit(0)
+
+def start():
+	""" Starting room outputs are bear_room or cthulhu_room """
+	print "You are in a dark room."
+	print "There are doors to your right and left and straight"
+	print "Which one do you take?"
+
+	next = raw_input("&gt; ")
+
+	if next == "left":
+		bear_room()
+	if next == "right":
+		cthulhu_room()
+	if next == "straight":
+		colin_room()
+# secret code to bypass and go directly to the gold room
+	if next == "1":
+		gold_room()
+	else:
+		dead("You stumble around the room until you starve.")
+
+
+start()</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-01-23 07:12:02 PST
+Last updated 2014-01-24 10:05:42 PST
 </div>
 </div>
 </body>

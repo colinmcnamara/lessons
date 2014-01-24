@@ -3033,7 +3033,167 @@ listnum <span style="color: #990000">=</span> <span style="color: #993399">0</sp
 <h2 id="_exercise_35_branches_and_functions">35. Exercise_35_Branches_and_Functions</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_5">35.1. Lesson Notes</h3>
+<h3 id="_branches_and_functions">35.1. branches and functions</h3>
+<div class="paragraph"><p>Apparently my mind is going to get bent</p></div>
+</div>
+<div class="sect2">
+<h3 id="_pydoc">35.2. pydoc</h3>
+<div class="paragraph"><p>need to figure out how to interact with pydoc</p></div>
+</div>
+<div class="sect2">
+<h3 id="_kind_off_stuck_of_the_final_gold_room">35.3. kind off stuck of the final gold room</h3>
+<div class="paragraph"><p>integer statements</p></div>
+<div class="paragraph"><p>line 8-10 looked for numbers 0 and 1. if if found those it change</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>raw_input
+<span style="font-style: italic"><span style="color: #9A1900"># to</span></span>
+<span style="font-weight: bold"><span style="color: #000000">int</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #000000">raw_input</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"&gt; "</span><span style="color: #990000">))</span></tt></pre></div></div>
+<div class="paragraph"><p>easy way to validate if this is an integer is to define a function that tests</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">RepresentesInt</span></span><span style="color: #990000">(</span>s<span style="color: #990000">):</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">try</span></span><span style="color: #990000">:</span>
+                <span style="font-weight: bold"><span style="color: #000000">int</span></span><span style="color: #990000">(</span>s<span style="color: #990000">)</span>
+                <span style="font-weight: bold"><span style="color: #0000FF">return</span></span><span style="color: #990000">(</span>True<span style="color: #990000">)</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">except</span></span> ValueError<span style="color: #990000">:</span>
+                <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> False</tt></pre></div></div>
+<div class="paragraph"><p>Then you can call it later within a function</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>        <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="font-weight: bold"><span style="color: #000000">RepresentesInt</span></span><span style="color: #990000">(</span>next<span style="color: #990000">)</span> <span style="color: #990000">==</span> True<span style="color: #990000">:</span>
+                how_much <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">int</span></span><span style="color: #990000">(</span>next<span style="color: #990000">)</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">else</span></span><span style="color: #990000">:</span>
+                <span style="font-weight: bold"><span style="color: #000000">dead</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Man, learn to type a number"</span><span style="color: #990000">)</span></tt></pre></div></div>
+</div>
+<div class="sect2">
+<h3 id="_exercise_code">35.4. Exercise Code</h3>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-weight: bold"><span style="color: #000080">from</span></span> sys <span style="font-weight: bold"><span style="color: #000080">import</span></span> exit
+
+<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">RepresentesInt</span></span><span style="color: #990000">(</span>s<span style="color: #990000">):</span>
+<span style="font-style: italic"><span style="color: #9A1900">        """ helper function to test whether a string is an integer """</span></span>
+        <span style="font-weight: bold"><span style="color: #0000FF">try</span></span><span style="color: #990000">:</span>
+                <span style="font-weight: bold"><span style="color: #000000">int</span></span><span style="color: #990000">(</span>s<span style="color: #990000">)</span>
+                <span style="font-weight: bold"><span style="color: #0000FF">return</span></span><span style="color: #990000">(</span>True<span style="color: #990000">)</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">except</span></span> ValueError<span style="color: #990000">:</span>
+                <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> False
+
+<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">gold_room</span></span><span style="color: #990000">():</span>
+<span style="font-style: italic"><span style="color: #9A1900">        """ exit of game. if you type in anything other than an integer you die. also</span></span>
+<span style="font-style: italic"><span style="color: #9A1900">        evaluates the integer to see if it is greater than or less than 50 """</span></span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"This room is full of gold. How much do you take?"</span>
+
+        next <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">raw_input</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"&gt; "</span><span style="color: #990000">)</span>
+<span style="font-style: italic"><span style="color: #9A1900">## troubleshooting block</span></span>
+<span style="font-style: italic"><span style="color: #9A1900">## validate what we entered</span></span>
+<span style="font-style: italic"><span style="color: #9A1900">#       print next</span></span>
+<span style="font-style: italic"><span style="color: #9A1900">##print out whether it is an integer or not</span></span>
+<span style="font-style: italic"><span style="color: #9A1900">#       print RepresentesInt(next)</span></span>
+<span style="font-style: italic"><span style="color: #9A1900">## end troubleshooting block</span></span>
+
+<span style="font-style: italic"><span style="color: #9A1900">#Compare the status. If True set it as an integer</span></span>
+        <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="font-weight: bold"><span style="color: #000000">RepresentesInt</span></span><span style="color: #990000">(</span>next<span style="color: #990000">)</span> <span style="color: #990000">==</span> True<span style="color: #990000">:</span>
+                how_much <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">int</span></span><span style="color: #990000">(</span>next<span style="color: #990000">)</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">else</span></span><span style="color: #990000">:</span>
+                <span style="font-weight: bold"><span style="color: #000000">dead</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Man, learn to type a number"</span><span style="color: #990000">)</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> how_much <span style="color: #990000">&lt;</span> <span style="color: #993399">50</span><span style="color: #990000">:</span>
+                <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"Nice, you're not greedy, you win!"</span>
+                <span style="font-weight: bold"><span style="color: #000000">exit</span></span><span style="color: #990000">(</span><span style="color: #993399">0</span><span style="color: #990000">)</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">else</span></span><span style="color: #990000">:</span>
+                <span style="font-weight: bold"><span style="color: #000000">dead</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"You greedy bastard!"</span><span style="color: #990000">)</span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">bear_room</span></span><span style="color: #990000">():</span>
+<span style="font-style: italic"><span style="color: #9A1900">        """ room before the gold_room. checks if taunt bear is entered twice """</span></span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"There is a bear here."</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"The bear has a bunch of honey."</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"The fat bear is in front of another door."</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"How are you going to move the bear?"</span>
+        bear_moved <span style="color: #990000">=</span> False
+
+        <span style="font-weight: bold"><span style="color: #0000FF">while</span></span> True<span style="color: #990000">:</span>
+                next <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">raw_input</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"&gt; "</span><span style="color: #990000">)</span>
+                <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> next <span style="color: #990000">==</span> <span style="color: #FF0000">"take honey"</span><span style="color: #990000">:</span>
+                        <span style="font-weight: bold"><span style="color: #000000">dead</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"The bear looks at you then slaps your face off."</span><span style="color: #990000">)</span>
+                <span style="font-weight: bold"><span style="color: #0000FF">elif</span></span> next <span style="color: #990000">==</span> <span style="color: #FF0000">"taunt bear"</span> <span style="font-weight: bold"><span style="color: #0000FF">and</span></span> <span style="font-weight: bold"><span style="color: #0000FF">not</span></span> bear_moved<span style="color: #990000">:</span>
+                        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"The bear has moved from the door. You can go through it now."</span>
+                        bear_moved <span style="color: #990000">=</span> True
+                <span style="font-weight: bold"><span style="color: #0000FF">elif</span></span> next <span style="color: #990000">==</span> <span style="color: #FF0000">"taunt bear"</span> <span style="font-weight: bold"><span style="color: #0000FF">and</span></span> bear_moved<span style="color: #990000">:</span>
+                        <span style="font-weight: bold"><span style="color: #000000">dead</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"The bear gets pissed off and chews your leg off."</span><span style="color: #990000">)</span>
+                <span style="font-weight: bold"><span style="color: #0000FF">elif</span></span> next <span style="color: #990000">==</span> <span style="color: #FF0000">"open door"</span> <span style="font-weight: bold"><span style="color: #0000FF">and</span></span> bear_moved<span style="color: #990000">:</span>
+                        <span style="font-weight: bold"><span style="color: #000000">gold_room</span></span><span style="color: #990000">()</span>
+                <span style="font-weight: bold"><span style="color: #0000FF">else</span></span><span style="color: #990000">:</span>
+                        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"I got no idea what that means."</span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">cthulhu_room</span></span><span style="color: #990000">():</span>
+<span style="font-style: italic"><span style="color: #9A1900">        """ loop where if you choose wisely you return to start"""</span></span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"Here you see the great evil cthulhu."</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"He, it, whatever stares at you and you go insane."</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"Do you flee for your life or eat your head?"</span>
+
+        next <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">raw_input</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"&gt; "</span><span style="color: #990000">)</span>
+
+        <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #FF0000">"flee"</span> <span style="font-weight: bold"><span style="color: #0000FF">in</span></span> next<span style="color: #990000">:</span>
+                <span style="font-weight: bold"><span style="color: #000000">start</span></span><span style="color: #990000">()</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">elif</span></span> <span style="color: #FF0000">"head"</span> <span style="font-weight: bold"><span style="color: #0000FF">in</span></span> next<span style="color: #990000">:</span>
+                <span style="font-weight: bold"><span style="color: #000000">dead</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Well that was tasty!"</span><span style="color: #990000">)</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">else</span></span><span style="color: #990000">:</span>
+                <span style="font-weight: bold"><span style="color: #000000">cthulhu_room</span></span><span style="color: #990000">()</span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">colin_room</span></span><span style="color: #990000">():</span>
+<span style="font-style: italic"><span style="color: #9A1900">        """ loop where if you choose wisely you return to start"""</span></span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"Here you see the great and nerdy Colin."</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"He stares at you and your beard grows."</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"Do you shave, or grow a beard?"</span>
+
+        next <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">raw_input</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"&gt; "</span><span style="color: #990000">)</span>
+
+        <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #FF0000">"grow"</span> <span style="font-weight: bold"><span style="color: #0000FF">or</span></span> <span style="color: #FF0000">"beard"</span> <span style="font-weight: bold"><span style="color: #0000FF">in</span></span> next<span style="color: #990000">:</span>
+                <span style="font-weight: bold"><span style="color: #000000">start</span></span><span style="color: #990000">()</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">elif</span></span> <span style="color: #FF0000">"shave"</span> <span style="font-weight: bold"><span style="color: #0000FF">in</span></span> next<span style="color: #990000">:</span>
+                <span style="font-weight: bold"><span style="color: #000000">dead</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Men don't shave!"</span><span style="color: #990000">)</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">else</span></span><span style="color: #990000">:</span>
+                <span style="font-weight: bold"><span style="color: #000000">colin_room</span></span><span style="color: #990000">()</span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">dead</span></span><span style="color: #990000">(</span>why<span style="color: #990000">):</span>
+<span style="font-style: italic"><span style="color: #9A1900">        """ output that kills the player"""</span></span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> why<span style="color: #990000">,</span> <span style="color: #FF0000">"Good job!"</span>
+        <span style="font-weight: bold"><span style="color: #000000">exit</span></span><span style="color: #990000">(</span><span style="color: #993399">0</span><span style="color: #990000">)</span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">start</span></span><span style="color: #990000">():</span>
+<span style="font-style: italic"><span style="color: #9A1900">        """ Starting room outputs are bear_room or cthulhu_room """</span></span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"You are in a dark room."</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"There are doors to your right and left and straight"</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"Which one do you take?"</span>
+
+        next <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">raw_input</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"&gt; "</span><span style="color: #990000">)</span>
+
+        <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> next <span style="color: #990000">==</span> <span style="color: #FF0000">"left"</span><span style="color: #990000">:</span>
+                <span style="font-weight: bold"><span style="color: #000000">bear_room</span></span><span style="color: #990000">()</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> next <span style="color: #990000">==</span> <span style="color: #FF0000">"right"</span><span style="color: #990000">:</span>
+                <span style="font-weight: bold"><span style="color: #000000">cthulhu_room</span></span><span style="color: #990000">()</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> next <span style="color: #990000">==</span> <span style="color: #FF0000">"straight"</span><span style="color: #990000">:</span>
+                <span style="font-weight: bold"><span style="color: #000000">colin_room</span></span><span style="color: #990000">()</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> next <span style="color: #990000">==</span> <span style="color: #FF0000">"1"</span><span style="color: #990000">:</span>
+                <span style="font-weight: bold"><span style="color: #000000">gold_room</span></span><span style="color: #990000">()</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">else</span></span><span style="color: #990000">:</span>
+                <span style="font-weight: bold"><span style="color: #000000">dead</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"You stumble around the room until you starve."</span><span style="color: #990000">)</span>
+
+
+<span style="font-weight: bold"><span style="color: #000000">start</span></span><span style="color: #990000">()</span></tt></pre></div></div>
 </div>
 </div>
 </div>
@@ -3041,7 +3201,7 @@ listnum <span style="color: #990000">=</span> <span style="color: #993399">0</sp
 <h2 id="_exercise_36_designing_and_debugging">36. Exercise_36_Designing_and_Debugging</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_6">36.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_5">36.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -3049,7 +3209,7 @@ listnum <span style="color: #990000">=</span> <span style="color: #993399">0</sp
 <h2 id="_exercise_37_symbol_review">37. Exercise_37_Symbol_Review</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_7">37.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_6">37.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -3057,7 +3217,7 @@ listnum <span style="color: #990000">=</span> <span style="color: #993399">0</sp
 <h2 id="_exercise_38_doing_things_to_lists">38. Exercise_38_Doing_Things_To_Lists</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_8">38.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_7">38.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -3065,7 +3225,7 @@ listnum <span style="color: #990000">=</span> <span style="color: #993399">0</sp
 <h2 id="_exercise_39_dictionaries_oh_lovely_dictionaries">39. Exercise_39_Dictionaries_Oh_Lovely_Dictionaries</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_9">39.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_8">39.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -3073,7 +3233,7 @@ listnum <span style="color: #990000">=</span> <span style="color: #993399">0</sp
 <h2 id="_exercise_40_modules_classes_and_objects">40. Exercise_40_Modules_Classes_And_Objects</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_10">40.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_9">40.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -3081,7 +3241,7 @@ listnum <span style="color: #990000">=</span> <span style="color: #993399">0</sp
 <h2 id="_exercise_41_learning_to_speak_object_oriented">41. Exercise_41_Learning_To_Speak_Object_Oriented</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_11">41.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_10">41.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -3089,7 +3249,7 @@ listnum <span style="color: #990000">=</span> <span style="color: #993399">0</sp
 <h2 id="_exercise_42_is_a_has_a_objects_and_classes">42. Exercise_42_Is-A_Has-A_Objects_and_Classes</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_12">42.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_11">42.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -3097,7 +3257,7 @@ listnum <span style="color: #990000">=</span> <span style="color: #993399">0</sp
 <h2 id="_exercise_43_gothons_from_planet_percal__25">43. Exercise_43_Gothons_From_Planet_Percal_#25</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_13">43.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_12">43.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -3105,7 +3265,7 @@ listnum <span style="color: #990000">=</span> <span style="color: #993399">0</sp
 <h2 id="_exercise_44_inheritance_vs_composition">44. Exercise_44_Inheritance_Vs_Composition</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_14">44.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_13">44.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -3113,7 +3273,7 @@ listnum <span style="color: #990000">=</span> <span style="color: #993399">0</sp
 <h2 id="_exercise_45_you_make_a_game">45. Exercise_45_You_Make_A_Game</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_15">45.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_14">45.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -3121,7 +3281,7 @@ listnum <span style="color: #990000">=</span> <span style="color: #993399">0</sp
 <h2 id="_exercise_46_a_project_skeleton">46. Exercise_46_A_Project_Skeleton</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_16">46.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_15">46.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -3129,7 +3289,7 @@ listnum <span style="color: #990000">=</span> <span style="color: #993399">0</sp
 <h2 id="_exercise_47_automated_testing">47. Exercise_47_Automated_Testing</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_17">47.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_16">47.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -3137,7 +3297,7 @@ listnum <span style="color: #990000">=</span> <span style="color: #993399">0</sp
 <h2 id="_exercise_48_advanced_user_input">48. Exercise_48_Advanced_User_Input</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_18">48.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_17">48.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -3145,7 +3305,7 @@ listnum <span style="color: #990000">=</span> <span style="color: #993399">0</sp
 <h2 id="_exercise_49_making_sentences">49. Exercise_49_Making_Sentences</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_19">49.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_18">49.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -3153,7 +3313,7 @@ listnum <span style="color: #990000">=</span> <span style="color: #993399">0</sp
 <h2 id="_exercise_50_your_first_website">50. Exercise_50_Your_First_Website</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_20">50.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_19">50.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -3161,7 +3321,7 @@ listnum <span style="color: #990000">=</span> <span style="color: #993399">0</sp
 <h2 id="_exercise_51_getting_input_from_a_browser">51. Exercise_51_Getting_Input_From_A_Browser</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_21">51.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_20">51.1. Lesson Notes</h3>
 </div>
 </div>
 </div>

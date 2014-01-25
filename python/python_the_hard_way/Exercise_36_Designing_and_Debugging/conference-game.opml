@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+  <head>
+    <title>NovaMind-Ex36-Game</title>
+  </head>
+  <body>
+    <outline text="Start">
+      <outline text="Oh_crap_conference" _note="You realize that you have to be at a conference tomorrow. What do you do?">
+        <outline text="Call_in_sick" _note="You pull the oldest game in the ">
+        </outline>
+        <outline text="Send an Employee" _note="You decide that your employees should do some work for a change, and send one of your guys
+">
+        </outline>
+        <outline text="Rush to get ready" _note="You suck it up, and pack at midnight for a 4 am flight">
+        </outline>
+      </outline>
+    </outline>
+    <outline text="Packing for conference">
+    </outline>
+    <outline text="You_are_fired" _note="You&#8217;re actions have resulted in you being fired.">
+    </outline>
+    <outline text="You_got_promoted" _note="your boss and the community acknowledge how awesome you are and promote you.">
+    </outline>
+    <outline text="day_off" _note="You have many choices of what to do now that you are have free time what do you do?
+
+">
+      <outline text="Go Golfing" _note="Your boss see&#8217;s you on the golf course (he is screwing off too)
+
+The world of double standards exists, you are fired.">
+      </outline>
+      <outline text="Announce you are not available but - Continue to work" _note="Your boss and the community acknowledge how awesome you are, and you end up getting promoted.">
+      </outline>
+      <outline text="Turn off everything and hide" _note="There is no hiding for work. Your boss, everyone on twitter is asking where you are. Return to start
+">
+      </outline>
+    </outline>
+    <outline text="Delegation">
+      <outline text="Send best guy" _note="you decide to send the best guy on your team. 
+This results in internal projects slipping. 
+you are fired.
+">
+      </outline>
+      <outline text="Send worst guy" _note="You send the worst guy on your team. The community now hates your company, and the manufacturers think your company sucks.
+You are fired.
+">
+      </outline>
+      <outline text="Send Mediocre guy" _note="You decide to send your &#8220;good enough&#8221; guy to the conference. He holds the proper tweet ups, and engages with all the right people since he really has no stress of performing.
+
+You are recognized with your amazing leadership with a promotion.">
+      </outline>
+    </outline>
+    <outline text="Just go" _note="You decide to go, but may not have time to prep for your flight">
+      <outline text="Take_first_flight" _note="You rush to take the first flight out and forget all of your equipment. You are not able to do your video blogs. Your boss is pissed. you are fired">
+      </outline>
+      <outline text="Push_Flight_back_an_hour" _note="This ends up costing the company and extra $500. You end up on accountings watch list. This results in you losing your job.
+you are fired.">
+      </outline>
+      <outline text="Push_flight_back_a_day" _note="You decide that day one isn&#8217;t so important. and you can push your social media stuff to day2. What should you do with your day?">
+      </outline>
+    </outline>
+  </body>
+</opml>

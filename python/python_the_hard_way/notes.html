@@ -3187,6 +3187,7 @@ http://www.gnu.org/software/src-highlite -->
                 <span style="font-weight: bold"><span style="color: #000000">cthulhu_room</span></span><span style="color: #990000">()</span>
         <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> next <span style="color: #990000">==</span> <span style="color: #FF0000">"straight"</span><span style="color: #990000">:</span>
                 <span style="font-weight: bold"><span style="color: #000000">colin_room</span></span><span style="color: #990000">()</span>
+<span style="font-style: italic"><span style="color: #9A1900"># secret code to bypass and go directly to the gold room</span></span>
         <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> next <span style="color: #990000">==</span> <span style="color: #FF0000">"1"</span><span style="color: #990000">:</span>
                 <span style="font-weight: bold"><span style="color: #000000">gold_room</span></span><span style="color: #990000">()</span>
         <span style="font-weight: bold"><span style="color: #0000FF">else</span></span><span style="color: #990000">:</span>
@@ -3201,7 +3202,223 @@ http://www.gnu.org/software/src-highlite -->
 <h2 id="_exercise_36_designing_and_debugging">36. Exercise_36_Designing_and_Debugging</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_5">36.1. Lesson Notes</h3>
+<h3 id="_designing_and_debugging">36.1. designing and debugging</h3>
+<div class="sect3">
+<h4 id="_rules_for_if_statements">36.1.1. Rules for if-Statements</h4>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Every <code>if-statement</code> must have an <code>else</code>
+</p>
+</li>
+<li>
+<p>
+if this <code>else</code> should never be run because it doesn&#8217;t make sense
+</p>
+<div class="olist loweralpha"><ol class="loweralpha">
+<li>
+<p>
+then you must use a <code>die</code> function in the <code>else</code> that prints out an error message and dies, (just like the dead function in the bear room excersize)
+</p>
+</li>
+</ol></div>
+</li>
+<li>
+<p>
+Never nest <code>if-statements</code> more than two deep and always try to do them one deep.
+</p>
+<div class="olist loweralpha"><ol class="loweralpha">
+<li>
+<p>
+This means if you put an <code>if</code> and an <code>if</code>  then you should be looking to move that second <code>if</code> to another function
+</p>
+</li>
+</ol></div>
+</li>
+<li>
+<p>
+Treat <code>if-statemnts</code> like paragraphs, where each <code>if elif else</code> grouping is like a set of sentances.
+</p>
+<div class="olist loweralpha"><ol class="loweralpha">
+<li>
+<p>
+put blank lines before and after
+</p>
+</li>
+</ol></div>
+</li>
+<li>
+<p>
+Your bolean tests should be simple.
+</p>
+<div class="olist loweralpha"><ol class="loweralpha">
+<li>
+<p>
+if they are complex. move the calculations to variables earlier in your function.
+</p>
+</li>
+<li>
+<p>
+use a good name for your variable
+</p>
+</li>
+</ol></div>
+</li>
+</ol></div>
+</div>
+<div class="sect3">
+<h4 id="_rules_for_loops">36.1.2. Rules for loops</h4>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+use a <code>while-loop</code> only to loop forever.
+</p>
+<div class="olist loweralpha"><ol class="loweralpha">
+<li>
+<p>
+that pretty much means never
+</p>
+</li>
+</ol></div>
+</li>
+<li>
+<p>
+use a <code>for-loop</code> for all other kinds of lopping.
+</p>
+<div class="olist loweralpha"><ol class="loweralpha">
+<li>
+<p>
+especially if there is a fixed or limited number of things to do
+</p>
+</li>
+</ol></div>
+</li>
+</ol></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_debuging_tips">36.2. Debuging tips</h3>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Do not use a debuger
+</p>
+<div class="olist loweralpha"><ol class="loweralpha">
+<li>
+<p>
+you get to much information
+</p>
+</li>
+</ol></div>
+</li>
+<li>
+<p>
+use print statements throughout your code
+</p>
+</li>
+<li>
+<p>
+Make sure little parts of your code work
+</p>
+<div class="olist loweralpha"><ol class="loweralpha">
+<li>
+<p>
+do not write massive stuff
+</p>
+</li>
+<li>
+<p>
+write tests throughout
+</p>
+</li>
+<li>
+<p>
+code a bit, test a bit, etc etc
+</p>
+</li>
+</ol></div>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_homework_my_game">36.3. Homework - My game</h3>
+<div class="paragraph"><p>What are the requirements for writing this game?</p></div>
+</div>
+<div class="sect2">
+<h3 id="_required_use">36.4. Required use</h3>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Lists
+</p>
+</li>
+<li>
+<p>
+Functions
+</p>
+</li>
+<li>
+<p>
+Modules
+</p>
+</li>
+<li>
+<p>
+Find new pieces of python to do interesting stuff
+</p>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_steps">36.5. Steps</h3>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Make a map
+</p>
+</li>
+<li>
+<p>
+Create
+</p>
+<div class="olist loweralpha"><ol class="loweralpha">
+<li>
+<p>
+rooms
+</p>
+</li>
+<li>
+<p>
+monsters
+</p>
+</li>
+<li>
+<p>
+traps
+</p>
+</li>
+</ol></div>
+</li>
+<li>
+<p>
+code the map
+</p>
+</li>
+<li>
+<p>
+DON&#8217;T VAPOR LOCK!!!
+</p>
+</li>
+<li>
+<p>
+Start small, get bigger and bigger
+</p>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_map">36.6. Map</h3>
+<div class="paragraph"><p>include ../figures/map.png</p></div>
 </div>
 </div>
 </div>
@@ -3209,7 +3426,7 @@ http://www.gnu.org/software/src-highlite -->
 <h2 id="_exercise_37_symbol_review">37. Exercise_37_Symbol_Review</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_6">37.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_5">37.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -3217,7 +3434,7 @@ http://www.gnu.org/software/src-highlite -->
 <h2 id="_exercise_38_doing_things_to_lists">38. Exercise_38_Doing_Things_To_Lists</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_7">38.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_6">38.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -3225,7 +3442,7 @@ http://www.gnu.org/software/src-highlite -->
 <h2 id="_exercise_39_dictionaries_oh_lovely_dictionaries">39. Exercise_39_Dictionaries_Oh_Lovely_Dictionaries</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_8">39.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_7">39.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -3233,7 +3450,7 @@ http://www.gnu.org/software/src-highlite -->
 <h2 id="_exercise_40_modules_classes_and_objects">40. Exercise_40_Modules_Classes_And_Objects</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_9">40.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_8">40.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -3241,7 +3458,7 @@ http://www.gnu.org/software/src-highlite -->
 <h2 id="_exercise_41_learning_to_speak_object_oriented">41. Exercise_41_Learning_To_Speak_Object_Oriented</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_10">41.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_9">41.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -3249,7 +3466,7 @@ http://www.gnu.org/software/src-highlite -->
 <h2 id="_exercise_42_is_a_has_a_objects_and_classes">42. Exercise_42_Is-A_Has-A_Objects_and_Classes</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_11">42.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_10">42.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -3257,7 +3474,7 @@ http://www.gnu.org/software/src-highlite -->
 <h2 id="_exercise_43_gothons_from_planet_percal__25">43. Exercise_43_Gothons_From_Planet_Percal_#25</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_12">43.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_11">43.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -3265,7 +3482,7 @@ http://www.gnu.org/software/src-highlite -->
 <h2 id="_exercise_44_inheritance_vs_composition">44. Exercise_44_Inheritance_Vs_Composition</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_13">44.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_12">44.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -3273,7 +3490,7 @@ http://www.gnu.org/software/src-highlite -->
 <h2 id="_exercise_45_you_make_a_game">45. Exercise_45_You_Make_A_Game</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_14">45.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_13">45.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -3281,7 +3498,7 @@ http://www.gnu.org/software/src-highlite -->
 <h2 id="_exercise_46_a_project_skeleton">46. Exercise_46_A_Project_Skeleton</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_15">46.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_14">46.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -3289,7 +3506,7 @@ http://www.gnu.org/software/src-highlite -->
 <h2 id="_exercise_47_automated_testing">47. Exercise_47_Automated_Testing</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_16">47.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_15">47.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -3297,7 +3514,7 @@ http://www.gnu.org/software/src-highlite -->
 <h2 id="_exercise_48_advanced_user_input">48. Exercise_48_Advanced_User_Input</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_17">48.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_16">48.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -3305,7 +3522,7 @@ http://www.gnu.org/software/src-highlite -->
 <h2 id="_exercise_49_making_sentences">49. Exercise_49_Making_Sentences</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_18">49.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_17">49.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -3313,7 +3530,7 @@ http://www.gnu.org/software/src-highlite -->
 <h2 id="_exercise_50_your_first_website">50. Exercise_50_Your_First_Website</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_19">50.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_18">50.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -3321,7 +3538,7 @@ http://www.gnu.org/software/src-highlite -->
 <h2 id="_exercise_51_getting_input_from_a_browser">51. Exercise_51_Getting_Input_From_A_Browser</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_20">51.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_19">51.1. Lesson Notes</h3>
 </div>
 </div>
 </div>

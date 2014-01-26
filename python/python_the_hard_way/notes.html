@@ -4575,7 +4575,205 @@ print a(i)</p></div>
 <h2 id="_exercise_38_doing_things_to_lists">38. Exercise_38_Doing_Things_To_Lists</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_5">38.1. Lesson Notes</h3>
+<h3 id="_doing_things_to_lists">38.1. Doing things to lists</h3>
+<div class="paragraph"><p>All sorts of cool list operations</p></div>
+</div>
+<div class="sect2">
+<h3 id="_pop">38.2. .pop</h3>
+<div class="paragraph"><p>example</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>x <span style="color: #990000">=</span> my_2nd_list<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">pop</span></span><span style="color: #990000">()</span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"%s is the last item in my_2nd_list"</span> <span style="color: #990000">%</span> x
+</tt></pre></div></div>
+<div class="paragraph"><p>would place the last element in my_2nd_list into x and display it with print</p></div>
+</div>
+<div class="sect2">
+<h3 id="_changing_how_a_list_is_seperated">38.3. changing how a list is seperated</h3>
+<div class="paragraph"><p>in this example we take a list seperated by spaces, and split them with ' '</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>
+ten_things <span style="color: #990000">=</span> <span style="color: #FF0000">"Apples Oranges Crows Telephone Light Sugar"</span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"Wait there's not 10 things in that list, let's fix that."</span>
+
+stuff <span style="color: #990000">=</span> ten_things<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">split</span></span><span style="color: #990000">(</span><span style="color: #FF0000">' '</span><span style="color: #990000">)</span></tt></pre></div></div>
+<div class="paragraph"><p>output -</p></div>
+<div class="paragraph"><p>here is the old list Apples Oranges Crows Telephone Light Sugar
+here is the new list [<em>Apples</em>, <em>Oranges</em>, <em>Crows</em>, <em>Telephone</em>, <em>Light</em>, <em>Sugar</em>]</p></div>
+<div class="paragraph"><p>notice how the new list has ticks around the items, and comma&#8217;s seperating values. good for CSV?</p></div>
+<div class="paragraph"><p>though we should probably just use a module for CSV work.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_returing_the_first_element_of_a_list_listname_1">38.4. returing the first element of a list - listname[1]</h3>
+<div class="paragraph"><p>prints the first index of a list</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> listname<span style="color: #990000">[</span><span style="color: #993399">1</span><span style="color: #990000">]</span></tt></pre></div></div>
+</div>
+<div class="sect2">
+<h3 id="_return_index_1_that_8217_s_the_last_element_listname_1">38.5. Return index -1 (that&#8217;s the last element) listname[-1]</h3>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> listname<span style="color: #990000">[-</span><span style="color: #993399">1</span><span style="color: #990000">]</span></tt></pre></div></div>
+</div>
+<div class="sect2">
+<h3 id="_join">38.6. .join</h3>
+<div class="paragraph"><p>in this example, join each element together with a space between them</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">' '</span><span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">join</span></span><span style="color: #990000">(</span>stuff<span style="color: #990000">)</span></tt></pre></div></div>
+<div class="paragraph"><p>output = Apples Oranges Crows Telephone Light Sugar Boy Girl Banana</p></div>
+</div>
+<div class="sect2">
+<h3 id="_print_em_em_join_stuff_3_5">38.7. print <em>#</em>.join(stuff[3:5])</h3>
+<div class="paragraph"><p>join index 3 and 5 together with the seperator #</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">'#'</span><span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">join</span></span><span style="color: #990000">(</span>stuff<span style="color: #990000">[</span><span style="color: #993399">3</span><span style="color: #990000">:</span><span style="color: #993399">5</span><span style="color: #990000">])</span> <span style="font-style: italic"><span style="color: #9A1900"># super stellar</span></span></tt></pre></div></div>
+<div class="paragraph"><p>output = Telephone#Light</p></div>
+</div>
+<div class="sect2">
+<h3 id="_object_oriented_programming">38.8. object oriented programming</h3>
+<div class="paragraph"><p>deeper dive on OOP taken from here -</p></div>
+<div class="paragraph"><p><a href="http://www.codeproject.com/Articles/22769/Introduction-to-Object-Oriented-Programming-Concep#OOP">http://www.codeproject.com/Articles/22769/Introduction-to-Object-Oriented-Programming-Concep#OOP</a></p></div>
+<div class="paragraph"><p>Rather then use a procedural way of doing things (C, etc). Object oriented programming is grouped into self sustainable "objects" that provide for re-usability</p></div>
+<div class="imageblock" id="Oop_Table">
+<div class="content">
+<img src="../figures/oop.jpg" alt="../figures/oop.jpg" />
+</div>
+<div class="title">Figure 2. Object Oriented Programming Architectural Overview</div>
+</div>
+<div class="sect3">
+<h4 id="_example_your_hand">38.8.1. example - your hand</h4>
+<div class="paragraph"><p>Hand is a class
+your body contains two objects called hand
+        these are named left and right</p></div>
+<div class="paragraph"><p>These objects are controlled by electrical signals send through your -
+        shoulders (an interface)</p></div>
+<div class="paragraph"><p>Your shoulder is an interface your body uses to interact with your hands.</p></div>
+<div class="paragraph"><p>Hand is a well architected class, the hand being re-used for left and right usage with minor modifications</p></div>
+<div class="sect4">
+<h5 id="_what_is_an_object">what is an object</h5>
+<div class="paragraph"><p>an Object is a "thing" that can peform a set of activities.</p></div>
+</div>
+<div class="sect4">
+<h5 id="_example">Example</h5>
+<div class="paragraph"><p>the hand can grip something or, a <code>student(object)</code> can give the name or address</p></div>
+<div class="paragraph"><p>in pure Object Oriented Programming terms an object is an instance of a class</p></div>
+</div>
+<div class="sect4">
+<h5 id="_what_is_a_class">what is a class ?</h5>
+<div class="paragraph"><p>A class is representation of a type of <code>object</code></p></div>
+<div class="paragraph"><p>It is the blueprint /plan /template that describes the details of an object.</p></div>
+<div class="imageblock" id="Class_Table">
+<div class="content">
+<img src="../figures/class.gif" alt="../figures/class.gif" />
+</div>
+<div class="title">Figure 3. visual representation of a class</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_class_components">Class components</h5>
+<div class="ulist"><ul>
+<li>
+<p>
+name
+</p>
+</li>
+<li>
+<p>
+attributes
+</p>
+</li>
+<li>
+<p>
+operations
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_class_in_python">38.9. Class in Python</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+Minimal new syntaxes added
+</p>
+</li>
+<li>
+<p>
+Class inheritance supported
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+multiple base classes supported.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+derived class
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+can overide methods of its base classes or methods
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+a method can call the method of a base class with the same name
+</p>
+</li>
+<li>
+<p>
+objects can contain arbitrary amounts of data
+</p>
+</li>
+</ul></div>
+<div class="sect3">
+<h4 id="_dir_something_vs_the_class_or_something">38.9.1. dir(something) vs the "Class" or something</h4>
+<div class="paragraph"><p>dir() or dir(something) shows all the things inside of something.</p></div>
+<div class="paragraph"><p>This can be a list, a module, a class, etc</p></div>
+<div class="paragraph"><p>a class is the grouping of objects and information.</p></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_code_2">38.10. code</h3>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt></tt></pre></div></div>
 </div>
 </div>
 </div>
@@ -4583,7 +4781,7 @@ print a(i)</p></div>
 <h2 id="_exercise_39_dictionaries_oh_lovely_dictionaries">39. Exercise_39_Dictionaries_Oh_Lovely_Dictionaries</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_6">39.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_5">39.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -4591,7 +4789,7 @@ print a(i)</p></div>
 <h2 id="_exercise_40_modules_classes_and_objects">40. Exercise_40_Modules_Classes_And_Objects</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_7">40.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_6">40.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -4599,7 +4797,7 @@ print a(i)</p></div>
 <h2 id="_exercise_41_learning_to_speak_object_oriented">41. Exercise_41_Learning_To_Speak_Object_Oriented</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_8">41.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_7">41.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -4607,7 +4805,7 @@ print a(i)</p></div>
 <h2 id="_exercise_42_is_a_has_a_objects_and_classes">42. Exercise_42_Is-A_Has-A_Objects_and_Classes</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_9">42.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_8">42.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -4615,7 +4813,7 @@ print a(i)</p></div>
 <h2 id="_exercise_43_gothons_from_planet_percal__25">43. Exercise_43_Gothons_From_Planet_Percal_#25</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_10">43.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_9">43.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -4623,7 +4821,7 @@ print a(i)</p></div>
 <h2 id="_exercise_44_inheritance_vs_composition">44. Exercise_44_Inheritance_Vs_Composition</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_11">44.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_10">44.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -4631,7 +4829,7 @@ print a(i)</p></div>
 <h2 id="_exercise_45_you_make_a_game">45. Exercise_45_You_Make_A_Game</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_12">45.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_11">45.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -4639,7 +4837,7 @@ print a(i)</p></div>
 <h2 id="_exercise_46_a_project_skeleton">46. Exercise_46_A_Project_Skeleton</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_13">46.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_12">46.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -4647,7 +4845,7 @@ print a(i)</p></div>
 <h2 id="_exercise_47_automated_testing">47. Exercise_47_Automated_Testing</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_14">47.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_13">47.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -4655,7 +4853,7 @@ print a(i)</p></div>
 <h2 id="_exercise_48_advanced_user_input">48. Exercise_48_Advanced_User_Input</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_15">48.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_14">48.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -4663,7 +4861,7 @@ print a(i)</p></div>
 <h2 id="_exercise_49_making_sentences">49. Exercise_49_Making_Sentences</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_16">49.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_15">49.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -4671,7 +4869,7 @@ print a(i)</p></div>
 <h2 id="_exercise_50_your_first_website">50. Exercise_50_Your_First_Website</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_17">50.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_16">50.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -4679,7 +4877,7 @@ print a(i)</p></div>
 <h2 id="_exercise_51_getting_input_from_a_browser">51. Exercise_51_Getting_Input_From_A_Browser</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_18">51.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_17">51.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -4693,7 +4891,7 @@ print a(i)</p></div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-01-24 04:47:18 PST
+Last updated 2014-01-26 05:29:32 PST
 </div>
 </div>
 </body>

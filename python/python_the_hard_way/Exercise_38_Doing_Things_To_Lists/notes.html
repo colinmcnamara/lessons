@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="generator" content="Asciidoctor 0.1.4">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lesson Notes</title>
+<title>Doing things to lists</title>
 <link rel="stylesheet" href="./asciidoctor.css">
 </head>
 <body class="article">
@@ -12,13 +12,247 @@
 </div>
 <div id="content">
 <div class="sect2">
-<h3 id="_lesson_notes">Lesson Notes</h3>
+<h3 id="_doing_things_to_lists">Doing things to lists</h3>
+<div class="paragraph">
+<p>All sorts of cool list operations</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__pop">.pop</h3>
+<div class="paragraph">
+<p>example</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="python language-python">x = my_2nd_list.pop()
+print "%s is the last item in my_2nd_list" % x
+</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>would place the last element in my_2nd_list into x and display it with print</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_changing_how_a_list_is_seperated">changing how a list is seperated</h3>
+<div class="paragraph">
+<p>in this example we take a list seperated by spaces, and split them with ' '</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="python language-python">
+ten_things = "Apples Oranges Crows Telephone Light Sugar"
 
+print "Wait there's not 10 things in that list, let's fix that."
+
+stuff = ten_things.split(' ')</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>output -</p>
+</div>
+<div class="paragraph">
+<p>here is the old list Apples Oranges Crows Telephone Light Sugar
+here is the new list [<em>Apples</em>, <em>Oranges</em>, <em>Crows</em>, <em>Telephone</em>, <em>Light</em>, <em>Sugar</em>]</p>
+</div>
+<div class="paragraph">
+<p>notice how the new list has ticks around the items, and comma&#8217;s seperating values. good for CSV?</p>
+</div>
+<div class="paragraph">
+<p>though we should probably just use a module for CSV work.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_returing_the_first_element_of_a_list_listname_1">returing the first element of a list - listname[1]</h3>
+<div class="paragraph">
+<p>prints the first index of a list</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="python language-python">
+print listname[1]</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_return_index_1_that_s_the_last_element_listname_1">Return index -1 (that&#8217;s the last element) listname[-1]</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="python language-python">
+print listname[-1]</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__join">.join</h3>
+<div class="paragraph">
+<p>in this example, join each element together with a space between them</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="python language-python">print ' '.join(stuff)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>output = Apples Oranges Crows Telephone Light Sugar Boy Girl Banana</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_print_em_em_join_stuff_3_5">print <em>#</em>.join(stuff[3:5])</h3>
+<div class="paragraph">
+<p>join index 3 and 5 together with the seperator #</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="python language-python">print '#'.join(stuff[3:5]) # super stellar</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>output = Telephone#Light</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_object_oriented_programming">object oriented programming</h3>
+<div class="paragraph">
+<p>deeper dive on OOP taken from here -</p>
+</div>
+<div class="paragraph">
+<p><a href="http://www.codeproject.com/Articles/22769/Introduction-to-Object-Oriented-Programming-Concep#OOP">http://www.codeproject.com/Articles/22769/Introduction-to-Object-Oriented-Programming-Concep#OOP</a></p>
+</div>
+<div class="paragraph">
+<p>Rather then use a procedural way of doing things (C, etc). Object oriented programming is grouped into self sustainable "objects" that provide for re-usability</p>
+</div>
+<div id="Oop_Table" class="imageblock">
+<div class="content">
+<img src="../figures/oop.jpg" alt="oop">
+</div>
+<div class="title">Figure 1. Object Oriented Programming Architectural Overview</div>
+</div>
+<div class="sect3">
+<h4 id="_example_your_hand">example - your hand</h4>
+<div class="paragraph">
+<p>Hand is a class
+your body contains two objects called hand
+	these are named left and right</p>
+</div>
+<div class="paragraph">
+<p>These objects are controlled by electrical signals send through your -
+	shoulders (an interface)</p>
+</div>
+<div class="paragraph">
+<p>Your shoulder is an interface your body uses to interact with your hands.</p>
+</div>
+<div class="paragraph">
+<p>Hand is a well architected class, the hand being re-used for left and right usage with minor modifications</p>
+</div>
+<div class="sect4">
+<h5 id="_what_is_an_object">what is an object</h5>
+<div class="paragraph">
+<p>an Object is a "thing" that can peform a set of activities.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_example">Example</h5>
+<div class="paragraph">
+<p>the hand can grip something or, a <code>student(object)</code> can give the name or address</p>
+</div>
+<div class="paragraph">
+<p>in pure Object Oriented Programming terms an object is an instance of a class</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_what_is_a_class">what is a class ?</h5>
+<div class="paragraph">
+<p>A class is representation of a type of <code>object</code></p>
+</div>
+<div class="paragraph">
+<p>It is the blueprint /plan /template that describes the details of an object.</p>
+</div>
+<div id="Class_Table" class="imageblock">
+<div class="content">
+<img src="../figures/class.gif" alt="class">
+</div>
+<div class="title">Figure 2. visual representation of a class</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_class_components">Class components</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>name</p>
+</li>
+<li>
+<p>attributes</p>
+</li>
+<li>
+<p>operations</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_class_in_python">Class in Python</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Minimal new syntaxes added</p>
+</li>
+<li>
+<p>Class inheritance supported</p>
+<div class="ulist">
+<ul>
+<li>
+<p>multiple base classes supported.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>derived class</p>
+<div class="ulist">
+<ul>
+<li>
+<p>can overide methods of its base classes or methods</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>a method can call the method of a base class with the same name</p>
+</li>
+<li>
+<p>objects can contain arbitrary amounts of data</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_dir_something_vs_the_class_or_something">dir(something) vs the "Class" or something</h4>
+<div class="paragraph">
+<p>dir() or dir(something) shows all the things inside of something.</p>
+</div>
+<div class="paragraph">
+<p>This can be a list, a module, a class, etc</p>
+</div>
+<div class="paragraph">
+<p>a class is the grouping of objects and information.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_code">code</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="python language-python"></code></pre>
+</div>
+</div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-01-23 07:12:17 PST
+Last updated 2014-01-26 06:31:40 PST
 </div>
 </div>
 </body>

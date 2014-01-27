@@ -1,11 +1,735 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="generator" content="Asciidoctor 0.1.4">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dictionaries</title>
-<link rel="stylesheet" href="./asciidoctor.css">
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title></title>
+<style type="text/css">
+/* Shared CSS for AsciiDoc xhtml11 and html5 backends */
+
+/* Default font. */
+body {
+  font-family: Georgia,serif;
+}
+
+/* Title font. */
+h1, h2, h3, h4, h5, h6,
+div.title, caption.title,
+thead, p.table.header,
+#toctitle,
+#author, #revnumber, #revdate, #revremark,
+#footer {
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+  color: navy;
+}
+
+strong {
+  font-weight: bold;
+  color: #083194;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1, h2, h3 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  padding-top: 0.5em;
+}
+h3 {
+  float: left;
+}
+h3 + * {
+  clear: left;
+}
+h5 {
+  font-size: 1.0em;
+}
+
+div.sectionbody {
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul, ol, li > p {
+  margin-top: 0;
+}
+ul > li     { color: #aaa; }
+ul > li > * { color: black; }
+
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
+  padding: 0;
+  margin: 0;
+}
+pre {
+  white-space: pre-wrap;
+}
+
+#author {
+  color: #527bbd;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+#email {
+}
+#revnumber, #revdate, #revremark {
+}
+
+#footer {
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+#preamble {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.0em;
+  margin-bottom: 2.0em;
+  margin-right: 10%;
+  color: #606060;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  color: #527bbd;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid #dddddd;
+  border-left: 4px solid #f0f0f0;
+  padding: 0.5em;
+}
+
+div.listingblock > div.content {
+  border: 1px solid #dddddd;
+  border-left: 5px solid #f0f0f0;
+  background: #f8f8f8;
+  padding: 0.5em;
+}
+
+div.quoteblock, div.verseblock {
+  padding-left: 1.0em;
+  margin-left: 1.0em;
+  margin-right: 10%;
+  border-left: 5px solid #f0f0f0;
+  color: #888;
+}
+
+div.quoteblock > div.attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
+
+div.verseblock > pre.content {
+  font-family: inherit;
+  font-size: inherit;
+}
+div.verseblock > div.attribution {
+  padding-top: 0.75em;
+  text-align: left;
+}
+/* DEPRECATED: Pre version 8.2.7 verse style literal block. */
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 3px solid #dddddd;
+}
+
+div.exampleblock > div.content {
+  border-left: 3px solid #dddddd;
+  padding-left: 0.5em;
+}
+
+div.imageblock div.content { padding-left: 0; }
+span.image img { border-style: none; vertical-align: text-bottom; }
+a.image:visited { color: white; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: normal;
+  color: navy;
+}
+dd > *:first-child {
+  margin-top: 0.1em;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.arabic {
+  list-style-type: decimal;
+}
+ol.loweralpha {
+  list-style-type: lower-alpha;
+}
+ol.upperalpha {
+  list-style-type: upper-alpha;
+}
+ol.lowerroman {
+  list-style-type: lower-roman;
+}
+ol.upperroman {
+  list-style-type: upper-roman;
+}
+
+div.compact ul, div.compact ol,
+div.compact p, div.compact p,
+div.compact div, div.compact div {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+tfoot {
+  font-weight: bold;
+}
+td > div.verse {
+  white-space: pre;
+}
+
+div.hdlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+div.hdlist tr {
+  padding-bottom: 15px;
+}
+dt.hdlist1.strong, td.hdlist1.strong {
+  font-weight: bold;
+}
+td.hdlist1 {
+  vertical-align: top;
+  font-style: normal;
+  padding-right: 0.8em;
+  color: navy;
+}
+td.hdlist2 {
+  vertical-align: top;
+}
+div.hdlist.compact tr {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.comment {
+  background: yellow;
+}
+
+.footnote, .footnoteref {
+  font-size: 0.8em;
+}
+
+span.footnote, span.footnoteref {
+  vertical-align: super;
+}
+
+#footnotes {
+  margin: 20px 0 20px 0;
+  padding: 7px 0 0 0;
+}
+
+#footnotes div.footnote {
+  margin: 0 0 5px 0;
+}
+
+#footnotes hr {
+  border: none;
+  border-top: 1px solid silver;
+  height: 1px;
+  text-align: left;
+  margin-left: 0;
+  width: 20%;
+  min-width: 100px;
+}
+
+div.colist td {
+  padding-right: 0.5em;
+  padding-bottom: 0.3em;
+  vertical-align: top;
+}
+div.colist td img {
+  margin-top: 0.3em;
+}
+
+@media print {
+  #footer-badges { display: none; }
+}
+
+#toc {
+  margin-bottom: 2.5em;
+}
+
+#toctitle {
+  color: #527bbd;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel0, div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.toclevel2 {
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+div.toclevel3 {
+  margin-left: 4em;
+  font-size: 0.9em;
+}
+div.toclevel4 {
+  margin-left: 6em;
+  font-size: 0.9em;
+}
+
+span.aqua { color: aqua; }
+span.black { color: black; }
+span.blue { color: blue; }
+span.fuchsia { color: fuchsia; }
+span.gray { color: gray; }
+span.green { color: green; }
+span.lime { color: lime; }
+span.maroon { color: maroon; }
+span.navy { color: navy; }
+span.olive { color: olive; }
+span.purple { color: purple; }
+span.red { color: red; }
+span.silver { color: silver; }
+span.teal { color: teal; }
+span.white { color: white; }
+span.yellow { color: yellow; }
+
+span.aqua-background { background: aqua; }
+span.black-background { background: black; }
+span.blue-background { background: blue; }
+span.fuchsia-background { background: fuchsia; }
+span.gray-background { background: gray; }
+span.green-background { background: green; }
+span.lime-background { background: lime; }
+span.maroon-background { background: maroon; }
+span.navy-background { background: navy; }
+span.olive-background { background: olive; }
+span.purple-background { background: purple; }
+span.red-background { background: red; }
+span.silver-background { background: silver; }
+span.teal-background { background: teal; }
+span.white-background { background: white; }
+span.yellow-background { background: yellow; }
+
+span.big { font-size: 2em; }
+span.small { font-size: 0.6em; }
+
+span.underline { text-decoration: underline; }
+span.overline { text-decoration: overline; }
+span.line-through { text-decoration: line-through; }
+
+div.unbreakable { page-break-inside: avoid; }
+
+
+/*
+ * xhtml11 specific
+ *
+ * */
+
+div.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead, p.table.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.table {
+  margin-top: 0;
+}
+/* Because the table frame attribute is overriden by CSS in most browsers. */
+div.tableblock > table[frame="void"] {
+  border-style: none;
+}
+div.tableblock > table[frame="hsides"] {
+  border-left-style: none;
+  border-right-style: none;
+}
+div.tableblock > table[frame="vsides"] {
+  border-top-style: none;
+  border-bottom-style: none;
+}
+
+
+/*
+ * html5 specific
+ *
+ * */
+
+table.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+thead, p.tableblock.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.tableblock {
+  margin-top: 0;
+}
+table.tableblock {
+  border-width: 3px;
+  border-spacing: 0px;
+  border-style: solid;
+  border-color: #527bbd;
+  border-collapse: collapse;
+}
+th.tableblock, td.tableblock {
+  border-width: 1px;
+  padding: 4px;
+  border-style: solid;
+  border-color: #527bbd;
+}
+
+table.tableblock.frame-topbot {
+  border-left-style: hidden;
+  border-right-style: hidden;
+}
+table.tableblock.frame-sides {
+  border-top-style: hidden;
+  border-bottom-style: hidden;
+}
+table.tableblock.frame-none {
+  border-style: hidden;
+}
+
+th.tableblock.halign-left, td.tableblock.halign-left {
+  text-align: left;
+}
+th.tableblock.halign-center, td.tableblock.halign-center {
+  text-align: center;
+}
+th.tableblock.halign-right, td.tableblock.halign-right {
+  text-align: right;
+}
+
+th.tableblock.valign-top, td.tableblock.valign-top {
+  vertical-align: top;
+}
+th.tableblock.valign-middle, td.tableblock.valign-middle {
+  vertical-align: middle;
+}
+th.tableblock.valign-bottom, td.tableblock.valign-bottom {
+  vertical-align: bottom;
+}
+
+
+/*
+ * manpage specific
+ *
+ * */
+
+body.manpage h1 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top: 2px solid silver;
+  border-bottom: 2px solid silver;
+}
+body.manpage h2 {
+  border-style: none;
+}
+body.manpage div.sectionbody {
+  margin-left: 3em;
+}
+
+@media print {
+  body.manpage div#toc { display: none; }
+}
+
+
+</style>
+<script type="text/javascript">
+/*<![CDATA[*/
+var asciidoc = {  // Namespace.
+
+/////////////////////////////////////////////////////////////////////
+// Table Of Contents generator
+/////////////////////////////////////////////////////////////////////
+
+/* Author: Mihai Bazon, September 2002
+ * http://students.infoiasi.ro/~mishoo
+ *
+ * Table Of Content generator
+ * Version: 0.4
+ *
+ * Feel free to use this script under the terms of the GNU General Public
+ * License, as long as you do not remove or alter this notice.
+ */
+
+ /* modified by Troy D. Hanson, September 2006. License: GPL */
+ /* modified by Stuart Rackham, 2006, 2009. License: GPL */
+
+// toclevels = 1..4.
+toc: function (toclevels) {
+
+  function getText(el) {
+    var text = "";
+    for (var i = el.firstChild; i != null; i = i.nextSibling) {
+      if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
+        text += i.data;
+      else if (i.firstChild != null)
+        text += getText(i);
+    }
+    return text;
+  }
+
+  function TocEntry(el, text, toclevel) {
+    this.element = el;
+    this.text = text;
+    this.toclevel = toclevel;
+  }
+
+  function tocEntries(el, toclevels) {
+    var result = new Array;
+    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
+    // Function that scans the DOM tree for header elements (the DOM2
+    // nodeIterator API would be a better technique but not supported by all
+    // browsers).
+    var iterate = function (el) {
+      for (var i = el.firstChild; i != null; i = i.nextSibling) {
+        if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
+          var mo = re.exec(i.tagName);
+          if (mo && (i.getAttribute("class") || i.getAttribute("className")) != "float") {
+            result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
+          }
+          iterate(i);
+        }
+      }
+    }
+    iterate(el);
+    return result;
+  }
+
+  var toc = document.getElementById("toc");
+  if (!toc) {
+    return;
+  }
+
+  // Delete existing TOC entries in case we're reloading the TOC.
+  var tocEntriesToRemove = [];
+  var i;
+  for (i = 0; i < toc.childNodes.length; i++) {
+    var entry = toc.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div'
+     && entry.getAttribute("class")
+     && entry.getAttribute("class").match(/^toclevel/))
+      tocEntriesToRemove.push(entry);
+  }
+  for (i = 0; i < tocEntriesToRemove.length; i++) {
+    toc.removeChild(tocEntriesToRemove[i]);
+  }
+
+  // Rebuild TOC entries.
+  var entries = tocEntries(document.getElementById("content"), toclevels);
+  for (var i = 0; i < entries.length; ++i) {
+    var entry = entries[i];
+    if (entry.element.id == "")
+      entry.element.id = "_toc_" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var div = document.createElement("div");
+    div.appendChild(a);
+    div.className = "toclevel" + entry.toclevel;
+    toc.appendChild(div);
+  }
+  if (entries.length == 0)
+    toc.parentNode.removeChild(toc);
+},
+
+
+/////////////////////////////////////////////////////////////////////
+// Footnotes generator
+/////////////////////////////////////////////////////////////////////
+
+/* Based on footnote generation code from:
+ * http://www.brandspankingnew.net/archive/2005/07/format_footnote.html
+ */
+
+footnotes: function () {
+  // Delete existing footnote entries in case we're reloading the footnodes.
+  var i;
+  var noteholder = document.getElementById("footnotes");
+  if (!noteholder) {
+    return;
+  }
+  var entriesToRemove = [];
+  for (i = 0; i < noteholder.childNodes.length; i++) {
+    var entry = noteholder.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
+      entriesToRemove.push(entry);
+  }
+  for (i = 0; i < entriesToRemove.length; i++) {
+    noteholder.removeChild(entriesToRemove[i]);
+  }
+
+  // Rebuild footnote entries.
+  var cont = document.getElementById("content");
+  var spans = cont.getElementsByTagName("span");
+  var refs = {};
+  var n = 0;
+  for (i=0; i<spans.length; i++) {
+    if (spans[i].className == "footnote") {
+      n++;
+      var note = spans[i].getAttribute("data-note");
+      if (!note) {
+        // Use [\s\S] in place of . so multi-line matches work.
+        // Because JavaScript has no s (dotall) regex flag.
+        note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+        spans[i].innerHTML =
+          "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+        spans[i].setAttribute("data-note", note);
+      }
+      noteholder.innerHTML +=
+        "<div class='footnote' id='_footnote_" + n + "'>" +
+        "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
+        n + "</a>. " + note + "</div>";
+      var id =spans[i].getAttribute("id");
+      if (id != null) refs["#"+id] = n;
+    }
+  }
+  if (n == 0)
+    noteholder.parentNode.removeChild(noteholder);
+  else {
+    // Process footnoterefs.
+    for (i=0; i<spans.length; i++) {
+      if (spans[i].className == "footnoteref") {
+        var href = spans[i].getElementsByTagName("a")[0].getAttribute("href");
+        href = href.match(/#.*/)[0];  // Because IE return full URL.
+        n = refs[href];
+        spans[i].innerHTML =
+          "[<a href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+      }
+    }
+  }
+},
+
+install: function(toclevels) {
+  var timerId;
+
+  function reinstall() {
+    asciidoc.footnotes();
+    if (toclevels) {
+      asciidoc.toc(toclevels);
+    }
+  }
+
+  function reinstallAndRemoveTimer() {
+    clearInterval(timerId);
+    reinstall();
+  }
+
+  timerId = setInterval(reinstall, 500);
+  if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", reinstallAndRemoveTimer, false);
+  else
+    window.onload = reinstallAndRemoveTimer;
+}
+
+}
+asciidoc.install();
+/*]]>*/
+</script>
 </head>
 <body class="article">
 <div id="header">
@@ -13,67 +737,268 @@
 <div id="content">
 <div class="sect2">
 <h3 id="_dictionaries">Dictionaries</h3>
-
 </div>
 <div class="sect2">
 <h3 id="_thoughts_on_my_last_game">Thoughts on my last game</h3>
-<div class="paragraph">
-<p><strong>I could have used a dictionary vs comparing two lists!</strong></p>
-</div>
+<div class="paragraph"><p><strong>I could have used a dictionary vs comparing two lists!</strong></p></div>
 </div>
 <div class="sect2">
 <h3 id="_quick_tip_for_dictionaries_use_a_different_bracket">Quick Tip for Dictionaries - { use a different bracket }</h3>
-<div class="paragraph">
-<p>Dictionaries use curly braces, vs straight</p>
+<div class="paragraph"><p>Dictionaries use curly braces, vs straight</p></div>
 </div>
+<div class="sect2">
+<h3 id="_quick_tip_for_dictionaries_vs">Quick Tip for Dictionaries ' vs "</h3>
+<div class="paragraph"><p>Not sure if it is just style. But notice that ticks vs quotes are used. (single vs double)</p></div>
 </div>
 <div class="sect2">
 <h3 id="_example_dictionary_list">Example dictionary list</h3>
 <div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="python language-python">dictionaryname['room_message' : 'which door do you choose' ,'Door 1': 'room_fired', 'Door 2': 'room_promoted', 'Door 3': 'room_day_off']</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>print dictionaryname[<em>room_message</em>]
-&gt;&gt;&gt; which door do you choose</p>
-</div>
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>dictionaryname<span style="color: #990000">[</span><span style="color: #FF0000">'room_message'</span> <span style="color: #990000">:</span> <span style="color: #FF0000">'which door do you choose'</span> <span style="color: #990000">,</span><span style="color: #FF0000">'Door 1'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'room_fired'</span><span style="color: #990000">,</span> <span style="color: #FF0000">'Door 2'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'room_promoted'</span><span style="color: #990000">,</span> <span style="color: #FF0000">'Door 3'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'room_day_off'</span><span style="color: #990000">]</span></tt></pre></div></div>
+<div class="paragraph"><p>print dictionaryname[<em>room_message</em>]
+&gt;&gt;&gt; which door do you choose</p></div>
 </div>
 <div class="sect2">
 <h3 id="_inserting_new_item_into_dictionary">inserting new item into dictionary</h3>
-<div class="paragraph">
-<p>You can just call out the field, and the data.</p>
-</div>
+<div class="paragraph"><p>You can just call out the field, and the data.</p></div>
 <div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="python language-python">dictionaryname['Door 4'] = 'room_delegate'</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>&gt;&gt;&gt;&gt; print dictionaryname
-{<em>room_message</em> : <em>which door do you choose</em> ,<em>Door 1</em>: <em>room_fired</em>, <em>Door 2</em>: <em>room_promoted</em>, <em>Door 3</em>: <em>room_day_off</em>]}</p>
-</div>
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>dictionaryname<span style="color: #990000">[</span><span style="color: #FF0000">'Door 4'</span><span style="color: #990000">]</span> <span style="color: #990000">=</span> <span style="color: #FF0000">'room_delegate'</span></tt></pre></div></div>
+<div class="paragraph"><p>&gt;&gt;&gt;&gt; print dictionaryname
+{<em>room_message</em> : <em>which door do you choose</em> ,<em>Door 1</em>: <em>room_fired</em>, <em>Door 2</em>: <em>room_promoted</em>, <em>Door 3</em>: <em>room_day_off</em>]}</p></div>
 </div>
 <div class="sect2">
 <h3 id="_deleting_from_a_dictionary">Deleting from a dictionary</h3>
 <div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="python language-python"># delete by name
-del dictionaryname['Door 1']
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-style: italic"><span style="color: #9A1900"># delete by name</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">del</span></span> dictionaryname<span style="color: #990000">[</span><span style="color: #FF0000">'Door 1'</span><span style="color: #990000">]</span>
 
-# delete by index number
-del dictionaryname [2]</code></pre>
+<span style="font-style: italic"><span style="color: #9A1900"># delete by index number</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">del</span></span> dictionaryname <span style="color: #990000">[</span><span style="color: #993399">2</span><span style="color: #990000">]</span></tt></pre></div></div>
+<div class="paragraph"><p>&gt;&gt;&gt;&gt; print dictionaryname
+{<em>room_message</em> : <em>which door do you choose</em> , <em>Door 3</em>: <em>room_day_off</em>]}</p></div>
+</div>
+<div class="sect2">
+<h3 id="_dictname_items_the_items_operator">dictname.items() - the items operator</h3>
+<div class="paragraph"><p>something .items() prints out the objects with th list or dictionary they refer too</p></div>
+</div>
+<div class="sect2">
+<h3 id="_combine_two_dicts_in_a_print_statement">Combine two dicts in a print statement</h3>
+<div class="paragraph"><p>you can lookup an item across two dictionaries in one statemetn</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>listname1<span style="color: #990000">[</span>comparedlistname<span style="color: #990000">[</span><span style="color: #FF0000">'lookup'</span><span style="color: #990000">]]</span></tt></pre></div></div>
+<div class="paragraph"><p>This example looks up the city by putting in the state abbreviation (which is effectively the key in the dict)</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">'_'</span> <span style="color: #990000">*</span> <span style="color: #993399">10</span>
+<span style="font-weight: bold"><span style="color: #0000FF">for</span></span> state<span style="color: #990000">,</span> abbrev <span style="font-weight: bold"><span style="color: #0000FF">in</span></span> states<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">items</span></span><span style="color: #990000">():</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"%s state is abbreviated %s and has city %s"</span> <span style="color: #990000">%</span> <span style="color: #990000">(</span>
+                state<span style="color: #990000">,</span> abbrev<span style="color: #990000">,</span> cities<span style="color: #990000">[</span>abbrev<span style="color: #990000">])</span></tt></pre></div></div>
+</div>
+<div class="sect2">
+<h3 id="_special_word_none">Special word - None</h3>
+<div class="paragraph"><p>in tihs example the word None is used to represent the absense of a value.</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>state <span style="color: #990000">=</span> states<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">get</span></span><span style="color: #990000">(</span><span style="color: #FF0000">'Texas'</span><span style="color: #990000">,</span> None<span style="color: #990000">)</span></tt></pre></div></div>
+</div>
+<div class="sect2">
+<h3 id="_get_method">.get() method</h3>
+<div class="paragraph"><p>Return a value for a specific key</p></div>
+<div class="paragraph"><p>In this example we are getting the key for <em>TX</em></p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-style: italic"><span style="color: #9A1900"># get a city with a default value</span></span>
+city <span style="color: #990000">=</span>  cities<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">get</span></span><span style="color: #990000">(</span><span style="color: #FF0000">'TX'</span><span style="color: #990000">,</span> <span style="color: #FF0000">'Does Not Exist'</span><span style="color: #990000">)</span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"The city for the state 'TX' is: %s"</span> <span style="color: #990000">%</span> city</tt></pre></div></div>
+</div>
+<div class="sect2">
+<h3 id="_key_error">Key error</h3>
+<div class="paragraph"><p>Python raises a KeyError whenever a dict() object is requested (using the format a = adict[key]) and the key is not in the dictionary.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_what_can_8217_t_you_do_with_dictionaries">What can&#8217;t you do with dictionaries?</h3>
+<div class="paragraph"><p># duplcate keys - only displays the last one
+# you can get around this by storing lists or sets inside of the dictionary</p></div>
+<div class="paragraph"><p># you can get a dictionary of lists by using the following</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-weight: bold"><span style="color: #000080">from</span></span> collections <span style="font-weight: bold"><span style="color: #000080">import</span></span> defaultdict
+data_dict <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">defaultdict</span></span><span style="color: #990000">(</span>list<span style="color: #990000">)</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># all you have to do is replace</span></span>
+data_dict<span style="color: #990000">[</span>regNumber<span style="color: #990000">]</span> <span style="color: #990000">=</span> details
+
+<span style="font-style: italic"><span style="color: #9A1900"># with</span></span>
+data_dict<span style="color: #990000">[</span>regNumber<span style="color: #990000">].</span><span style="font-weight: bold"><span style="color: #000000">append</span></span><span style="color: #990000">(</span>details<span style="color: #990000">)</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># and you'll get a dictionary of lists</span></span></tt></pre></div></div>
+</div>
+<div class="sect2">
+<h3 id="_my_switch_host_location_code_created_from_lesson">My switch, host, location code created from lesson</h3>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-style: italic"><span style="color: #9A1900"># Create a mapping of labs</span></span>
+labs <span style="color: #990000">=</span> <span style="color: #990000">{</span>
+        <span style="color: #FF0000">'Pleasanton-Lab'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'SW1'</span><span style="color: #990000">,</span>
+        <span style="color: #FF0000">'Irvine-Lab'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'SW2'</span><span style="color: #990000">,</span>
+        <span style="color: #FF0000">'Atlanta-Lab'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'SW3'</span>
+<span style="color: #990000">}</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># Define what ports are on each switch</span></span>
+switchports <span style="color: #990000">=</span> <span style="color: #990000">{</span>
+        <span style="color: #FF0000">'SW1'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'Ge1-1'</span><span style="color: #990000">,</span>
+        <span style="color: #FF0000">'SW2'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'Ge2-1'</span><span style="color: #990000">,</span>
+        <span style="color: #FF0000">'SW3'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'Ge3-1'</span>
+<span style="color: #990000">}</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># create a host port mapping</span></span>
+hosts_switchports <span style="color: #990000">=</span> <span style="color: #990000">{</span>
+        <span style="color: #FF0000">'Ge1-1'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'puppet.denicacloud.com'</span><span style="color: #990000">,</span>
+        <span style="color: #FF0000">'Ge2-1'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'jenkins.denicacloud.com'</span><span style="color: #990000">,</span>
+        <span style="color: #FF0000">'Ge3-1'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'gerrit.denicacloud.com'</span>
+<span style="color: #990000">}</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># Note this only prints out a single (the last) item</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">'_'</span> <span style="color: #990000">*</span> <span style="color: #993399">10</span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"Atlanta-Lab contains"</span><span style="color: #990000">,</span> labs<span style="color: #990000">[</span><span style="color: #FF0000">'Atlanta-Lab'</span><span style="color: #990000">]</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># Print out a specific host port location</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">'_'</span> <span style="color: #990000">*</span> <span style="color: #993399">10</span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"Ge1-1 will always contain "</span><span style="color: #990000">,</span> hosts_switchports<span style="color: #990000">[</span><span style="color: #FF0000">'Ge1-1'</span><span style="color: #990000">]</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># Look up based on labs then switchport dict</span></span>
+<span style="font-style: italic"><span style="color: #9A1900"># Returns the last item in list</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">'_'</span> <span style="color: #990000">*</span> <span style="color: #993399">10</span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"Irvine-lab port is: "</span><span style="color: #990000">,</span> switchports<span style="color: #990000">[</span>labs<span style="color: #990000">[</span><span style="color: #FF0000">'Irvine-Lab'</span><span style="color: #990000">]]</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># Print out every lab labs</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">'_'</span> <span style="color: #990000">*</span> <span style="color: #993399">10</span>
+<span style="font-weight: bold"><span style="color: #0000FF">for</span></span> lab<span style="color: #990000">,</span> switch <span style="font-weight: bold"><span style="color: #0000FF">in</span></span> labs<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">items</span></span><span style="color: #990000">():</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"%s is located in %s"</span> <span style="color: #990000">%</span> <span style="color: #990000">(</span>switch<span style="color: #990000">,</span> lab<span style="color: #990000">)</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># Multi-lookup Print out hosts in switch in lab</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">'_'</span> <span style="color: #990000">*</span> <span style="color: #993399">10</span>
+<span style="font-weight: bold"><span style="color: #0000FF">for</span></span> lab<span style="color: #990000">,</span> abbrev <span style="font-weight: bold"><span style="color: #0000FF">in</span></span> labs<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">items</span></span><span style="color: #990000">():</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"%s contains %s which has port %s"</span> <span style="color: #990000">%</span> <span style="color: #990000">(</span>lab<span style="color: #990000">,</span> abbrev<span style="color: #990000">,</span>
+                switchports<span style="color: #990000">[</span>abbrev<span style="color: #990000">])</span><span style="font-style: italic"><span style="color: #9A1900">#</span></span>
+
+<span style="font-style: italic"><span style="color: #9A1900">## multi-mutli lookup. Lookup what hosts are containted in each lab</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">'_'</span> <span style="color: #990000">*</span> <span style="color: #993399">10</span>
+<span style="font-weight: bold"><span style="color: #0000FF">for</span></span> lab<span style="color: #990000">,</span> abbrev <span style="font-weight: bold"><span style="color: #0000FF">in</span></span> labs<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">items</span></span><span style="color: #990000">():</span>
+        switch <span style="color: #990000">=</span> abbrev
+<span style="font-style: italic"><span style="color: #9A1900">#       print "Switch = %s" % switch</span></span>
+        returned_port <span style="color: #990000">=</span> switchports<span style="color: #990000">[</span>switch<span style="color: #990000">]</span>
+<span style="font-style: italic"><span style="color: #9A1900">#       print "Returned Port = %s" % returned_port</span></span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"%s contains %s which has host %s on port %s "</span> <span style="color: #990000">%</span> <span style="color: #990000">(</span>lab<span style="color: #990000">,</span> switch<span style="color: #990000">,</span>
+         hosts_switchports<span style="color: #990000">[</span>returned_port<span style="color: #990000">],</span> switchports<span style="color: #990000">[</span>switch<span style="color: #990000">])</span>
+</tt></pre></div></div>
+</div>
+<div class="sect2">
+<h3 id="_lesson_code">Lesson code</h3>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-style: italic"><span style="color: #9A1900"># Create a mapping of state to abbreviation</span></span>
+states <span style="color: #990000">=</span> <span style="color: #990000">{</span>
+        <span style="color: #FF0000">'Oregon'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'OR'</span><span style="color: #990000">,</span>
+        <span style="color: #FF0000">'Florida'</span><span style="color: #990000">:</span> <span style="color: #FF0000">"FL"</span><span style="color: #990000">,</span>
+        <span style="color: #FF0000">'California'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'CA'</span><span style="color: #990000">,</span>
+        <span style="color: #FF0000">'New York'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'NY'</span><span style="color: #990000">,</span>
+        <span style="color: #FF0000">'Michigan'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'MI'</span>
+<span style="color: #990000">}</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># Create a basic set of states and some cities in them</span></span>
+cities <span style="color: #990000">=</span> <span style="color: #990000">{</span>
+        <span style="color: #FF0000">'CA'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'San Francisco'</span><span style="color: #990000">,</span>
+        <span style="color: #FF0000">'MI'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'Detroit'</span><span style="color: #990000">,</span>
+        <span style="color: #FF0000">'FL'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'Jacksonville'</span>
+<span style="color: #990000">}</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># Add some more cities</span></span>
+cities<span style="color: #990000">[</span><span style="color: #FF0000">'NY'</span><span style="color: #990000">]</span> <span style="color: #990000">=</span> <span style="color: #FF0000">'New York'</span>
+cities<span style="color: #990000">[</span><span style="color: #FF0000">'OR'</span><span style="color: #990000">]</span> <span style="color: #990000">=</span> <span style="color: #FF0000">'Portland'</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># print out some cities</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">'_'</span> <span style="color: #990000">*</span> <span style="color: #993399">10</span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"NY State has: "</span><span style="color: #990000">,</span> cities<span style="color: #990000">[</span><span style="color: #FF0000">'NY'</span><span style="color: #990000">]</span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"OR State has: "</span><span style="color: #990000">,</span> cities<span style="color: #990000">[</span><span style="color: #FF0000">'OR'</span><span style="color: #990000">]</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># print some states</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">'_'</span> <span style="color: #990000">*</span> <span style="color: #993399">10</span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"Michigan's abbreviation is: "</span><span style="color: #990000">,</span> states<span style="color: #990000">[</span><span style="color: #FF0000">'Michigan'</span><span style="color: #990000">]</span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"Florida's abbreviation is: "</span><span style="color: #990000">,</span> states<span style="color: #990000">[</span><span style="color: #FF0000">'Florida'</span><span style="color: #990000">]</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># do it by using the state then cities dict</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">'_'</span> <span style="color: #990000">*</span> <span style="color: #993399">10</span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"Michigan has: "</span><span style="color: #990000">,</span> cities<span style="color: #990000">[</span>states<span style="color: #990000">[</span><span style="color: #FF0000">'Michigan'</span><span style="color: #990000">]]</span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"Florida has: "</span><span style="color: #990000">,</span> cities<span style="color: #990000">[</span>states<span style="color: #990000">[</span><span style="color: #FF0000">'Florida'</span><span style="color: #990000">]]</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># print every state abbreviation</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">'_'</span> <span style="color: #990000">*</span> <span style="color: #993399">10</span>
+<span style="font-weight: bold"><span style="color: #0000FF">for</span></span> state<span style="color: #990000">,</span> abbrev <span style="font-weight: bold"><span style="color: #0000FF">in</span></span> states<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">items</span></span><span style="color: #990000">():</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"%s is abbreviated %s"</span> <span style="color: #990000">%</span> <span style="color: #990000">(</span>state<span style="color: #990000">,</span> abbrev<span style="color: #990000">)</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># print every city in state</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">'_'</span> <span style="color: #990000">*</span> <span style="color: #993399">10</span>
+<span style="font-weight: bold"><span style="color: #0000FF">for</span></span> city<span style="color: #990000">,</span> abbrev <span style="font-weight: bold"><span style="color: #0000FF">in</span></span> cities<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">items</span></span><span style="color: #990000">():</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"%s has the city %s"</span> <span style="color: #990000">%</span> <span style="color: #990000">(</span>abbrev<span style="color: #990000">,</span> city<span style="color: #990000">)</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># now do both at the same time</span></span>
+<span style="font-style: italic"><span style="color: #9A1900"># this looks up the city by the state abbrevation</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">'_'</span> <span style="color: #990000">*</span> <span style="color: #993399">10</span>
+<span style="font-weight: bold"><span style="color: #0000FF">for</span></span> state<span style="color: #990000">,</span> abbrev <span style="font-weight: bold"><span style="color: #0000FF">in</span></span> states<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">items</span></span><span style="color: #990000">():</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"%s state is abbreviated %s and has city %s"</span> <span style="color: #990000">%</span> <span style="color: #990000">(</span>
+                state<span style="color: #990000">,</span> abbrev<span style="color: #990000">,</span> cities<span style="color: #990000">[</span>abbrev<span style="color: #990000">])</span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">'_'</span> <span style="color: #990000">*</span> <span style="color: #993399">10</span>
+<span style="font-style: italic"><span style="color: #9A1900"># safely get a abbreviation by state that might not be there</span></span>
+state <span style="color: #990000">=</span> states<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">get</span></span><span style="color: #990000">(</span><span style="color: #FF0000">'Texas'</span><span style="color: #990000">,</span> None<span style="color: #990000">)</span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="font-weight: bold"><span style="color: #0000FF">not</span></span> state<span style="color: #990000">:</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"Sorry no Texas."</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># get a city with a default value</span></span>
+city <span style="color: #990000">=</span>  cities<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">get</span></span><span style="color: #990000">(</span><span style="color: #FF0000">'TX'</span><span style="color: #990000">,</span> <span style="color: #FF0000">'Does Not Exist'</span><span style="color: #990000">)</span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"The city for the state 'TX' is: %s"</span> <span style="color: #990000">%</span> city</tt></pre></div></div>
 </div>
 </div>
-<div class="paragraph">
-<p>&gt;&gt;&gt;&gt; print dictionaryname
-{<em>room_message</em> : <em>which door do you choose</em> , <em>Door 3</em>: <em>room_day_off</em>]}</p>
-</div>
-</div>
-</div>
+<div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-01-27 06:04:34 PST
+Last updated 2014-01-27 08:17:19 PST
 </div>
 </div>
 </body>

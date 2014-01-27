@@ -4781,7 +4781,263 @@ http://www.gnu.org/software/src-highlite -->
 <h2 id="_exercise_39_dictionaries_oh_lovely_dictionaries">39. Exercise_39_Dictionaries_Oh_Lovely_Dictionaries</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_5">39.1. Lesson Notes</h3>
+<h3 id="_dictionaries">39.1. Dictionaries</h3>
+</div>
+<div class="sect2">
+<h3 id="_thoughts_on_my_last_game">39.2. Thoughts on my last game</h3>
+<div class="paragraph"><p><strong>I could have used a dictionary vs comparing two lists!</strong></p></div>
+</div>
+<div class="sect2">
+<h3 id="_quick_tip_for_dictionaries_use_a_different_bracket">39.3. Quick Tip for Dictionaries - { use a different bracket }</h3>
+<div class="paragraph"><p>Dictionaries use curly braces, vs straight</p></div>
+</div>
+<div class="sect2">
+<h3 id="_quick_tip_for_dictionaries_vs">39.4. Quick Tip for Dictionaries ' vs "</h3>
+<div class="paragraph"><p>Not sure if it is just style. But notice that ticks vs quotes are used. (single vs double)</p></div>
+</div>
+<div class="sect2">
+<h3 id="_example_dictionary_list">39.5. Example dictionary list</h3>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>dictionaryname<span style="color: #990000">[</span><span style="color: #FF0000">'room_message'</span> <span style="color: #990000">:</span> <span style="color: #FF0000">'which door do you choose'</span> <span style="color: #990000">,</span><span style="color: #FF0000">'Door 1'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'room_fired'</span><span style="color: #990000">,</span> <span style="color: #FF0000">'Door 2'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'room_promoted'</span><span style="color: #990000">,</span> <span style="color: #FF0000">'Door 3'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'room_day_off'</span><span style="color: #990000">]</span></tt></pre></div></div>
+<div class="paragraph"><p>print dictionaryname[<em>room_message</em>]
+&gt;&gt;&gt; which door do you choose</p></div>
+</div>
+<div class="sect2">
+<h3 id="_inserting_new_item_into_dictionary">39.6. inserting new item into dictionary</h3>
+<div class="paragraph"><p>You can just call out the field, and the data.</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>dictionaryname<span style="color: #990000">[</span><span style="color: #FF0000">'Door 4'</span><span style="color: #990000">]</span> <span style="color: #990000">=</span> <span style="color: #FF0000">'room_delegate'</span></tt></pre></div></div>
+<div class="paragraph"><p>&gt;&gt;&gt;&gt; print dictionaryname
+{<em>room_message</em> : <em>which door do you choose</em> ,<em>Door 1</em>: <em>room_fired</em>, <em>Door 2</em>: <em>room_promoted</em>, <em>Door 3</em>: <em>room_day_off</em>]}</p></div>
+</div>
+<div class="sect2">
+<h3 id="_deleting_from_a_dictionary">39.7. Deleting from a dictionary</h3>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-style: italic"><span style="color: #9A1900"># delete by name</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">del</span></span> dictionaryname<span style="color: #990000">[</span><span style="color: #FF0000">'Door 1'</span><span style="color: #990000">]</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># delete by index number</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">del</span></span> dictionaryname <span style="color: #990000">[</span><span style="color: #993399">2</span><span style="color: #990000">]</span></tt></pre></div></div>
+<div class="paragraph"><p>&gt;&gt;&gt;&gt; print dictionaryname
+{<em>room_message</em> : <em>which door do you choose</em> , <em>Door 3</em>: <em>room_day_off</em>]}</p></div>
+</div>
+<div class="sect2">
+<h3 id="_dictname_items_the_items_operator">39.8. dictname.items() - the items operator</h3>
+<div class="paragraph"><p>something .items() prints out the objects with th list or dictionary they refer too</p></div>
+</div>
+<div class="sect2">
+<h3 id="_combine_two_dicts_in_a_print_statement">39.9. Combine two dicts in a print statement</h3>
+<div class="paragraph"><p>you can lookup an item across two dictionaries in one statemetn</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>listname1<span style="color: #990000">[</span>comparedlistname<span style="color: #990000">[</span><span style="color: #FF0000">'lookup'</span><span style="color: #990000">]]</span></tt></pre></div></div>
+<div class="paragraph"><p>This example looks up the city by putting in the state abbreviation (which is effectively the key in the dict)</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">'_'</span> <span style="color: #990000">*</span> <span style="color: #993399">10</span>
+<span style="font-weight: bold"><span style="color: #0000FF">for</span></span> state<span style="color: #990000">,</span> abbrev <span style="font-weight: bold"><span style="color: #0000FF">in</span></span> states<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">items</span></span><span style="color: #990000">():</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"%s state is abbreviated %s and has city %s"</span> <span style="color: #990000">%</span> <span style="color: #990000">(</span>
+                state<span style="color: #990000">,</span> abbrev<span style="color: #990000">,</span> cities<span style="color: #990000">[</span>abbrev<span style="color: #990000">])</span></tt></pre></div></div>
+</div>
+<div class="sect2">
+<h3 id="_special_word_none">39.10. Special word - None</h3>
+<div class="paragraph"><p>in tihs example the word None is used to represent the absense of a value.</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>state <span style="color: #990000">=</span> states<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">get</span></span><span style="color: #990000">(</span><span style="color: #FF0000">'Texas'</span><span style="color: #990000">,</span> None<span style="color: #990000">)</span></tt></pre></div></div>
+</div>
+<div class="sect2">
+<h3 id="_get_method">39.11. .get() method</h3>
+<div class="paragraph"><p>Return a value for a specific key</p></div>
+<div class="paragraph"><p>In this example we are getting the key for <em>TX</em></p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-style: italic"><span style="color: #9A1900"># get a city with a default value</span></span>
+city <span style="color: #990000">=</span>  cities<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">get</span></span><span style="color: #990000">(</span><span style="color: #FF0000">'TX'</span><span style="color: #990000">,</span> <span style="color: #FF0000">'Does Not Exist'</span><span style="color: #990000">)</span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"The city for the state 'TX' is: %s"</span> <span style="color: #990000">%</span> city</tt></pre></div></div>
+</div>
+<div class="sect2">
+<h3 id="_key_error">39.12. Key error</h3>
+<div class="paragraph"><p>Python raises a KeyError whenever a dict() object is requested (using the format a = adict[key]) and the key is not in the dictionary.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_what_can_8217_t_you_do_with_dictionaries">39.13. What can&#8217;t you do with dictionaries?</h3>
+<div class="paragraph"><p># duplcate keys - only displays the last one
+# you can get around this by storing lists or sets inside of the dictionary</p></div>
+<div class="paragraph"><p># you can get a dictionary of lists by using the following</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-weight: bold"><span style="color: #000080">from</span></span> collections <span style="font-weight: bold"><span style="color: #000080">import</span></span> defaultdict
+data_dict <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">defaultdict</span></span><span style="color: #990000">(</span>list<span style="color: #990000">)</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># all you have to do is replace</span></span>
+data_dict<span style="color: #990000">[</span>regNumber<span style="color: #990000">]</span> <span style="color: #990000">=</span> details
+
+<span style="font-style: italic"><span style="color: #9A1900"># with</span></span>
+data_dict<span style="color: #990000">[</span>regNumber<span style="color: #990000">].</span><span style="font-weight: bold"><span style="color: #000000">append</span></span><span style="color: #990000">(</span>details<span style="color: #990000">)</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># and you'll get a dictionary of lists</span></span></tt></pre></div></div>
+</div>
+<div class="sect2">
+<h3 id="_my_switch_host_location_code_created_from_lesson">39.14. My switch, host, location code created from lesson</h3>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-style: italic"><span style="color: #9A1900"># Create a mapping of labs</span></span>
+labs <span style="color: #990000">=</span> <span style="color: #990000">{</span>
+        <span style="color: #FF0000">'Pleasanton-Lab'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'SW1'</span><span style="color: #990000">,</span>
+        <span style="color: #FF0000">'Irvine-Lab'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'SW2'</span><span style="color: #990000">,</span>
+        <span style="color: #FF0000">'Atlanta-Lab'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'SW3'</span>
+<span style="color: #990000">}</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># Define what ports are on each switch</span></span>
+switchports <span style="color: #990000">=</span> <span style="color: #990000">{</span>
+        <span style="color: #FF0000">'SW1'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'Ge1-1'</span><span style="color: #990000">,</span>
+        <span style="color: #FF0000">'SW2'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'Ge2-1'</span><span style="color: #990000">,</span>
+        <span style="color: #FF0000">'SW3'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'Ge3-1'</span>
+<span style="color: #990000">}</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># create a host port mapping</span></span>
+hosts_switchports <span style="color: #990000">=</span> <span style="color: #990000">{</span>
+        <span style="color: #FF0000">'Ge1-1'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'puppet.denicacloud.com'</span><span style="color: #990000">,</span>
+        <span style="color: #FF0000">'Ge2-1'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'jenkins.denicacloud.com'</span><span style="color: #990000">,</span>
+        <span style="color: #FF0000">'Ge3-1'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'gerrit.denicacloud.com'</span>
+<span style="color: #990000">}</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># Note this only prints out a single (the last) item</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">'_'</span> <span style="color: #990000">*</span> <span style="color: #993399">10</span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"Atlanta-Lab contains"</span><span style="color: #990000">,</span> labs<span style="color: #990000">[</span><span style="color: #FF0000">'Atlanta-Lab'</span><span style="color: #990000">]</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># Print out a specific host port location</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">'_'</span> <span style="color: #990000">*</span> <span style="color: #993399">10</span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"Ge1-1 will always contain "</span><span style="color: #990000">,</span> hosts_switchports<span style="color: #990000">[</span><span style="color: #FF0000">'Ge1-1'</span><span style="color: #990000">]</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># Look up based on labs then switchport dict</span></span>
+<span style="font-style: italic"><span style="color: #9A1900"># Returns the last item in list</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">'_'</span> <span style="color: #990000">*</span> <span style="color: #993399">10</span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"Irvine-lab port is: "</span><span style="color: #990000">,</span> switchports<span style="color: #990000">[</span>labs<span style="color: #990000">[</span><span style="color: #FF0000">'Irvine-Lab'</span><span style="color: #990000">]]</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># Print out every lab labs</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">'_'</span> <span style="color: #990000">*</span> <span style="color: #993399">10</span>
+<span style="font-weight: bold"><span style="color: #0000FF">for</span></span> lab<span style="color: #990000">,</span> switch <span style="font-weight: bold"><span style="color: #0000FF">in</span></span> labs<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">items</span></span><span style="color: #990000">():</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"%s is located in %s"</span> <span style="color: #990000">%</span> <span style="color: #990000">(</span>switch<span style="color: #990000">,</span> lab<span style="color: #990000">)</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># Multi-lookup Print out hosts in switch in lab</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">'_'</span> <span style="color: #990000">*</span> <span style="color: #993399">10</span>
+<span style="font-weight: bold"><span style="color: #0000FF">for</span></span> lab<span style="color: #990000">,</span> abbrev <span style="font-weight: bold"><span style="color: #0000FF">in</span></span> labs<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">items</span></span><span style="color: #990000">():</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"%s contains %s which has port %s"</span> <span style="color: #990000">%</span> <span style="color: #990000">(</span>lab<span style="color: #990000">,</span> abbrev<span style="color: #990000">,</span>
+                switchports<span style="color: #990000">[</span>abbrev<span style="color: #990000">])</span><span style="font-style: italic"><span style="color: #9A1900">#</span></span>
+
+<span style="font-style: italic"><span style="color: #9A1900">## multi-mutli lookup. Lookup what hosts are containted in each lab</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">'_'</span> <span style="color: #990000">*</span> <span style="color: #993399">10</span>
+<span style="font-weight: bold"><span style="color: #0000FF">for</span></span> lab<span style="color: #990000">,</span> abbrev <span style="font-weight: bold"><span style="color: #0000FF">in</span></span> labs<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">items</span></span><span style="color: #990000">():</span>
+        switch <span style="color: #990000">=</span> abbrev
+<span style="font-style: italic"><span style="color: #9A1900">#       print "Switch = %s" % switch</span></span>
+        returned_port <span style="color: #990000">=</span> switchports<span style="color: #990000">[</span>switch<span style="color: #990000">]</span>
+<span style="font-style: italic"><span style="color: #9A1900">#       print "Returned Port = %s" % returned_port</span></span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"%s contains %s which has host %s on port %s "</span> <span style="color: #990000">%</span> <span style="color: #990000">(</span>lab<span style="color: #990000">,</span> switch<span style="color: #990000">,</span>
+         hosts_switchports<span style="color: #990000">[</span>returned_port<span style="color: #990000">],</span> switchports<span style="color: #990000">[</span>switch<span style="color: #990000">])</span>
+</tt></pre></div></div>
+</div>
+<div class="sect2">
+<h3 id="_lesson_code">39.15. Lesson code</h3>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-style: italic"><span style="color: #9A1900"># Create a mapping of state to abbreviation</span></span>
+states <span style="color: #990000">=</span> <span style="color: #990000">{</span>
+        <span style="color: #FF0000">'Oregon'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'OR'</span><span style="color: #990000">,</span>
+        <span style="color: #FF0000">'Florida'</span><span style="color: #990000">:</span> <span style="color: #FF0000">"FL"</span><span style="color: #990000">,</span>
+        <span style="color: #FF0000">'California'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'CA'</span><span style="color: #990000">,</span>
+        <span style="color: #FF0000">'New York'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'NY'</span><span style="color: #990000">,</span>
+        <span style="color: #FF0000">'Michigan'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'MI'</span>
+<span style="color: #990000">}</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># Create a basic set of states and some cities in them</span></span>
+cities <span style="color: #990000">=</span> <span style="color: #990000">{</span>
+        <span style="color: #FF0000">'CA'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'San Francisco'</span><span style="color: #990000">,</span>
+        <span style="color: #FF0000">'MI'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'Detroit'</span><span style="color: #990000">,</span>
+        <span style="color: #FF0000">'FL'</span><span style="color: #990000">:</span> <span style="color: #FF0000">'Jacksonville'</span>
+<span style="color: #990000">}</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># Add some more cities</span></span>
+cities<span style="color: #990000">[</span><span style="color: #FF0000">'NY'</span><span style="color: #990000">]</span> <span style="color: #990000">=</span> <span style="color: #FF0000">'New York'</span>
+cities<span style="color: #990000">[</span><span style="color: #FF0000">'OR'</span><span style="color: #990000">]</span> <span style="color: #990000">=</span> <span style="color: #FF0000">'Portland'</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># print out some cities</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">'_'</span> <span style="color: #990000">*</span> <span style="color: #993399">10</span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"NY State has: "</span><span style="color: #990000">,</span> cities<span style="color: #990000">[</span><span style="color: #FF0000">'NY'</span><span style="color: #990000">]</span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"OR State has: "</span><span style="color: #990000">,</span> cities<span style="color: #990000">[</span><span style="color: #FF0000">'OR'</span><span style="color: #990000">]</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># print some states</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">'_'</span> <span style="color: #990000">*</span> <span style="color: #993399">10</span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"Michigan's abbreviation is: "</span><span style="color: #990000">,</span> states<span style="color: #990000">[</span><span style="color: #FF0000">'Michigan'</span><span style="color: #990000">]</span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"Florida's abbreviation is: "</span><span style="color: #990000">,</span> states<span style="color: #990000">[</span><span style="color: #FF0000">'Florida'</span><span style="color: #990000">]</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># do it by using the state then cities dict</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">'_'</span> <span style="color: #990000">*</span> <span style="color: #993399">10</span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"Michigan has: "</span><span style="color: #990000">,</span> cities<span style="color: #990000">[</span>states<span style="color: #990000">[</span><span style="color: #FF0000">'Michigan'</span><span style="color: #990000">]]</span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"Florida has: "</span><span style="color: #990000">,</span> cities<span style="color: #990000">[</span>states<span style="color: #990000">[</span><span style="color: #FF0000">'Florida'</span><span style="color: #990000">]]</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># print every state abbreviation</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">'_'</span> <span style="color: #990000">*</span> <span style="color: #993399">10</span>
+<span style="font-weight: bold"><span style="color: #0000FF">for</span></span> state<span style="color: #990000">,</span> abbrev <span style="font-weight: bold"><span style="color: #0000FF">in</span></span> states<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">items</span></span><span style="color: #990000">():</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"%s is abbreviated %s"</span> <span style="color: #990000">%</span> <span style="color: #990000">(</span>state<span style="color: #990000">,</span> abbrev<span style="color: #990000">)</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># print every city in state</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">'_'</span> <span style="color: #990000">*</span> <span style="color: #993399">10</span>
+<span style="font-weight: bold"><span style="color: #0000FF">for</span></span> city<span style="color: #990000">,</span> abbrev <span style="font-weight: bold"><span style="color: #0000FF">in</span></span> cities<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">items</span></span><span style="color: #990000">():</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"%s has the city %s"</span> <span style="color: #990000">%</span> <span style="color: #990000">(</span>abbrev<span style="color: #990000">,</span> city<span style="color: #990000">)</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># now do both at the same time</span></span>
+<span style="font-style: italic"><span style="color: #9A1900"># this looks up the city by the state abbrevation</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">'_'</span> <span style="color: #990000">*</span> <span style="color: #993399">10</span>
+<span style="font-weight: bold"><span style="color: #0000FF">for</span></span> state<span style="color: #990000">,</span> abbrev <span style="font-weight: bold"><span style="color: #0000FF">in</span></span> states<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">items</span></span><span style="color: #990000">():</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"%s state is abbreviated %s and has city %s"</span> <span style="color: #990000">%</span> <span style="color: #990000">(</span>
+                state<span style="color: #990000">,</span> abbrev<span style="color: #990000">,</span> cities<span style="color: #990000">[</span>abbrev<span style="color: #990000">])</span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">'_'</span> <span style="color: #990000">*</span> <span style="color: #993399">10</span>
+<span style="font-style: italic"><span style="color: #9A1900"># safely get a abbreviation by state that might not be there</span></span>
+state <span style="color: #990000">=</span> states<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">get</span></span><span style="color: #990000">(</span><span style="color: #FF0000">'Texas'</span><span style="color: #990000">,</span> None<span style="color: #990000">)</span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="font-weight: bold"><span style="color: #0000FF">not</span></span> state<span style="color: #990000">:</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"Sorry no Texas."</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># get a city with a default value</span></span>
+city <span style="color: #990000">=</span>  cities<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">get</span></span><span style="color: #990000">(</span><span style="color: #FF0000">'TX'</span><span style="color: #990000">,</span> <span style="color: #FF0000">'Does Not Exist'</span><span style="color: #990000">)</span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"The city for the state 'TX' is: %s"</span> <span style="color: #990000">%</span> city</tt></pre></div></div>
 </div>
 </div>
 </div>
@@ -4789,7 +5045,7 @@ http://www.gnu.org/software/src-highlite -->
 <h2 id="_exercise_40_modules_classes_and_objects">40. Exercise_40_Modules_Classes_And_Objects</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_6">40.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_5">40.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -4797,7 +5053,7 @@ http://www.gnu.org/software/src-highlite -->
 <h2 id="_exercise_41_learning_to_speak_object_oriented">41. Exercise_41_Learning_To_Speak_Object_Oriented</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_7">41.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_6">41.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -4805,7 +5061,7 @@ http://www.gnu.org/software/src-highlite -->
 <h2 id="_exercise_42_is_a_has_a_objects_and_classes">42. Exercise_42_Is-A_Has-A_Objects_and_Classes</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_8">42.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_7">42.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -4813,7 +5069,7 @@ http://www.gnu.org/software/src-highlite -->
 <h2 id="_exercise_43_gothons_from_planet_percal__25">43. Exercise_43_Gothons_From_Planet_Percal_#25</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_9">43.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_8">43.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -4821,7 +5077,7 @@ http://www.gnu.org/software/src-highlite -->
 <h2 id="_exercise_44_inheritance_vs_composition">44. Exercise_44_Inheritance_Vs_Composition</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_10">44.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_9">44.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -4829,7 +5085,7 @@ http://www.gnu.org/software/src-highlite -->
 <h2 id="_exercise_45_you_make_a_game">45. Exercise_45_You_Make_A_Game</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_11">45.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_10">45.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -4837,7 +5093,7 @@ http://www.gnu.org/software/src-highlite -->
 <h2 id="_exercise_46_a_project_skeleton">46. Exercise_46_A_Project_Skeleton</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_12">46.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_11">46.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -4845,7 +5101,7 @@ http://www.gnu.org/software/src-highlite -->
 <h2 id="_exercise_47_automated_testing">47. Exercise_47_Automated_Testing</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_13">47.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_12">47.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -4853,7 +5109,7 @@ http://www.gnu.org/software/src-highlite -->
 <h2 id="_exercise_48_advanced_user_input">48. Exercise_48_Advanced_User_Input</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_14">48.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_13">48.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -4861,7 +5117,7 @@ http://www.gnu.org/software/src-highlite -->
 <h2 id="_exercise_49_making_sentences">49. Exercise_49_Making_Sentences</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_15">49.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_14">49.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -4869,7 +5125,7 @@ http://www.gnu.org/software/src-highlite -->
 <h2 id="_exercise_50_your_first_website">50. Exercise_50_Your_First_Website</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_16">50.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_15">50.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -4877,7 +5133,7 @@ http://www.gnu.org/software/src-highlite -->
 <h2 id="_exercise_51_getting_input_from_a_browser">51. Exercise_51_Getting_Input_From_A_Browser</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_17">51.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_16">51.1. Lesson Notes</h3>
 </div>
 </div>
 </div>

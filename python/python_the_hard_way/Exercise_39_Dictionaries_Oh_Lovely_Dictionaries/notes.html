@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="generator" content="Asciidoctor 0.1.4">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lesson Notes</title>
+<title>Dictionaries</title>
 <link rel="stylesheet" href="./asciidoctor.css">
 </head>
 <body class="article">
@@ -12,13 +12,68 @@
 </div>
 <div id="content">
 <div class="sect2">
-<h3 id="_lesson_notes">Lesson Notes</h3>
+<h3 id="_dictionaries">Dictionaries</h3>
 
+</div>
+<div class="sect2">
+<h3 id="_thoughts_on_my_last_game">Thoughts on my last game</h3>
+<div class="paragraph">
+<p><strong>I could have used a dictionary vs comparing two lists!</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_quick_tip_for_dictionaries_use_a_different_bracket">Quick Tip for Dictionaries - { use a different bracket }</h3>
+<div class="paragraph">
+<p>Dictionaries use curly braces, vs straight</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_dictionary_list">Example dictionary list</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="python language-python">dictionaryname['room_message' : 'which door do you choose' ,'Door 1': 'room_fired', 'Door 2': 'room_promoted', 'Door 3': 'room_day_off']</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>print dictionaryname[<em>room_message</em>]
+&gt;&gt;&gt; which door do you choose</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_inserting_new_item_into_dictionary">inserting new item into dictionary</h3>
+<div class="paragraph">
+<p>You can just call out the field, and the data.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="python language-python">dictionaryname['Door 4'] = 'room_delegate'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>&gt;&gt;&gt;&gt; print dictionaryname
+{<em>room_message</em> : <em>which door do you choose</em> ,<em>Door 1</em>: <em>room_fired</em>, <em>Door 2</em>: <em>room_promoted</em>, <em>Door 3</em>: <em>room_day_off</em>]}</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_deleting_from_a_dictionary">Deleting from a dictionary</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="python language-python"># delete by name
+del dictionaryname['Door 1']
+
+# delete by index number
+del dictionaryname [2]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>&gt;&gt;&gt;&gt; print dictionaryname
+{<em>room_message</em> : <em>which door do you choose</em> , <em>Door 3</em>: <em>room_day_off</em>]}</p>
+</div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-01-23 07:12:29 PST
+Last updated 2014-01-27 06:04:34 PST
 </div>
 </div>
 </body>

@@ -1,0 +1,778 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"you",
+				"you_got_promoted"
+			],
+			[
+				"user",
+				"user_choice"
+			],
+			[
+				"inpu",
+				"input_within_bounds_of_list_item"
+			],
+			[
+				"room_ho",
+				"room_oh_crap_conference_statement"
+			],
+			[
+				"oh",
+				"oh_crap_conference_list_action"
+			],
+			[
+				"oh_crap_conference",
+				"oh_crap_conference_list_action_input"
+			],
+			[
+				"print_",
+				"print_all_choices_with_number"
+			],
+			[
+				"action",
+				"action_name"
+			],
+			[
+				"prin",
+				"print_list_names"
+			],
+			[
+				"oh_",
+				"oh_crap_conference_list_name"
+			],
+			[
+				"room",
+				"room_just_go"
+			],
+			[
+				"room_",
+				"room_delegation"
+			],
+			[
+				"ctu",
+				"cthulhu_room"
+			],
+			[
+				"ch",
+				"cthulhu_room"
+			],
+			[
+				"fr",
+				"formatter"
+			],
+			[
+				"joke",
+				"joke_evaluation"
+			],
+			[
+				"wi",
+				"weight_kilogram"
+			],
+			[
+				"he",
+				"height_centimeters"
+			],
+			[
+				"car",
+				"carpool_capacity"
+			],
+			[
+				"sab",
+				"sabnzbd_category"
+			],
+			[
+				"sa",
+				"sabnzbd"
+			],
+			[
+				"cali",
+				"Calibre-in"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "notes.asc",
+			"settings":
+			{
+				"buffer_size": 4932,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Exercise_38_Doing_Things_To_Lists/notes.asc",
+			"settings":
+			{
+				"buffer_size": 3422,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Exercise_38_Doing_Things_To_Lists/ex38.py",
+			"settings":
+			{
+				"buffer_size": 679,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/User/Asciidoc.sublime-build",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"pus",
+				"Git: Push"
+			],
+			[
+				"com",
+				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Add..."
+			],
+			[
+				"git ad",
+				"Git: Add..."
+			],
+			[
+				"pu",
+				"Git: Push"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"gid ad",
+				"Git: Add..."
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git add",
+				"Git: Add..."
+			],
+			[
+				"git co",
+				"Git: Commit"
+			],
+			[
+				"qui",
+				"Git: Quick Commit"
+			],
+			[
+				"COMMIT",
+				"Git: Commit history"
+			],
+			[
+				"git",
+				"Git: Commit history"
+			],
+			[
+				"QUI",
+				"Git: Quick Commit"
+			],
+			[
+				"qu",
+				"Git: Quick Commit"
+			],
+			[
+				"quo",
+				"Git: Quick Commit"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"gita dd",
+				"Git: Add..."
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"ad",
+				"Git: Add..."
+			],
+			[
+				"q",
+				"Git: Quick Commit"
+			],
+			[
+				"a",
+				"Git: Amend Commit"
+			],
+			[
+				"ame",
+				"Git: Amend Commit"
+			],
+			[
+				"git ",
+				"Git: Commit"
+			],
+			[
+				"git  qui",
+				"Git: Quick Commit"
+			],
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"git pu",
+				"Git: Push"
+			],
+			[
+				"git add ",
+				"Git: Add..."
+			],
+			[
+				"quic",
+				"Git: Quick Commit"
+			],
+			[
+				"status",
+				"Git: Status"
+			],
+			[
+				"git qu",
+				"Git: Quick Commit"
+			],
+			[
+				"git qui",
+				"Git: Quick Commit"
+			],
+			[
+				"COM",
+				"Git: Commit history"
+			],
+			[
+				"an",
+				"Git: Amend Commit"
+			],
+			[
+				"am",
+				"Git: Amend Commit"
+			],
+			[
+				"git am",
+				"Git: Amend Commit"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Discover Packages"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Discover Packages"
+			],
+			[
+				"ascii",
+				"Set Syntax: AsciiDoc"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 584.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_37_Symbol_Review/ex37.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_37_Symbol_Review/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_36_Designing_and_Debugging/conference-game.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_36_Designing_and_Debugging/ex36-game.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_36_Designing_and_Debugging/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_35_Branches_and_Functions/ex35.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_35_Branches_and_Functions/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_34_Accessing_Elements_Of_Lists/ex34.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_34_Accessing_Elements_Of_Lists/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_6_Strings_And_Text/notes.html",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_6_Strings_And_Text/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_6_Strings_And_Text/ex6.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_5_More_Variables_And_Printing/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_5_More_Variables_And_Printing/ex5.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/folderlist.txt",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_0_The_Setup/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_10_What_Was_That?/ex10-drills.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_10_What_Was_That?/ex10-fun.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_10_What_Was_That?/ex10.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_10_What_Was_That?/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_10_What_Was_That?/notes.html",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_11_Asking_Questions/ex11-ucs.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_11_Asking_Questions/ex11.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_11_Asking_Questions/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_12_Prompting_People/ex12.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_12_Prompting_People/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_14_Prompting_And_Passing/ex14.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_14_Prompting_And_Passing/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_15_Reading_Files/ex15.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_15_Reading_Files/ex15_sample.txt",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_15_Reading_Files/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_16_Reading_And_Writing_Files/ex16-1.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_16_Reading_And_Writing_Files/ex16.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_16_Reading_And_Writing_Files/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_16_Reading_And_Writing_Files/test.txt",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_17_More_Files/ex17.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_17_More_Files/new_file.txt",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_17_More_Files/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_17_More_Files/notes.html",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_17_More_Files/test.txt",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_1_A_Good_First_Program/ex1.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_1_A_Good_First_Program/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_20_Functions_And_Files/ex20.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_20_Functions_And_Files/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_20_Functions_And_Files/test.txt",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_21_Functions_Can_Return_Something/ex21.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_21_Functions_Can_Return_Something/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_22_What_Do_You_Know_So_Far?/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_24_More_Practice/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_25_Even_More_Practice/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_27_Memorizing_Logic/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_28_Boolean_Practice/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_29_What_If/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_2_Comments_And_Pound_Characters/ex2.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_2_Comments_And_Pound_Characters/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_30_Else_And_If/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_31_Making_Decisions/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_32_Loops_And_Lists/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_33_While_Loops/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_38_Doing_Things_To_Lists/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_3_Numbers_And_Math/ex3.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_3_Numbers_And_Math/hours-in-year.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_3_Numbers_And_Math/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_43_Gothons_From_Planet_Percal_#25/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_46_A_Project_Skeleton/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_47_Automated_Testing/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_48_Advanced_User_Input/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_4_Variables_And_Names/ex4.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_4_Variables_And_Names/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_4_Variables_And_Names/notes.html",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_50_Your_First_Website/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_51_Getting_Input_From_A_Browser/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_52_The_Start_Of_Your_Web_Game/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_5_More_Variables_And_Printing/notes.html",
+		"/Users/cmcnamara/code/nexus/nexus-biz-reporting/doc/sprint4.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_8_Printing,_Printing/ex8.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_44_Inheritance_Vs._Composition/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_42_Is-A,_Has-A,_Objects,_and_Classes/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_40_Modules,_Classes,_And_Objects/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_39_Dictionaries,_Oh_Lovely_Dictionaries/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_18_Names,_Variables,_Code,_Functions/notes.html",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_18_Names,_Variables,_Code,_Functions/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_18_Names,_Variables,_Code,_Functions/ex18.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_13_Parameters,_Unpacking,_Variables/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_13_Parameters,_Unpacking,_Variables/ex13.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_13_Parameters,_Unpacking,_Variables/ex13-one-arg.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_13_Parameters,_Unpacking,_Variables/ex13-5-arg.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_13_Parameters,_Unpacking,_Variables/ex13-5-arg-nexus-VPC config.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_13_Parameters,_Unpacking,_Variables/ex13-2.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_8_Printing,_Printing/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_9_Printing,_Printing,_Printing/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_8_Printing,_Printing/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_52_The_Start_Of_Your_Web_Game/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_51_Getting_Input_From_A_Browser/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_50_Your_First_Website/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_4_Variables_And_Names/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_49_Making_Sentences/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_48_Advanced_User_Input/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_47_Automated_Testing/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_46_A_Project_Skeleton/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_45_You_Make_A_Game/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_44_Inheritance_Vs._Composition/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_41_Learning_To_Speak_Object_Oriented/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_40_Modules,_Classes,_And_Objects/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_3_Numbers_And_Math/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_38_Doing_Things_To_Lists/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_37_Symbol_Review/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_35_Branches_and_Functions/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_34_Accessing_Elements_Of_Lists/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_33_While_Loops/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_32_Loops_And_Lists/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_31_Making_Decisions/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_2_Comments_And_Pound_Characters/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_29_What_If/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_28_Boolean_Practice/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_27_Memorizing_Logic/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_25_Even_More_Practice/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_24_More_Practice/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_23_Read_Some_Code/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_22_What_Do_You_Know_So_Far?/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_21_Functions_Can_Return_Something/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_20_Functions_And_Files/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_19_Functions_And_Variables/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_18_Names,_Variables,_Code,_Functions/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_17_More_Files/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_16_Reading_And_Writing_Files/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_15_Reading_Files/*",
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_14_Prompting_And_Passing/*"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"=== Term",
+			"Definition",
+			"Term",
+			"delegation",
+			"day_off",
+			"day_off_",
+			"choices",
+			"conference",
+			"func_action_name",
+			"oh_crap_",
+			"func_listname",
+			"action_name",
+			"why",
+			"list_name",
+			"room_statement",
+			"room_name",
+			"user_choice",
+			"(s)",
+			"listname",
+			"global",
+			"listname_action",
+			"print_list_names",
+			"room_oh_crap_conference_list",
+			"()",
+			"listname",
+			"oh_crap_conference_list",
+			"#",
+			"#====",
+			"#= ",
+			"#=",
+			"#== ",
+			"#=== ",
+			"#= ",
+			"#=",
+			"notes.asc",
+			"computer",
+			"domino",
+			"%r",
+			"%R",
+			"%r",
+			"file",
+			"raw_input",
+			"%r",
+			"%d",
+			"my_",
+			"PS1",
+			"cars",
+			"source",
+			"simple",
+			"notes.asc",
+			"echo \"= Lesson Notes\" > ",
+			"\n#",
+			"print",
+			":\"",
+			"=",
+			">>",
+			"cat",
+			"README.md",
+			"touch",
+			"mkdir ",
+			"Exercise",
+			" ",
+			"Game",
+			" ",
+			":",
+			"              <h1><a href=\"index.html\">Learn Python The Hard Way</a></h1>",
+			"              <h1><a href=\"/book/index.html\">Learn Python The Hard Way</a></h1>",
+			"              <h1><a href=\"index.html\">Learn Python The Hard Way</a></h1>",
+			"              <h1><a href=\"./index.html\">Learn Python The Hard Way</a></h1>",
+			"              <h1><a href=\"/index.html\">Learn Python The Hard Way</a></h1>",
+			"              <h1><a href=\"../index.html\">Learn Python The Hard Way</a></h1>",
+			"<div data-paydiv",
+			"\n        <div class=\"section\" id=\"video\">\n            <div class=\"large-12 columns panel\">\n                <div data-paydiv_product=\"2\" id='paydiv'>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <div class=\"large-1 columns\" id=\"right-nav\">\n        <center>\n        <p><a href=\"index.html\"><img src=\"images/48_structure.png\"></a></p>\n        <p><a href=\"mailto:help@learncodethehardway.org\"><img src=\"images/48_email.png\"></a></p>\n        <p><a href=\"#common-student-questions\"><img src=\"images/48_faq.png\"></a></p>\n        <p><a href=\"#video\"><img src=\"images/48_video.png\"></a></p>\n        </center>\n    </div>\n\n    <div class=\"twelve columns\" id=\"footer\">\n        <div class=\"large-4 columns\" id=\"footer-block\">\n            <p>\n            <a href=\"http://learncodethehardway.org/\">Copyright (C) 2010 Zed. A. Shaw</a>\n            </p>\n        </div>\n        <div class=\"large-4 columns\" id=\"footer-block\">\n            <p>\n            </p>\n        </div>\n        <div class=\"large-3 columns\" id=\"footer-block\">\n            <p>\n            </p>\n        </div>\n        <div class=\"one columns\">\n            &nbsp;\n        </div>\n    </div>\n\n\n\n    <script src=\"https://paydiv.io/static/js/videojs/video.js\"></script>\n    <link rel=\"stylesheet\" href=\"https://paydiv.io/static/js/videojs/video-js.css\">\n    <script src=\"https://paydiv.io/static/api/v1/paydiv.js\"></script>\n\n  <!-- Included JS Files (Compressed) -->\n  <script type=\"text/javascript\">\n\n  var _gaq = _gaq || [];\n  _gaq.push(['_setAccount', 'UA-24168052-1']);\n  _gaq.push(['_trackPageview']);\n\n  (function() {\n    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;\n    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\n    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);\n  })();\n  </script>\n<script src=\"https://paydiv.io/static/js/videojs/video.js\"></script>\n    <link rel=\"stylesheet\" href=\"https://paydiv.io/static/js/videojs/video-js.css\">\n    <script src=\"https://paydiv.io/static/api/v1/paydiv.js\"></script>\n\n  <!-- Included JS Files (Compressed) -->\n  <script type=\"text/javascript\">\n\n  var _gaq = _gaq || [];\n  _gaq.push(['_setAccount', 'UA-24168052-1']);\n  _gaq.push(['_trackPageview']);\n\n  (function() {\n    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;\n    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\n    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);\n  })();\n  </script>\n",
+			"\n        <div class=\"section\" id=\"video\">\n            <div class=\"large-12 columns panel\">\n                <div data-paydiv_product=\"2\" id='paydiv'>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <div class=\"large-1 columns\" id=\"right-nav\">\n        <center>\n        <p><a href=\"index.html\"><img src=\"images/48_structure.png\"></a></p>\n        <p><a href=\"mailto:help@learncodethehardway.org\"><img src=\"images/48_email.png\"></a></p>\n        <p><a href=\"#common-student-questions\"><img src=\"images/48_faq.png\"></a></p>\n        <p><a href=\"#video\"><img src=\"images/48_video.png\"></a></p>\n        </center>\n    </div>\n\n    <div class=\"twelve columns\" id=\"footer\">\n        <div class=\"large-4 columns\" id=\"footer-block\">\n            <p>\n            <a href=\"http://learncodethehardway.org/\">Copyright (C) 2010 Zed. A. Shaw</a>\n            </p>\n        </div>\n        <div class=\"large-4 columns\" id=\"footer-block\">\n            <p>\n            </p>\n        </div>\n        <div class=\"large-3 columns\" id=\"footer-block\">\n            <p>\n            </p>\n        </div>\n        <div class=\"one columns\">\n            &nbsp;\n        </div>\n    </div>\n\n\n\n    <script src=\"https://paydiv.io/static/js/videojs/video.js\"></script>\n    <link rel=\"stylesheet\" href=\"https://paydiv.io/static/js/videojs/video-js.css\">\n    <script src=\"https://paydiv.io/static/api/v1/paydiv.js\"></script>\n\n  <!-- Included JS Files (Compressed) -->\n  <script type=\"text/javascript\">\n\n  var _gaq = _gaq || [];\n  _gaq.push(['_setAccount', 'UA-24168052-1']);\n  _gaq.push(['_trackPageview']);\n\n  (function() {\n    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;\n    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\n    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);\n  })();\n  </script>\n",
+			".html",
+			"execution",
+			"Guide"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"              <h1><a class=\"reference external\" href=\"index.html\">Learn Python The Hard Way</a></h1>",
+			"              <h1><a href=\"index.html\">Learn Python The Hard Way</a></h1>",
+			"              <h1><a href=\"/book/index.html\">Learn Python The Hard Way</a></h1>",
+			"              <h1><a href=\"index.html\">Learn Python The Hard Way</a></h1>",
+			"              <h1><a href=\"./index.html\">Learn Python The Hard Way</a></h1>",
+			"              <h1><a href=\"/index.html\">Learn Python The Hard Way</a></h1>",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "notes.asc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4932,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								590,
+								590
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"syntax": "Packages/User/AsciiDoc/AsciiDoc.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Exercise_38_Doing_Things_To_Lists/notes.asc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3422,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"syntax": "Packages/User/AsciiDoc/AsciiDoc.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"file": "Exercise_38_Doing_Things_To_Lists/ex38.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 679,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.363728666839,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 196.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 146.0
+	},
+	"output.guard":
+	{
+		"height": 118.0
+	},
+	"project": "python_the_hard_way.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/code/pythonthehardway/lessons/python/python_the_hard_way/python_the_hard_way.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 47.0,
+		"selected_items":
+		[
+			[
+				"replacewith",
+				"replaceWith"
+			]
+		],
+		"width": 392.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 156.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 1
+	}
+}

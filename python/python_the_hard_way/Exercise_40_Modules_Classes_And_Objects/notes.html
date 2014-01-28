@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="generator" content="Asciidoctor 0.1.4">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lesson Notes</title>
+<title>Modules, Classes and Objects</title>
 <link rel="stylesheet" href="./asciidoctor.css">
 </head>
 <body class="article">
@@ -12,13 +12,102 @@
 </div>
 <div id="content">
 <div class="sect2">
-<h3 id="_lesson_notes">Lesson Notes</h3>
+<h3 id="_modules_classes_and_objects">Modules, Classes and Objects</h3>
+<div class="paragraph">
+<p>Apparently the chapter where most people quit.
+Transitioning between scripting and development.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_classess_add_consistency">Classess add consistency</h3>
+<div class="paragraph">
+<p>you can use classes to impart structure.
+This lesson will be the begining in learning about object oriented programming.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_action_read_more_about_oop">ACTION -  read more about OOP</h3>
 
+</div>
+<div class="sect2">
+<h3 id="_modules_are_like_dictionaries">Modules are like dictionaries</h3>
+<div class="paragraph">
+<p>Example dictionary code</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="python language-python"># dictionary with a key 'apple' you want then you do this :
+
+mystuff = {'apple': "I AM APPLES!"}
+print mystuff['apple']</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_modules_are">Modules are</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>A python file with some functions or variables in it</p>
+</li>
+<li>
+<p>You then import that file</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>from blah import blah</p>
+</li>
+<li>
+<p>or import blah (blah = the file / mod you made)</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Then yo ucan access the functions of that module through the <em>.</em>(dot) operator</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_module_named_code_mystuff_py_code_w_a_function_called_code_apple_code">Module named <code>mystuff.py</code> w/ a function called <code>apple</code></h4>
+<div class="paragraph">
+<p>used in example code</p>
+</div>
+<div class="listingblock">
+<div class="title">module we created</div>
+<div class="content">
+<pre class="highlight"><code class="python language-python">def apple():
+	print "I AM APPLES!"
+
+# this is just a variable
+tangerine = "Living reflection of a dream"</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Code that refrenced the module</div>
+<div class="content">
+<pre class="highlight"><code class="python language-python"># dictionary with a key 'apple' you want then you do this :
+
+#mystuff = {'apple': "I AM APPLES!"}
+#print mystuff['apple']
+
+import mystuff
+
+# Necessary to load the apple function apparently.
+mystuff.apple()
+
+def apple():
+	print "I AM APPLES!"
+
+print mystuff.tangerine</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-01-23 07:12:38 PST
+Last updated 2014-01-28 05:01:06 PST
 </div>
 </div>
 </body>

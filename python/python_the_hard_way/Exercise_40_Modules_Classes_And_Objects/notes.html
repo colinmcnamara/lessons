@@ -231,10 +231,65 @@ print thing.tangerine
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_resources">Resources</h3>
+<div class="paragraph">
+<p><a href="http://stackoverflow.com/questions/20216376/learn-python-hard-way-exercise-40-class-query?newreg=c6ccc1d7ddce454ab71b523fff818e22">stackexchange article on lesson 40</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_stackexchange_explanation">StackExchange explanation</h3>
+<div class="paragraph">
+<p>Firstly, linking to the original example is a good idea. I am using line numbers from the original example.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Lines 1 to 8 define a class called Song. A class is exactly like a blueprint for making a new object. Every function that you add to a class will be added to the object when you make the object.</p>
+</li>
+<li>
+<p><code>Song</code> is on the right side on line 10 and 14 because you are making new Song objects, and putting them in variables. You don&#8217;t even need to put the Song object inside a variable. The following would work just fine:</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Song(["Do","Re","Mi"]).sing_me_a_song()</pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>What is the difference between this:</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>print("Hi!")</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And this?</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>message = "Hi!"</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>print(message)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the one you pass a value directly, and in the other you pass a variable that contains the value. Just like "Hi!" is a value, ["Do","Re","Mi"] is a value too. How would you pass the second value to a new Song object?</p>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-01-28 05:27:07 PST
+Last updated 2014-01-28 06:02:09 PST
 </div>
 </div>
 </body>

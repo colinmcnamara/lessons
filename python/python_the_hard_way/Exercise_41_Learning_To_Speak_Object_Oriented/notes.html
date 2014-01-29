@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="generator" content="Asciidoctor 0.1.4">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lesson Notes</title>
+<title>Learning to speak object oriented</title>
 <link rel="stylesheet" href="./asciidoctor.css">
 </head>
 <body class="article">
@@ -12,13 +12,163 @@
 </div>
 <div id="content">
 <div class="sect2">
-<h3 id="_lesson_notes">Lesson Notes</h3>
-
+<h3 id="_learning_to_speak_object_oriented">Learning to speak object oriented</h3>
+<div class="sect3">
+<h4 id="_class">Class</h4>
+<div class="paragraph">
+<p>Tell Python to make a new thing</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_object">object</h4>
+<div class="paragraph">
+<p>Two meanings,
+. the most pasic kind of thing
+. any instance of some thing</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_instance">instance</h4>
+<div class="paragraph">
+<p>what you get when you tell python to create a class</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_def">def</h4>
+<div class="paragraph">
+<p>how you define a function inside a class</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_self">self</h4>
+<div class="paragraph">
+<p>inside the functions in a class, self is a variable for the instance / object being accessed</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_inheritance">inheritance</h4>
+<div class="paragraph">
+<p>The concept that one calss can inherit traits from another class. much like you and your parents</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_composition">composition</h4>
+<div class="paragraph">
+<p>the concept that a class can be composed of other classes as parts, much like how a car has wheels</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_is_a">is-a</h4>
+<div class="paragraph">
+<p>phrase to say that something inherits from another,
+- as in "a salmon is-a fish"</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_has_a">has-a</h4>
+<div class="paragraph">
+<p>phrase to say that something is composed of other things or has a trait
+- as in "a salmon has-a mouth"</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_random_note_on_em_init_em">Random note on <em>init</em>()</h3>
+<div class="paragraph">
+<p>does nothing except check that no argments have been passed in</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_drills_flash_cards">Drills - Flash Cards</h3>
+<div class="sect3">
+<h4 id="_classx_y">classX(Y)</h4>
+<div class="paragraph">
+<p>Make a class named X that is-a Y</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_class_x_object_def_em_init_em_self_j">class X(object): def<em>init</em>(self,J)</h4>
+<div class="paragraph">
+<p>Class X has-a <em>init</em> that takes self and J parameters</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_class_x_object_def_m_self_j">class X(object): def M(self,J)</h4>
+<div class="paragraph">
+<p>class x has-a function named M tha takes takes self an J parameters</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_foo_x">foo = x()</h4>
+<div class="paragraph">
+<p>set foo to an instance of Class X</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_foo_m_j">foo.M(j)</h4>
+<div class="paragraph">
+<p>from foo get the M function and call it with parameters self J # i didn&#8217;t see self here. have to trust the writer&#8230;</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_foo_k_q">foo.k = Q</h4>
+<div class="paragraph">
+<p>from foo get the K attributed at set it to Q</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fill_in_your_self">Fill in your self</h3>
+<div class="paragraph">
+<p>Fill in in english what you think these are</p>
+</div>
+<div class="sect3">
+<h4 id="_class_x_y">class X(Y)</h4>
+<div class="paragraph">
+<p>make a class named X that is-a Y</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_class_x_object_def_em_init_em_self_j_2">class X(object): def<em>init</em>(self,J)</h4>
+<div class="paragraph">
+<p>make a class named X that contanins an <em>init</em> object with itself and J as parameters</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_class_x_object_def_m_self_j_2">class X(object): def M(self,J)</h4>
+<div class="paragraph">
+<p>make a class named X that contains the function M that takes self and J parameters</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_foo_x_2">foo = X()</h4>
+<div class="paragraph">
+<p>set object foo to an instance of class X</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_foo_m_j_2">foo.M(J)</h4>
+<div class="paragraph">
+<p>from foo get function M and call it with parameters J</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_foo_k_q_2">foo.K = Q</h4>
+<div class="paragraph">
+<p>from foo get the K attribute and set it to Q - note the lack of "()"</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_more_notes_strip_method">more notes - .strip() method</h3>
+<div class="paragraph">
+<p>removes <em>all</em> whitespace at the start and the end includeing tabs, newlines and carraige returns</p>
+</div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-01-23 07:12:42 PST
+Last updated 2014-01-29 09:18:33 PST
 </div>
 </div>
 </body>

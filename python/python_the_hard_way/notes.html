@@ -5441,7 +5441,83 @@ What is the difference between this:
 <h2 id="_exercise_42_is_a_has_a_objects_and_classes">42. Exercise_42_Is-A_Has-A_Objects_and_Classes</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_5">42.1. Lesson Notes</h3>
+<h3 id="_is_a_has_a_object_and_classes">42.1. is-a, has-a object and classes</h3>
+</div>
+<div class="sect2">
+<h3 id="_salmon_example">42.2. Salmon Example</h3>
+<div class="paragraph"><p>What is the difference betweek a fish and a salmon?</p></div>
+<div class="paragraph"><p>Fish is a class, Salmon is a class that is contained within the class fish</p></div>
+<div class="paragraph"><p>if you put 3 fish in a bucket, and name 2 of them frank and mary.</p></div>
+<div class="paragraph"><p>All three are class fish</p></div>
+<div class="paragraph"><p>All three are in the class salmon</p></div>
+<div class="paragraph"><p>frank and mary are just an instance of salmon (they are objects)</p></div>
+<div class="paragraph"><p>mary = salmon(her-unique attributes)</p></div>
+<div class="paragraph"><p>They are created from salmon but have unique attributes</p></div>
+</div>
+<div class="sect2">
+<h3 id="_class_2">42.3. Class</h3>
+<div class="paragraph"><p>Class is not a <em>real</em> thing. But rather a word we attache to instances of things with similar attributes</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+fins
+</p>
+</li>
+<li>
+<p>
+gills
+</p>
+</li>
+<li>
+<p>
+lives in water
+</p>
+</li>
+</ol></div>
+<div class="paragraph"><p>probably in class fish</p></div>
+</div>
+<div class="sect2">
+<h3 id="_key_concept_objects_are_created_from_classes">42.4. Key concept - Objects are created from classes.</h3>
+<div class="paragraph"><p>Classes are just the templates that we start with.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_figuring_out_whether_something_is_a_class_or_an_object">42.5. Figuring out whether something is a class or an object</h3>
+<div class="sect3">
+<h4 id="_is_a_vs_has_a">42.5.1. is-a vs has-a</h4>
+<div class="paragraph"><p>when you talk about objects and classes being related to each other by a class relationship you use <strong>is-a</strong></p></div>
+<div class="paragraph"><p><strong>Salmon IS-A fish</strong></p></div>
+<div class="paragraph"><p>when an object or class is only related you use</p></div>
+<div class="paragraph"><p><strong>Salmon HAS-A Gill</strong></p></div>
+<div class="paragraph"><p>Colin <strong>is-a</strong> class human and <strong>has-a</strong> class hand</p></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_self_name">42.6. self.name</h3>
+<div class="paragraph"><p>or blah.name whatever</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>self<span style="color: #990000">.</span>name <span style="color: #990000">=</span> name</tt></pre></div></div>
+<div class="paragraph"><p>gets the object name and sets it as a string. Neet.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_python_super_em_init_em_method">42.7. Python Super <em>init</em> method</h3>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Super lets you avoid referring to the ebase class explicitly.
+</p>
+</li>
+<li>
+<p>
+Main advantage comes from multiple inheritance.
+</p>
+</li>
+</ol></div>
+<div class="paragraph"><p><a href="http://www.artima.com/weblogs/viewpost.jsp?thread=236275">Post on super</a></p></div>
+<div class="paragraph"><p><a href="http://docs.python.org/2/library/functions.html#super">Python Doc&#8217;s on super</a></p></div>
 </div>
 </div>
 </div>
@@ -5449,7 +5525,7 @@ What is the difference between this:
 <h2 id="_exercise_43_gothons_from_planet_percal__25">43. Exercise_43_Gothons_From_Planet_Percal_#25</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_6">43.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_5">43.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -5457,7 +5533,7 @@ What is the difference between this:
 <h2 id="_exercise_44_inheritance_vs_composition">44. Exercise_44_Inheritance_Vs_Composition</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_7">44.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_6">44.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -5465,7 +5541,7 @@ What is the difference between this:
 <h2 id="_exercise_45_you_make_a_game">45. Exercise_45_You_Make_A_Game</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_8">45.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_7">45.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -5473,7 +5549,7 @@ What is the difference between this:
 <h2 id="_exercise_46_a_project_skeleton">46. Exercise_46_A_Project_Skeleton</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_9">46.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_8">46.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -5481,7 +5557,7 @@ What is the difference between this:
 <h2 id="_exercise_47_automated_testing">47. Exercise_47_Automated_Testing</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_10">47.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_9">47.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -5489,7 +5565,7 @@ What is the difference between this:
 <h2 id="_exercise_48_advanced_user_input">48. Exercise_48_Advanced_User_Input</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_11">48.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_10">48.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -5497,7 +5573,7 @@ What is the difference between this:
 <h2 id="_exercise_49_making_sentences">49. Exercise_49_Making_Sentences</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_12">49.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_11">49.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -5505,7 +5581,7 @@ What is the difference between this:
 <h2 id="_exercise_50_your_first_website">50. Exercise_50_Your_First_Website</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_13">50.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_12">50.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -5513,7 +5589,7 @@ What is the difference between this:
 <h2 id="_exercise_51_getting_input_from_a_browser">51. Exercise_51_Getting_Input_From_A_Browser</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_14">51.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_13">51.1. Lesson Notes</h3>
 </div>
 </div>
 </div>

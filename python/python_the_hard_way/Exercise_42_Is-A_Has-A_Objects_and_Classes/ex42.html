@@ -735,90 +735,70 @@ asciidoc.install();
 <div id="header">
 </div>
 <div id="content">
-<div class="sect2">
-<h3 id="_is_a_has_a_object_and_classes">is-a, has-a object and classes</h3>
-</div>
-<div class="sect2">
-<h3 id="_salmon_example">Salmon Example</h3>
-<div class="paragraph"><p>What is the difference betweek a fish and a salmon?</p></div>
-<div class="paragraph"><p>Fish is a class, Salmon is a class that is contained within the class fish</p></div>
-<div class="paragraph"><p>if you put 3 fish in a bucket, and name 2 of them frank and mary.</p></div>
-<div class="paragraph"><p>All three are class fish</p></div>
-<div class="paragraph"><p>All three are in the class salmon</p></div>
-<div class="paragraph"><p>frank and mary are just an instance of salmon (they are objects)</p></div>
-<div class="paragraph"><p>mary = salmon(her-unique attributes)</p></div>
-<div class="paragraph"><p>They are created from salmon but have unique attributes</p></div>
-</div>
-<div class="sect2">
-<h3 id="_class">Class</h3>
-<div class="paragraph"><p>Class is not a <em>real</em> thing. But rather a word we attache to instances of things with similar attributes</p></div>
-<div class="olist arabic"><ol class="arabic">
-<li>
-<p>
-fins
-</p>
-</li>
-<li>
-<p>
-gills
-</p>
-</li>
-<li>
-<p>
-lives in water
-</p>
-</li>
-</ol></div>
-<div class="paragraph"><p>probably in class fish</p></div>
-</div>
-<div class="sect2">
-<h3 id="_key_concept_objects_are_created_from_classes">Key concept - Objects are created from classes.</h3>
-<div class="paragraph"><p>Classes are just the templates that we start with.</p></div>
-</div>
-<div class="sect2">
-<h3 id="_figuring_out_whether_something_is_a_class_or_an_object">Figuring out whether something is a class or an object</h3>
-<div class="sect3">
-<h4 id="_is_a_vs_has_a">is-a vs has-a</h4>
-<div class="paragraph"><p>when you talk about objects and classes being related to each other by a class relationship you use <strong>is-a</strong></p></div>
-<div class="paragraph"><p><strong>Salmon IS-A fish</strong></p></div>
-<div class="paragraph"><p>when an object or class is only related you use</p></div>
-<div class="paragraph"><p><strong>Salmon HAS-A Gill</strong></p></div>
-<div class="paragraph"><p>Colin <strong>is-a</strong> class human and <strong>has-a</strong> class hand</p></div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_self_name">self.name</h3>
-<div class="paragraph"><p>or blah.name whatever</p></div>
-<div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.7
-by Lorenzo Bettini
-http://www.lorenzobettini.it
-http://www.gnu.org/software/src-highlite -->
-<pre><tt>self<span style="color: #990000">.</span>name <span style="color: #990000">=</span> name</tt></pre></div></div>
-<div class="paragraph"><p>gets the object name and sets it as a string. Neet.</p></div>
-</div>
-<div class="sect2">
-<h3 id="_python_super_em_init_em_method">Python Super <em>init</em> method</h3>
-<div class="olist arabic"><ol class="arabic">
-<li>
-<p>
-Super lets you avoid referring to the ebase class explicitly.
-</p>
-</li>
-<li>
-<p>
-Main advantage comes from multiple inheritance.
-</p>
-</li>
-</ol></div>
-<div class="paragraph"><p><a href="http://www.artima.com/weblogs/viewpost.jsp?thread=236275">Post on super</a></p></div>
-<div class="paragraph"><p><a href="http://docs.python.org/2/library/functions.html#super">Python Doc&#8217;s on super</a></p></div>
-</div>
+<div class="paragraph"><p>## Animal is-a object (yes, sort of confusing) look at the extra credit</p></div>
+<div class="paragraph"><p>class Animal(object):
+        pass</p></div>
+<div class="paragraph"><p>## ??</p></div>
+<div class="paragraph"><p>class Dog(Animal):
+        def <em>init</em>(self, name):
+                 ??
+                 self.name gets the object name as a string
+                self.name = name</p></div>
+<div class="paragraph"><p> ??
+class Cat(animal):
+        def <em>init</em>(self, name):
+                 ??
+                ## self.name gets the object name as a string
+                self.name = name</p></div>
+<div class="paragraph"><p> ??
+class Person(object):
+        def <em>init</em>(self, name):
+                 ??
+                self.name = name</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>## Person has-a pet of some kind
+self.pet = None</code></pre>
+</div></div>
+<div class="paragraph"><p> ??
+class Employee(Person):
+        def <em>init</em>(self, name, salary):
+                 ?? What is this strange magic
+                super(Employee, self).<em>_init</em>(name)
+                ## ??
+                self.salary = salary</p></div>
+<div class="paragraph"><p>## ??
+class Fish(object):
+        pass</p></div>
+<div class="paragraph"><p>## ??
+class Salmon(Fish):
+        pass</p></div>
+<div class="paragraph"><p>## ??
+class Halibut(Fish):
+        pass</p></div>
+<div class="paragraph"><p>## roger is-a Dog
+rover = Dog("Rover")</p></div>
+<div class="paragraph"><p>## ??
+satan = Cat("Satan")</p></div>
+<div class="paragraph"><p>## ??
+mary = Person("Mary")</p></div>
+<div class="paragraph"><p>## ??
+mary.pet = satan</p></div>
+<div class="paragraph"><p>## ??
+frank = Employee("Frank", 120000 )</p></div>
+<div class="paragraph"><p>## ??
+frank.pet = rover</p></div>
+<div class="paragraph"><p>## ??
+flipper = Fish()</p></div>
+<div class="paragraph"><p>## ??
+crouse = Salmon()</p></div>
+<div class="paragraph"><p>## ??
+harry = Halibut()</p></div>
 </div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-01-31 06:33:17 PST
+Last updated 2014-01-31 06:37:33 PST
 </div>
 </div>
 </body>

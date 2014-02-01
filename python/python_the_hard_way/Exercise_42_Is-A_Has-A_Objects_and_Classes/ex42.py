@@ -67,12 +67,17 @@ class Fish(object):
 	genus = "Animal"
 	blood = "cold"
 	babies = "Both living eggs"
+	info_dict = {
+	'breathes': 'water',
+	'locomotes': 'swiming'
+}
 	def announce(self):
 		print "-" * 10
 		print "My name is %s and I live in the %s " % (self.name, self.home)
 		print "I am an %s I spawn in %s water and my flesh is %s" % (self.genus , self.spawn_water, self.flesh_color)
 		print "My blood is %s, and I have %s babies" % (self.blood, self.babies)
 		print "I have a %s shape" % (self.shape)
+		print "I breath %s and move around by %s " % (self.info_dict['breathes'], self.info_dict['locomotes'])
 ## make a class Salmon that is-a fish
 class Salmon(Fish):
 	pass
@@ -82,6 +87,10 @@ class Salmon(Fish):
 	spawn_water = "fresh"
 	flesh_color = "pink"
 	shape = "Torpedo"
+	variants = ['chinook', 'king', 'koho']
+	def variant_report(self):
+		for i in self.variants:
+			print "%s is a type of Salmon" % (i)
 #	def announce(self):
 #		print "-" * 10
 #		print "My name is %s and I live in the %s " % (self.name, self.home)
@@ -143,3 +152,6 @@ rover.announce()
 mary.announce()
 crouse.announce()
 harry.announce()
+
+#get information about harry
+crouse.variant_report()

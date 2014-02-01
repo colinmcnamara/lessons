@@ -738,19 +738,21 @@ asciidoc.install();
 <div class="paragraph"><p>## Animal is-a object (yes, sort of confusing) look at the extra credit</p></div>
 <div class="paragraph"><p>class Animal(object):
         pass</p></div>
-<div class="paragraph"><p>## ??</p></div>
-<div class="paragraph"><p>class Dog(Animal):
+<div class="paragraph"><p> Make a class Dog is-an Animal and has-a function called <em>init</em> that takes self and name parameters
+ set the variable name with the name of the object (self.)
+class Dog(Animal):
         def <em>init</em>(self, name):
                  ??
                  self.name gets the object name as a string
                 self.name = name</p></div>
-<div class="paragraph"><p> ??
-class Cat(animal):
+<div class="paragraph"><p> Make a class Cat that is-an Animal and has-a function called<em>init</em> that takes self and name parameters
+ set the variable name with the name of the object (self.)
+class Cat(Animal):
         def <em>init</em>(self, name):
                  ??
-                ## self.name gets the object name as a string
+                 self.name gets the object name as a string
                 self.name = name</p></div>
-<div class="paragraph"><p> ??
+<div class="paragraph"><p> Make a class Person that takes self and name parameters and set the variable name with self. and to None
 class Person(object):
         def <em>init</em>(self, name):
                  ??
@@ -760,45 +762,48 @@ class Person(object):
 <pre><code>## Person has-a pet of some kind
 self.pet = None</code></pre>
 </div></div>
-<div class="paragraph"><p> ??
+<div class="paragraph"><p> Make a class Employee that is-a Person and has-a <em>init</em> that takes parameters self, name and salary
+ use a super to do wizardry  inside of the function
+ set the variable salary as object.salary value
 class Employee(Person):
         def <em>init</em>(self, name, salary):
                  ?? What is this strange magic
-                super(Employee, self).<em>_init</em>(name)
+                super(Employee, self).<em>init</em>(name)
                 ## ??
                 self.salary = salary</p></div>
-<div class="paragraph"><p>## ??
+<div class="paragraph"><p>## make a class fish
 class Fish(object):
         pass</p></div>
-<div class="paragraph"><p>## ??
+<div class="paragraph"><p>## make a class Salmon that is-a fish
 class Salmon(Fish):
         pass</p></div>
-<div class="paragraph"><p>## ??
+<div class="paragraph"><p>## make a calss Halibut that is-a fish
 class Halibut(Fish):
         pass</p></div>
-<div class="paragraph"><p>## roger is-a Dog
+<div class="paragraph"><p>## object rover is-a dog with the name of rover
 rover = Dog("Rover")</p></div>
-<div class="paragraph"><p>## ??
+<div class="paragraph"><p>## object satan is-a cat with the name of satan
 satan = Cat("Satan")</p></div>
-<div class="paragraph"><p>## ??
+<div class="paragraph"><p>## mary is-a Person with the name of Mary
 mary = Person("Mary")</p></div>
-<div class="paragraph"><p>## ??
+<div class="paragraph"><p>## the value pet in the class object (class) mary is satan
 mary.pet = satan</p></div>
-<div class="paragraph"><p>## ??
+<div class="paragraph"><p>## the object frank is in the class employee and has the parameter frank (name) and the salary 120000 (salary) passed as values
 frank = Employee("Frank", 120000 )</p></div>
-<div class="paragraph"><p>## ??
+<div class="paragraph"><p>## the object frank has a value pet that is set as the object rover
 frank.pet = rover</p></div>
-<div class="paragraph"><p>## ??
+<div class="paragraph"><p>## the object flipper is-a fish
 flipper = Fish()</p></div>
-<div class="paragraph"><p>## ??
+<div class="paragraph"><p>## the object crouse is-a salmon
 crouse = Salmon()</p></div>
-<div class="paragraph"><p>## ??
+<div class="paragraph"><p>## the object harry is-a Halibut
 harry = Halibut()</p></div>
+<div class="paragraph"><p>print "Employee named %s makes %s" % (frank.name, frank.salary)</p></div>
 </div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-01-31 06:37:33 PST
+Last updated 2014-02-01 08:44:18 PST
 </div>
 </div>
 </body>

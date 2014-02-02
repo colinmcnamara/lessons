@@ -1,735 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-<meta name="generator" content="AsciiDoc 8.6.9" />
-<title></title>
-<style type="text/css">
-/* Shared CSS for AsciiDoc xhtml11 and html5 backends */
-
-/* Default font. */
-body {
-  font-family: Georgia,serif;
-}
-
-/* Title font. */
-h1, h2, h3, h4, h5, h6,
-div.title, caption.title,
-thead, p.table.header,
-#toctitle,
-#author, #revnumber, #revdate, #revremark,
-#footer {
-  font-family: Arial,Helvetica,sans-serif;
-}
-
-body {
-  margin: 1em 5% 1em 5%;
-}
-
-a {
-  color: blue;
-  text-decoration: underline;
-}
-a:visited {
-  color: fuchsia;
-}
-
-em {
-  font-style: italic;
-  color: navy;
-}
-
-strong {
-  font-weight: bold;
-  color: #083194;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: #527bbd;
-  margin-top: 1.2em;
-  margin-bottom: 0.5em;
-  line-height: 1.3;
-}
-
-h1, h2, h3 {
-  border-bottom: 2px solid silver;
-}
-h2 {
-  padding-top: 0.5em;
-}
-h3 {
-  float: left;
-}
-h3 + * {
-  clear: left;
-}
-h5 {
-  font-size: 1.0em;
-}
-
-div.sectionbody {
-  margin-left: 0;
-}
-
-hr {
-  border: 1px solid silver;
-}
-
-p {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
-
-ul, ol, li > p {
-  margin-top: 0;
-}
-ul > li     { color: #aaa; }
-ul > li > * { color: black; }
-
-.monospaced, code, pre {
-  font-family: "Courier New", Courier, monospace;
-  font-size: inherit;
-  color: navy;
-  padding: 0;
-  margin: 0;
-}
-pre {
-  white-space: pre-wrap;
-}
-
-#author {
-  color: #527bbd;
-  font-weight: bold;
-  font-size: 1.1em;
-}
-#email {
-}
-#revnumber, #revdate, #revremark {
-}
-
-#footer {
-  font-size: small;
-  border-top: 2px solid silver;
-  padding-top: 0.5em;
-  margin-top: 4.0em;
-}
-#footer-text {
-  float: left;
-  padding-bottom: 0.5em;
-}
-#footer-badges {
-  float: right;
-  padding-bottom: 0.5em;
-}
-
-#preamble {
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
-}
-div.imageblock, div.exampleblock, div.verseblock,
-div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
-div.admonitionblock {
-  margin-top: 1.0em;
-  margin-bottom: 1.5em;
-}
-div.admonitionblock {
-  margin-top: 2.0em;
-  margin-bottom: 2.0em;
-  margin-right: 10%;
-  color: #606060;
-}
-
-div.content { /* Block element content. */
-  padding: 0;
-}
-
-/* Block element titles. */
-div.title, caption.title {
-  color: #527bbd;
-  font-weight: bold;
-  text-align: left;
-  margin-top: 1.0em;
-  margin-bottom: 0.5em;
-}
-div.title + * {
-  margin-top: 0;
-}
-
-td div.title:first-child {
-  margin-top: 0.0em;
-}
-div.content div.title:first-child {
-  margin-top: 0.0em;
-}
-div.content + div.title {
-  margin-top: 0.0em;
-}
-
-div.sidebarblock > div.content {
-  background: #ffffee;
-  border: 1px solid #dddddd;
-  border-left: 4px solid #f0f0f0;
-  padding: 0.5em;
-}
-
-div.listingblock > div.content {
-  border: 1px solid #dddddd;
-  border-left: 5px solid #f0f0f0;
-  background: #f8f8f8;
-  padding: 0.5em;
-}
-
-div.quoteblock, div.verseblock {
-  padding-left: 1.0em;
-  margin-left: 1.0em;
-  margin-right: 10%;
-  border-left: 5px solid #f0f0f0;
-  color: #888;
-}
-
-div.quoteblock > div.attribution {
-  padding-top: 0.5em;
-  text-align: right;
-}
-
-div.verseblock > pre.content {
-  font-family: inherit;
-  font-size: inherit;
-}
-div.verseblock > div.attribution {
-  padding-top: 0.75em;
-  text-align: left;
-}
-/* DEPRECATED: Pre version 8.2.7 verse style literal block. */
-div.verseblock + div.attribution {
-  text-align: left;
-}
-
-div.admonitionblock .icon {
-  vertical-align: top;
-  font-size: 1.1em;
-  font-weight: bold;
-  text-decoration: underline;
-  color: #527bbd;
-  padding-right: 0.5em;
-}
-div.admonitionblock td.content {
-  padding-left: 0.5em;
-  border-left: 3px solid #dddddd;
-}
-
-div.exampleblock > div.content {
-  border-left: 3px solid #dddddd;
-  padding-left: 0.5em;
-}
-
-div.imageblock div.content { padding-left: 0; }
-span.image img { border-style: none; vertical-align: text-bottom; }
-a.image:visited { color: white; }
-
-dl {
-  margin-top: 0.8em;
-  margin-bottom: 0.8em;
-}
-dt {
-  margin-top: 0.5em;
-  margin-bottom: 0;
-  font-style: normal;
-  color: navy;
-}
-dd > *:first-child {
-  margin-top: 0.1em;
-}
-
-ul, ol {
-    list-style-position: outside;
-}
-ol.arabic {
-  list-style-type: decimal;
-}
-ol.loweralpha {
-  list-style-type: lower-alpha;
-}
-ol.upperalpha {
-  list-style-type: upper-alpha;
-}
-ol.lowerroman {
-  list-style-type: lower-roman;
-}
-ol.upperroman {
-  list-style-type: upper-roman;
-}
-
-div.compact ul, div.compact ol,
-div.compact p, div.compact p,
-div.compact div, div.compact div {
-  margin-top: 0.1em;
-  margin-bottom: 0.1em;
-}
-
-tfoot {
-  font-weight: bold;
-}
-td > div.verse {
-  white-space: pre;
-}
-
-div.hdlist {
-  margin-top: 0.8em;
-  margin-bottom: 0.8em;
-}
-div.hdlist tr {
-  padding-bottom: 15px;
-}
-dt.hdlist1.strong, td.hdlist1.strong {
-  font-weight: bold;
-}
-td.hdlist1 {
-  vertical-align: top;
-  font-style: normal;
-  padding-right: 0.8em;
-  color: navy;
-}
-td.hdlist2 {
-  vertical-align: top;
-}
-div.hdlist.compact tr {
-  margin: 0;
-  padding-bottom: 0;
-}
-
-.comment {
-  background: yellow;
-}
-
-.footnote, .footnoteref {
-  font-size: 0.8em;
-}
-
-span.footnote, span.footnoteref {
-  vertical-align: super;
-}
-
-#footnotes {
-  margin: 20px 0 20px 0;
-  padding: 7px 0 0 0;
-}
-
-#footnotes div.footnote {
-  margin: 0 0 5px 0;
-}
-
-#footnotes hr {
-  border: none;
-  border-top: 1px solid silver;
-  height: 1px;
-  text-align: left;
-  margin-left: 0;
-  width: 20%;
-  min-width: 100px;
-}
-
-div.colist td {
-  padding-right: 0.5em;
-  padding-bottom: 0.3em;
-  vertical-align: top;
-}
-div.colist td img {
-  margin-top: 0.3em;
-}
-
-@media print {
-  #footer-badges { display: none; }
-}
-
-#toc {
-  margin-bottom: 2.5em;
-}
-
-#toctitle {
-  color: #527bbd;
-  font-size: 1.1em;
-  font-weight: bold;
-  margin-top: 1.0em;
-  margin-bottom: 0.1em;
-}
-
-div.toclevel0, div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-div.toclevel2 {
-  margin-left: 2em;
-  font-size: 0.9em;
-}
-div.toclevel3 {
-  margin-left: 4em;
-  font-size: 0.9em;
-}
-div.toclevel4 {
-  margin-left: 6em;
-  font-size: 0.9em;
-}
-
-span.aqua { color: aqua; }
-span.black { color: black; }
-span.blue { color: blue; }
-span.fuchsia { color: fuchsia; }
-span.gray { color: gray; }
-span.green { color: green; }
-span.lime { color: lime; }
-span.maroon { color: maroon; }
-span.navy { color: navy; }
-span.olive { color: olive; }
-span.purple { color: purple; }
-span.red { color: red; }
-span.silver { color: silver; }
-span.teal { color: teal; }
-span.white { color: white; }
-span.yellow { color: yellow; }
-
-span.aqua-background { background: aqua; }
-span.black-background { background: black; }
-span.blue-background { background: blue; }
-span.fuchsia-background { background: fuchsia; }
-span.gray-background { background: gray; }
-span.green-background { background: green; }
-span.lime-background { background: lime; }
-span.maroon-background { background: maroon; }
-span.navy-background { background: navy; }
-span.olive-background { background: olive; }
-span.purple-background { background: purple; }
-span.red-background { background: red; }
-span.silver-background { background: silver; }
-span.teal-background { background: teal; }
-span.white-background { background: white; }
-span.yellow-background { background: yellow; }
-
-span.big { font-size: 2em; }
-span.small { font-size: 0.6em; }
-
-span.underline { text-decoration: underline; }
-span.overline { text-decoration: overline; }
-span.line-through { text-decoration: line-through; }
-
-div.unbreakable { page-break-inside: avoid; }
-
-
-/*
- * xhtml11 specific
- *
- * */
-
-div.tableblock {
-  margin-top: 1.0em;
-  margin-bottom: 1.5em;
-}
-div.tableblock > table {
-  border: 3px solid #527bbd;
-}
-thead, p.table.header {
-  font-weight: bold;
-  color: #527bbd;
-}
-p.table {
-  margin-top: 0;
-}
-/* Because the table frame attribute is overriden by CSS in most browsers. */
-div.tableblock > table[frame="void"] {
-  border-style: none;
-}
-div.tableblock > table[frame="hsides"] {
-  border-left-style: none;
-  border-right-style: none;
-}
-div.tableblock > table[frame="vsides"] {
-  border-top-style: none;
-  border-bottom-style: none;
-}
-
-
-/*
- * html5 specific
- *
- * */
-
-table.tableblock {
-  margin-top: 1.0em;
-  margin-bottom: 1.5em;
-}
-thead, p.tableblock.header {
-  font-weight: bold;
-  color: #527bbd;
-}
-p.tableblock {
-  margin-top: 0;
-}
-table.tableblock {
-  border-width: 3px;
-  border-spacing: 0px;
-  border-style: solid;
-  border-color: #527bbd;
-  border-collapse: collapse;
-}
-th.tableblock, td.tableblock {
-  border-width: 1px;
-  padding: 4px;
-  border-style: solid;
-  border-color: #527bbd;
-}
-
-table.tableblock.frame-topbot {
-  border-left-style: hidden;
-  border-right-style: hidden;
-}
-table.tableblock.frame-sides {
-  border-top-style: hidden;
-  border-bottom-style: hidden;
-}
-table.tableblock.frame-none {
-  border-style: hidden;
-}
-
-th.tableblock.halign-left, td.tableblock.halign-left {
-  text-align: left;
-}
-th.tableblock.halign-center, td.tableblock.halign-center {
-  text-align: center;
-}
-th.tableblock.halign-right, td.tableblock.halign-right {
-  text-align: right;
-}
-
-th.tableblock.valign-top, td.tableblock.valign-top {
-  vertical-align: top;
-}
-th.tableblock.valign-middle, td.tableblock.valign-middle {
-  vertical-align: middle;
-}
-th.tableblock.valign-bottom, td.tableblock.valign-bottom {
-  vertical-align: bottom;
-}
-
-
-/*
- * manpage specific
- *
- * */
-
-body.manpage h1 {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  border-top: 2px solid silver;
-  border-bottom: 2px solid silver;
-}
-body.manpage h2 {
-  border-style: none;
-}
-body.manpage div.sectionbody {
-  margin-left: 3em;
-}
-
-@media print {
-  body.manpage div#toc { display: none; }
-}
-
-
-</style>
-<script type="text/javascript">
-/*<![CDATA[*/
-var asciidoc = {  // Namespace.
-
-/////////////////////////////////////////////////////////////////////
-// Table Of Contents generator
-/////////////////////////////////////////////////////////////////////
-
-/* Author: Mihai Bazon, September 2002
- * http://students.infoiasi.ro/~mishoo
- *
- * Table Of Content generator
- * Version: 0.4
- *
- * Feel free to use this script under the terms of the GNU General Public
- * License, as long as you do not remove or alter this notice.
- */
-
- /* modified by Troy D. Hanson, September 2006. License: GPL */
- /* modified by Stuart Rackham, 2006, 2009. License: GPL */
-
-// toclevels = 1..4.
-toc: function (toclevels) {
-
-  function getText(el) {
-    var text = "";
-    for (var i = el.firstChild; i != null; i = i.nextSibling) {
-      if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
-        text += i.data;
-      else if (i.firstChild != null)
-        text += getText(i);
-    }
-    return text;
-  }
-
-  function TocEntry(el, text, toclevel) {
-    this.element = el;
-    this.text = text;
-    this.toclevel = toclevel;
-  }
-
-  function tocEntries(el, toclevels) {
-    var result = new Array;
-    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
-    // Function that scans the DOM tree for header elements (the DOM2
-    // nodeIterator API would be a better technique but not supported by all
-    // browsers).
-    var iterate = function (el) {
-      for (var i = el.firstChild; i != null; i = i.nextSibling) {
-        if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
-          var mo = re.exec(i.tagName);
-          if (mo && (i.getAttribute("class") || i.getAttribute("className")) != "float") {
-            result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
-          }
-          iterate(i);
-        }
-      }
-    }
-    iterate(el);
-    return result;
-  }
-
-  var toc = document.getElementById("toc");
-  if (!toc) {
-    return;
-  }
-
-  // Delete existing TOC entries in case we're reloading the TOC.
-  var tocEntriesToRemove = [];
-  var i;
-  for (i = 0; i < toc.childNodes.length; i++) {
-    var entry = toc.childNodes[i];
-    if (entry.nodeName.toLowerCase() == 'div'
-     && entry.getAttribute("class")
-     && entry.getAttribute("class").match(/^toclevel/))
-      tocEntriesToRemove.push(entry);
-  }
-  for (i = 0; i < tocEntriesToRemove.length; i++) {
-    toc.removeChild(tocEntriesToRemove[i]);
-  }
-
-  // Rebuild TOC entries.
-  var entries = tocEntries(document.getElementById("content"), toclevels);
-  for (var i = 0; i < entries.length; ++i) {
-    var entry = entries[i];
-    if (entry.element.id == "")
-      entry.element.id = "_toc_" + i;
-    var a = document.createElement("a");
-    a.href = "#" + entry.element.id;
-    a.appendChild(document.createTextNode(entry.text));
-    var div = document.createElement("div");
-    div.appendChild(a);
-    div.className = "toclevel" + entry.toclevel;
-    toc.appendChild(div);
-  }
-  if (entries.length == 0)
-    toc.parentNode.removeChild(toc);
-},
-
-
-/////////////////////////////////////////////////////////////////////
-// Footnotes generator
-/////////////////////////////////////////////////////////////////////
-
-/* Based on footnote generation code from:
- * http://www.brandspankingnew.net/archive/2005/07/format_footnote.html
- */
-
-footnotes: function () {
-  // Delete existing footnote entries in case we're reloading the footnodes.
-  var i;
-  var noteholder = document.getElementById("footnotes");
-  if (!noteholder) {
-    return;
-  }
-  var entriesToRemove = [];
-  for (i = 0; i < noteholder.childNodes.length; i++) {
-    var entry = noteholder.childNodes[i];
-    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
-      entriesToRemove.push(entry);
-  }
-  for (i = 0; i < entriesToRemove.length; i++) {
-    noteholder.removeChild(entriesToRemove[i]);
-  }
-
-  // Rebuild footnote entries.
-  var cont = document.getElementById("content");
-  var spans = cont.getElementsByTagName("span");
-  var refs = {};
-  var n = 0;
-  for (i=0; i<spans.length; i++) {
-    if (spans[i].className == "footnote") {
-      n++;
-      var note = spans[i].getAttribute("data-note");
-      if (!note) {
-        // Use [\s\S] in place of . so multi-line matches work.
-        // Because JavaScript has no s (dotall) regex flag.
-        note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
-        spans[i].innerHTML =
-          "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
-          "' title='View footnote' class='footnote'>" + n + "</a>]";
-        spans[i].setAttribute("data-note", note);
-      }
-      noteholder.innerHTML +=
-        "<div class='footnote' id='_footnote_" + n + "'>" +
-        "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
-        n + "</a>. " + note + "</div>";
-      var id =spans[i].getAttribute("id");
-      if (id != null) refs["#"+id] = n;
-    }
-  }
-  if (n == 0)
-    noteholder.parentNode.removeChild(noteholder);
-  else {
-    // Process footnoterefs.
-    for (i=0; i<spans.length; i++) {
-      if (spans[i].className == "footnoteref") {
-        var href = spans[i].getElementsByTagName("a")[0].getAttribute("href");
-        href = href.match(/#.*/)[0];  // Because IE return full URL.
-        n = refs[href];
-        spans[i].innerHTML =
-          "[<a href='#_footnote_" + n +
-          "' title='View footnote' class='footnote'>" + n + "</a>]";
-      }
-    }
-  }
-},
-
-install: function(toclevels) {
-  var timerId;
-
-  function reinstall() {
-    asciidoc.footnotes();
-    if (toclevels) {
-      asciidoc.toc(toclevels);
-    }
-  }
-
-  function reinstallAndRemoveTimer() {
-    clearInterval(timerId);
-    reinstall();
-  }
-
-  timerId = setInterval(reinstall, 500);
-  if (document.addEventListener)
-    document.addEventListener("DOMContentLoaded", reinstallAndRemoveTimer, false);
-  else
-    window.onload = reinstallAndRemoveTimer;
-}
-
-}
-asciidoc.install();
-/*]]>*/
-</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="Asciidoctor 0.1.4">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>designing and debugging</title>
+<link rel="stylesheet" href="./asciidoctor.css">
 </head>
 <body class="article">
 <div id="header">
@@ -739,287 +15,249 @@ asciidoc.install();
 <h3 id="_designing_and_debugging">designing and debugging</h3>
 <div class="sect3">
 <h4 id="_rules_for_if_statements">Rules for if-Statements</h4>
-<div class="olist arabic"><ol class="arabic">
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>
-Every <code>if-statement</code> must have an <code>else</code>
-</p>
+<p>Every <code>if-statement</code> must have an <code>else</code></p>
 </li>
 <li>
-<p>
-if this <code>else</code> should never be run because it doesn&#8217;t make sense
-</p>
-<div class="olist loweralpha"><ol class="loweralpha">
+<p>if this <code>else</code> should never be run because it doesn&#8217;t make sense</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
 <li>
-<p>
-then you must use a <code>die</code> function in the <code>else</code> that prints out an error message and dies, (just like the dead function in the bear room excersize)
-</p>
+<p>then you must use a <code>die</code> function in the <code>else</code> that prints out an error message and dies, (just like the dead function in the bear room excersize)</p>
 </li>
-</ol></div>
+</ol>
+</div>
 </li>
 <li>
-<p>
-Never nest <code>if-statements</code> more than two deep and always try to do them one deep.
-</p>
-<div class="olist loweralpha"><ol class="loweralpha">
+<p>Never nest <code>if-statements</code> more than two deep and always try to do them one deep.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
 <li>
-<p>
-This means if you put an <code>if</code> and an <code>if</code>  then you should be looking to move that second <code>if</code> to another function
-</p>
+<p>This means if you put an <code>if</code> and an <code>if</code>  then you should be looking to move that second <code>if</code> to another function</p>
 </li>
-</ol></div>
+</ol>
+</div>
 </li>
 <li>
-<p>
-Treat <code>if-statemnts</code> like paragraphs, where each <code>if elif else</code> grouping is like a set of sentances.
-</p>
-<div class="olist loweralpha"><ol class="loweralpha">
+<p>Treat <code>if-statemnts</code> like paragraphs, where each <code>if elif else</code> grouping is like a set of sentances.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
 <li>
-<p>
-put blank lines before and after
-</p>
+<p>put blank lines before and after</p>
 </li>
-</ol></div>
+</ol>
+</div>
 </li>
 <li>
-<p>
-Your bolean tests should be simple.
-</p>
-<div class="olist loweralpha"><ol class="loweralpha">
+<p>Your bolean tests should be simple.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
 <li>
-<p>
-if they are complex. move the calculations to variables earlier in your function.
-</p>
+<p>if they are complex. move the calculations to variables earlier in your function.</p>
 </li>
 <li>
-<p>
-use a good name for your variable
-</p>
+<p>use a good name for your variable</p>
 </li>
-</ol></div>
+</ol>
+</div>
 </li>
-</ol></div>
+</ol>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_rules_for_loops">Rules for loops</h4>
-<div class="olist arabic"><ol class="arabic">
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>
-use a <code>while-loop</code> only to loop forever.
-</p>
-<div class="olist loweralpha"><ol class="loweralpha">
+<p>use a <code>while-loop</code> only to loop forever.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
 <li>
-<p>
-that pretty much means never
-</p>
+<p>that pretty much means never</p>
 </li>
-</ol></div>
+</ol>
+</div>
 </li>
 <li>
-<p>
-use a <code>for-loop</code> for all other kinds of lopping.
-</p>
-<div class="olist loweralpha"><ol class="loweralpha">
+<p>use a <code>for-loop</code> for all other kinds of lopping.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
 <li>
-<p>
-especially if there is a fixed or limited number of things to do
-</p>
+<p>especially if there is a fixed or limited number of things to do</p>
 </li>
-</ol></div>
+</ol>
+</div>
 </li>
-</ol></div>
+</ol>
+</div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_debuging_tips">Debuging tips</h3>
-<div class="olist arabic"><ol class="arabic">
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>
-Do not use a debuger
-</p>
-<div class="olist loweralpha"><ol class="loweralpha">
+<p>Do not use a debuger</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
 <li>
-<p>
-you get to much information
-</p>
+<p>you get to much information</p>
 </li>
-</ol></div>
-</li>
-<li>
-<p>
-use print statements throughout your code
-</p>
+</ol>
+</div>
 </li>
 <li>
-<p>
-Make sure little parts of your code work
-</p>
-<div class="olist loweralpha"><ol class="loweralpha">
-<li>
-<p>
-do not write massive stuff
-</p>
+<p>use print statements throughout your code</p>
 </li>
 <li>
-<p>
-write tests throughout
-</p>
+<p>Make sure little parts of your code work</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>do not write massive stuff</p>
 </li>
 <li>
-<p>
-code a bit, test a bit, etc etc
-</p>
+<p>write tests throughout</p>
 </li>
-</ol></div>
+<li>
+<p>code a bit, test a bit, etc etc</p>
 </li>
-</ol></div>
+</ol>
+</div>
+</li>
+</ol>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_homework_my_game">Homework - My game</h3>
-<div class="paragraph"><p>What are the requirements for writing this game?</p></div>
+<div class="paragraph">
+<p>What are the requirements for writing this game?</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_required_use">Required use</h3>
-<div class="olist arabic"><ol class="arabic">
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>
-Lists
-</p>
+<p>Lists</p>
 </li>
 <li>
-<p>
-Functions
-</p>
+<p>Functions</p>
 </li>
 <li>
-<p>
-Modules
-</p>
+<p>Modules</p>
 </li>
 <li>
-<p>
-Find new pieces of python to do interesting stuff
-</p>
+<p>Find new pieces of python to do interesting stuff</p>
 </li>
-</ol></div>
+</ol>
+</div>
 <div class="sect3">
 <h4 id="_ideas_on_required_ideas">ideas on Required ideas</h4>
-<div class="olist arabic"><ol class="arabic">
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>
-Lists
-</p>
-<div class="olist loweralpha"><ol class="loweralpha">
+<p>Lists</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
 <li>
-<p>
-maybe hold each of the choices in a list.
-   have each room pull validate against an index choice
-   that is +1  (which one do you want, 1, 2 or 3)
-   user puts 2, then that is (2 - 1) = 1 for the index
-</p>
+<p>maybe hold each of the choices in a list.
+have each room pull validate against an index choice
+that is +1  (which one do you want, 1, 2 or 3)
+user puts 2, then that is (2 - 1) = 1 for the index</p>
 </li>
-</ol></div>
-</li>
-<li>
-<p>
-Functions
-</p>
-<div class="olist loweralpha"><ol class="loweralpha">
-<li>
-<p>
-define a function for each room
-</p>
-</li>
-</ol></div>
+</ol>
+</div>
 </li>
 <li>
-<p>
-Modules
-</p>
-<div class="olist loweralpha"><ol class="loweralpha">
+<p>Functions</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
 <li>
-<p>
-import modules such as argv
-</p>
+<p>define a function for each room</p>
 </li>
-</ol></div>
+</ol>
+</div>
 </li>
 <li>
-<p>
-New peices of python do interesting stuff
-</p>
-<div class="olist loweralpha"><ol class="loweralpha">
+<p>Modules</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
 <li>
-<p>
-randomizer in choices?
-</p>
+<p>import modules such as argv</p>
 </li>
-</ol></div>
+</ol>
+</div>
 </li>
-</ol></div>
+<li>
+<p>New peices of python do interesting stuff</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>randomizer in choices?</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_steps">Steps</h3>
-<div class="olist arabic"><ol class="arabic">
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>
-Make a map
-</p>
+<p>Make a map</p>
 </li>
 <li>
-<p>
-Create
-</p>
-<div class="olist loweralpha"><ol class="loweralpha">
+<p>Create</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
 <li>
-<p>
-rooms
-</p>
+<p>rooms</p>
 </li>
 <li>
-<p>
-monsters
-</p>
+<p>monsters</p>
 </li>
 <li>
-<p>
-traps
-</p>
+<p>traps</p>
 </li>
-</ol></div>
-</li>
-<li>
-<p>
-code the map
-</p>
+</ol>
+</div>
 </li>
 <li>
-<p>
-DON&#8217;T VAPOR LOCK!!!
-</p>
+<p>code the map</p>
 </li>
 <li>
-<p>
-Start small, get bigger and bigger
-</p>
+<p>DON&#8217;T VAPOR LOCK!!!</p>
 </li>
-</ol></div>
+<li>
+<p>Start small, get bigger and bigger</p>
+</li>
+</ol>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_map">Map</h3>
-<div class="imageblock" id="Game_map">
+<div id="Game_map" class="imageblock">
 <div class="content">
-<img src="../figures/ex36-game.png" alt="../figures/ex36-game.png" />
+<img src="../figures/ex36-game.png" alt="ex36 game">
 </div>
 <div class="title">Figure 1. Game Image</div>
 </div>
 <div class="sect3">
 <h4 id="_game_overview">Game Overview</h4>
-<div class="paragraph"><p>overview of game structure (from mindmap)</p></div>
+<div class="paragraph">
+<p>overview of game structure (from mindmap)</p>
+</div>
 <div class="sect4">
 <h5 id="_conversion_from_opml_to_asc">Conversion from OPML to ASC</h5>
-<div class="paragraph"><p>pandoc morning.opml --from=opml --to=asciidoc --output=morning.asc --atx-headers</p></div>
+<div class="paragraph">
+<p>pandoc morning.opml --from=opml --to=asciidoc --output=morning.asc --atx-headers</p>
+</div>
 </div>
 </div>
 </div>
@@ -1027,266 +265,308 @@ Start small, get bigger and bigger
 <h3 id="_start">Start</h3>
 <div class="sect3">
 <h4 id="_room_oh_crap_conference">Room-Oh_crap_conference</h4>
-<div class="paragraph"><p>You realize that you have to be at a conference tomorrow. What do you
-do?</p></div>
+<div class="paragraph">
+<p>You realize that you have to be at a conference tomorrow. What do you
+do?</p>
+</div>
 <div class="sect4">
 <h5 id="_call_in_sick">Call_in_sick</h5>
-<div class="paragraph"><p>You pull the oldest game in the</p></div>
+<div class="paragraph">
+<p>You pull the oldest game in the</p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_send_an_employee">Send an Employee</h5>
-<div class="paragraph"><p>You decide that your employees should do some work for a change, and
-send one of your guys</p></div>
+<div class="paragraph">
+<p>You decide that your employees should do some work for a change, and
+send one of your guys</p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_rush_to_get_ready">Rush to get ready</h5>
-<div class="paragraph"><p>You suck it up, and pack at midnight for a 4 am flight</p></div>
+<div class="paragraph">
+<p>You suck it up, and pack at midnight for a 4 am flight</p>
+</div>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_packing_for_conference">Packing for conference</h3>
-<div class="paragraph"><p>Star of room</p></div>
+<div class="paragraph">
+<p>Star of room</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_you_are_fired">You_are_fired</h3>
-<div class="paragraph"><p>You’re actions have resulted in you being fired.</p></div>
+<div class="paragraph">
+<p>You’re actions have resulted in you being fired.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_you_got_promoted">You_got_promoted</h3>
-<div class="paragraph"><p>your boss and the community acknowledge how awesome you are and promote
-you.</p></div>
+<div class="paragraph">
+<p>your boss and the community acknowledge how awesome you are and promote
+you.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_day_off">day_off</h3>
-<div class="paragraph"><p>You have many choices of what to do now that you are have free time what
-do you do?</p></div>
+<div class="paragraph">
+<p>You have many choices of what to do now that you are have free time what
+do you do?</p>
+</div>
 <div class="sect3">
 <h4 id="_go_golfing">Go Golfing</h4>
-<div class="paragraph"><p>Your boss see’s you on the golf course (he is screwing off too)</p></div>
-<div class="paragraph"><p>The world of double standards exists, you are fired.</p></div>
-<div class="paragraph"><p>====Announce you are not available but - Continue to work</p></div>
-<div class="paragraph"><p>Your boss and the community acknowledge how awesome you are, and you end
-up getting promoted.</p></div>
+<div class="paragraph">
+<p>Your boss see’s you on the golf course (he is screwing off too)</p>
+</div>
+<div class="paragraph">
+<p>The world of double standards exists, you are fired.</p>
+</div>
+<div class="paragraph">
+<p>====Announce you are not available but - Continue to work</p>
+</div>
+<div class="paragraph">
+<p>Your boss and the community acknowledge how awesome you are, and you end
+up getting promoted.</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_turn_off_everything_and_hide">Turn off everything and hide</h4>
-<div class="paragraph"><p>There is no hiding for work. Your boss, everyone on twitter is asking
-where you are. Return to start</p></div>
+<div class="paragraph">
+<p>There is no hiding for work. Your boss, everyone on twitter is asking
+where you are. Return to start</p>
+</div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_delegation">Delegation</h3>
-<div class="paragraph"><p>====Send best guy</p></div>
-<div class="paragraph"><p>you decide to send the best guy on your team. This results in internal
-projects slipping. you are fired.</p></div>
+<div class="paragraph">
+<p>====Send best guy</p>
+</div>
+<div class="paragraph">
+<p>you decide to send the best guy on your team. This results in internal
+projects slipping. you are fired.</p>
+</div>
 <div class="sect3">
 <h4 id="_send_worst_guy">Send worst guy</h4>
-<div class="paragraph"><p>You send the worst guy on your team. The community now hates your
-company, and the manufacturers think your company sucks. You are fired.</p></div>
+<div class="paragraph">
+<p>You send the worst guy on your team. The community now hates your
+company, and the manufacturers think your company sucks. You are fired.</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_send_mediocre_guy">Send Mediocre guy</h4>
-<div class="paragraph"><p>You decide to send your “good enough” guy to the conference. He holds
+<div class="paragraph">
+<p>You decide to send your “good enough” guy to the conference. He holds
 the proper tweet ups, and engages with all the right people since he
-really has no stress of performing.</p></div>
-<div class="paragraph"><p>You are recognized with your amazing leadership with a promotion.</p></div>
+really has no stress of performing.</p>
+</div>
+<div class="paragraph">
+<p>You are recognized with your amazing leadership with a promotion.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_just_go">Just go</h3>
-<div class="paragraph"><p>You decide to go, but may not have time to prep for your flight</p></div>
+<div class="paragraph">
+<p>You decide to go, but may not have time to prep for your flight</p>
+</div>
 <div class="sect3">
 <h4 id="_take_first_flight">Take_first_flight</h4>
-<div class="paragraph"><p>You rush to take the first flight out and forget all of your equipment.
+<div class="paragraph">
+<p>You rush to take the first flight out and forget all of your equipment.
 You are not able to do your video blogs. Your boss is pissed. you are
-fired</p></div>
+fired</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_push_flight_back_an_hour">Push_Flight_back_an_hour</h4>
-<div class="paragraph"><p>This ends up costing the company and extra $500. You end up on
+<div class="paragraph">
+<p>This ends up costing the company and extra $500. You end up on
 accountings watch list. This results in you losing your job. you are
-fired.</p></div>
+fired.</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_push_flight_back_a_day">Push_flight_back_a_day</h4>
-<div class="paragraph"><p>You decide that day one isn’t so important. and you can push your social
-media stuff to day2. What should you do with your day?</p></div>
+<div class="paragraph">
+<p>You decide that day one isn’t so important. and you can push your social
+media stuff to day2. What should you do with your day?</p>
+</div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_the_code">the code</h3>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.7
-by Lorenzo Bettini
-http://www.lorenzobettini.it
-http://www.gnu.org/software/src-highlite -->
-<pre><tt><span style="font-style: italic"><span style="color: #9A1900"># Game about the grind of conferences</span></span>
-<span style="font-style: italic"><span style="color: #9A1900"># must use the following</span></span>
-<span style="font-style: italic"><span style="color: #9A1900"># . Lists</span></span>
-<span style="font-style: italic"><span style="color: #9A1900"># .. maybe hold each of the choices in a list.</span></span>
-<span style="font-style: italic"><span style="color: #9A1900">#    have each room pull validate against an index choice</span></span>
-<span style="font-style: italic"><span style="color: #9A1900">#    that is +1  (which one do you want, 1, 2 or 3)</span></span>
-<span style="font-style: italic"><span style="color: #9A1900">#    user puts 2, then that is (2 - 1) = 1 for the index</span></span>
-<span style="font-style: italic"><span style="color: #9A1900"># . Functions</span></span>
-<span style="font-style: italic"><span style="color: #9A1900"># .. define a function for each room</span></span>
-<span style="font-style: italic"><span style="color: #9A1900"># . Modules</span></span>
-<span style="font-style: italic"><span style="color: #9A1900"># .. import modules such as argv</span></span>
-<span style="font-style: italic"><span style="color: #9A1900"># . New pieces of python in code</span></span>
-<span style="font-style: italic"><span style="color: #9A1900"># .. Maybe randomizer to randomize choice presentation?</span></span>
-<span style="font-style: italic"><span style="color: #9A1900"># .... though that only works if you type in name.. or does it?</span></span>
+<div class="content">
+<pre class="highlight"><code class="python language-python"># Game about the grind of conferences
+# must use the following
+# . Lists
+# .. maybe hold each of the choices in a list.
+#    have each room pull validate against an index choice
+#    that is +1  (which one do you want, 1, 2 or 3)
+#    user puts 2, then that is (2 - 1) = 1 for the index
+# . Functions
+# .. define a function for each room
+# . Modules
+# .. import modules such as argv
+# . New pieces of python in code
+# .. Maybe randomizer to randomize choice presentation?
+# .... though that only works if you type in name.. or does it?
 
-<span style="font-weight: bold"><span style="color: #000080">from</span></span> sys <span style="font-weight: bold"><span style="color: #000080">import</span></span> argv
+from sys import argv
 
-list_name <span style="color: #990000">=</span> <span style="color: #FF0000">"empty"</span>
-action_name <span style="color: #990000">=</span> <span style="color: #FF0000">"empty"</span>
-listname <span style="color: #990000">=</span> <span style="color: #FF0000">"empty"</span>
-user_choice <span style="color: #990000">=</span> <span style="color: #FF0000">"empty"</span>
+list_name = "empty"
+action_name = "empty"
+listname = "empty"
+user_choice = "empty"
 
-<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">list_total_choices</span></span><span style="color: #990000">(</span>func_listname<span style="color: #990000">):</span>
-<span style="font-style: italic"><span style="color: #9A1900">#       print "list_total_choices Name in func_Listname is %s" % func_listname</span></span>
-        list_total_choices <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">len</span></span><span style="color: #990000">(</span>func_listname<span style="color: #990000">)</span>
-        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"You have %s choices"</span> <span style="color: #990000">%</span> list_total_choices
+def list_total_choices(func_listname):
+#	print "list_total_choices Name in func_Listname is %s" % func_listname
+	list_total_choices = len(func_listname)
+	print "You have %s choices" % list_total_choices
 
-<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">print_all_choices_with_number</span></span><span style="color: #990000">(</span>func_listname<span style="color: #990000">):</span>
-        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"========================"</span>
-<span style="font-style: italic"><span style="color: #9A1900">#       print "print_all_choices_with_number Name in func_Listname is %s" % func_listname</span></span>
-        <span style="font-weight: bold"><span style="color: #0000FF">for</span></span> i<span style="color: #990000">,</span>n <span style="font-weight: bold"><span style="color: #0000FF">in</span></span> <span style="font-weight: bold"><span style="color: #000000">enumerate</span></span><span style="color: #990000">(</span>func_listname<span style="color: #990000">):</span>
-                <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"Choice %s You can - %s"</span> <span style="color: #990000">%</span> <span style="color: #990000">(</span>i<span style="color: #990000">,</span>n<span style="color: #990000">)</span>
+def print_all_choices_with_number(func_listname):
+	print "========================"
+#	print "print_all_choices_with_number Name in func_Listname is %s" % func_listname
+	for i,n in enumerate(func_listname):
+		print "Choice %s You can - %s" % (i,n)
 
-<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">RepresentesInt</span></span><span style="color: #990000">(</span>func_s<span style="color: #990000">):</span>
-<span style="font-style: italic"><span style="color: #9A1900">        """ helper function to test whether a string is an integer """</span></span>
-        <span style="font-weight: bold"><span style="color: #0000FF">try</span></span><span style="color: #990000">:</span>
-                <span style="font-weight: bold"><span style="color: #000000">int</span></span><span style="color: #990000">(</span>func_s<span style="color: #990000">)</span>
-                <span style="font-weight: bold"><span style="color: #0000FF">return</span></span><span style="color: #990000">(</span>True<span style="color: #990000">)</span>
-        <span style="font-weight: bold"><span style="color: #0000FF">except</span></span> ValueError<span style="color: #990000">:</span>
-                <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> False
+def RepresentesInt(func_s):
+	""" helper function to test whether a string is an integer """
+	try:
+		int(func_s)
+		return(True)
+	except ValueError:
+		return False
 
-<span style="font-style: italic"><span style="color: #9A1900">## wip - need to work on the upper / lower bounds</span></span>
-<span style="font-style: italic"><span style="color: #9A1900">#def input_within_bounds_of_list_item(func_user_choice):</span></span>
-<span style="font-style: italic"><span style="color: #9A1900">#       try:</span></span>
-<span style="font-style: italic"><span style="color: #9A1900">#               if len(listname) &lt;= user_choice</span></span>
-<span style="font-style: italic"><span style="color: #9A1900">#               return(True)</span></span>
-<span style="font-style: italic"><span style="color: #9A1900">#       except ValueError:</span></span>
-<span style="font-style: italic"><span style="color: #9A1900">#               return False</span></span>
-<span style="font-style: italic"><span style="color: #9A1900">#</span></span>
-<span style="font-style: italic"><span style="color: #9A1900">#       print len(listname)</span></span>
-<span style="font-style: italic"><span style="color: #9A1900">#       print listname</span></span>
+## wip - need to work on the upper / lower bounds
+#def input_within_bounds_of_list_item(func_user_choice):
+#	try:
+#		if len(listname) &lt;= user_choice
+#		return(True)
+#	except ValueError:
+#		return False
+#
+#	print len(listname)
+#	print listname
 
-<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">input_list_choice</span></span><span style="color: #990000">(</span>func_listname_action<span style="color: #990000">):</span>
-        <span style="font-weight: bold"><span style="color: #0000FF">global</span></span> user_choice
-        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"What number is your choice?"</span>
-        <span style="font-style: italic"><span style="color: #9A1900"># enumerate list items, return numbers</span></span>
-        user_input <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">raw_input</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"&gt; "</span><span style="color: #990000">)</span>
+def input_list_choice(func_listname_action):
+	global user_choice
+	print "What number is your choice?"
+	# enumerate list items, return numbers
+	user_input = raw_input("&gt; ")
 
-        <span style="font-style: italic"><span style="color: #9A1900"># testing to see if everything came through correct</span></span>
-        <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="font-weight: bold"><span style="color: #000000">RepresentesInt</span></span><span style="color: #990000">(</span>user_input<span style="color: #990000">)</span> <span style="color: #990000">==</span> True<span style="color: #990000">:</span>
-                user_choice <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">int</span></span><span style="color: #990000">(</span>user_input<span style="color: #990000">)</span>
-<span style="font-style: italic"><span style="color: #9A1900">#               print "your listname is %s long" % len(listname)</span></span>
-                <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="font-weight: bold"><span style="color: #000000">len</span></span><span style="color: #990000">(</span>listname<span style="color: #990000">)</span> <span style="color: #990000">&lt;</span> <span style="color: #990000">(</span>user_choice <span style="color: #990000">+</span> <span style="color: #993399">1</span><span style="color: #990000">):</span>
-<span style="font-style: italic"><span style="color: #9A1900">#                       you_are_fired("That choice was not available.")</span></span>
-                        <span style="font-weight: bold"><span style="color: #000000">you_are_fired</span></span><span style="color: #990000">()</span>
-        <span style="font-weight: bold"><span style="color: #0000FF">else</span></span><span style="color: #990000">:</span>
-<span style="font-style: italic"><span style="color: #9A1900">#               you_are_fired("You can't follow directions.")</span></span>
-                <span style="font-weight: bold"><span style="color: #000000">you_are_fired</span></span><span style="color: #990000">()</span>
+	# testing to see if everything came through correct
+	if RepresentesInt(user_input) == True:
+		user_choice = int(user_input)
+#		print "your listname is %s long" % len(listname)
+		if len(listname) &lt; (user_choice + 1):
+#			you_are_fired("That choice was not available.")
+			you_are_fired()
+	else:
+#		you_are_fired("You can't follow directions.")
+		you_are_fired()
 
-<span style="font-style: italic"><span style="color: #9A1900"># wip - dependand on input_within_bounds function</span></span>
-<span style="font-style: italic"><span style="color: #9A1900">#       if input_within_bounds_of_list_item(user_choice) == True:</span></span>
-<span style="font-style: italic"><span style="color: #9A1900">#               room_function()</span></span>
-<span style="font-style: italic"><span style="color: #9A1900">#       else:</span></span>
-<span style="font-style: italic"><span style="color: #9A1900">#               you_are_fired("You can't follow directions.")</span></span>
+# wip - dependand on input_within_bounds function
+#	if input_within_bounds_of_list_item(user_choice) == True:
+#		room_function()
+#	else:
+#		you_are_fired("You can't follow directions.")
 
-<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">room_function</span></span><span style="color: #990000">(</span>func_room_name<span style="color: #990000">,</span> func_room_statement<span style="color: #990000">,</span> func_list_name<span style="color: #990000">,</span> func_action_name<span style="color: #990000">):</span>
+def room_function(func_room_name, func_room_statement, func_list_name, func_action_name):
 
-<span style="font-style: italic"><span style="color: #9A1900">        """ iterate through all the functions per room """</span></span>
-        <span style="font-weight: bold"><span style="color: #0000FF">global</span></span> listname
-        listname <span style="color: #990000">=</span> func_list_name
-<span style="font-style: italic"><span style="color: #9A1900">#       print listname</span></span>
-        <span style="font-style: italic"><span style="color: #9A1900"># tell the use what situation they are in</span></span>
-        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> func_room_statement
-        <span style="font-style: italic"><span style="color: #9A1900"># print all the choices</span></span>
-<span style="font-style: italic"><span style="color: #9A1900">#       create_func_list_names(func_room_name)</span></span>
-        <span style="font-style: italic"><span style="color: #9A1900"># the two choices below are for debugging only</span></span>
-<span style="font-style: italic"><span style="color: #9A1900">#       print "Room Function list = %s" % func_list_name</span></span>
-<span style="font-style: italic"><span style="color: #9A1900">#       print "Room Function action = %s" % func_action_name</span></span>
-<span style="font-style: italic"><span style="color: #9A1900">#       print "\n"</span></span>
-        <span style="font-weight: bold"><span style="color: #000000">list_total_choices</span></span><span style="color: #990000">(</span>func_list_name<span style="color: #990000">)</span>
-        <span style="font-weight: bold"><span style="color: #000000">print_all_choices_with_number</span></span><span style="color: #990000">(</span>func_list_name<span style="color: #990000">)</span>
-        <span style="font-weight: bold"><span style="color: #000000">input_list_choice</span></span><span style="color: #990000">(</span>func_action_name<span style="color: #990000">)</span>
-<span style="font-style: italic"><span style="color: #9A1900">#       print "Your Choice from Global Variable is %s" % user_choice</span></span>
-<span style="font-style: italic"><span style="color: #9A1900">#       print "Choosing index number %s from %s" % (user_choice, func_action_name)</span></span>
-        action_name <span style="color: #990000">=</span> func_action_name<span style="color: #990000">[</span>user_choice<span style="color: #990000">]</span>
-<span style="font-style: italic"><span style="color: #9A1900">#       print "going to %s" % action_name</span></span>
+	""" iterate through all the functions per room """
+	global listname
+	listname = func_list_name
+#	print listname
+	# tell the use what situation they are in
+	print func_room_statement
+	# print all the choices
+#	create_func_list_names(func_room_name)
+	# the two choices below are for debugging only
+#	print "Room Function list = %s" % func_list_name
+#	print "Room Function action = %s" % func_action_name
+#	print "\n"
+	list_total_choices(func_list_name)
+	print_all_choices_with_number(func_list_name)
+	input_list_choice(func_action_name)
+#	print "Your Choice from Global Variable is %s" % user_choice
+#	print "Choosing index number %s from %s" % (user_choice, func_action_name)
+	action_name = func_action_name[user_choice]
+#	print "going to %s" % action_name
 
-        func_room_name <span style="color: #990000">=</span> <span style="color: #990000">[]</span>
-        func_room_statement <span style="color: #990000">=</span> <span style="color: #990000">[]</span>
-        func_listname <span style="color: #990000">=</span> <span style="color: #990000">[]</span>
-        func_action_name <span style="color: #990000">=</span> <span style="color: #990000">[]</span>
-        <span style="font-weight: bold"><span style="color: #000000">action_name</span></span><span style="color: #990000">()</span>
+	func_room_name = []
+	func_room_statement = []
+	func_listname = []
+	func_action_name = []
+	action_name()
 
 
-<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">you_are_fired</span></span><span style="color: #990000">():</span>
-<span style="font-style: italic"><span style="color: #9A1900">        """ successful end choice room """</span></span>
-        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"\nYou have bad judgement. This results in you being fired."</span>
-        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"\n"</span>
-        <span style="font-weight: bold"><span style="color: #000000">exit</span></span><span style="color: #990000">(</span><span style="color: #993399">0</span><span style="color: #990000">)</span>
+def you_are_fired():
+	""" successful end choice room """
+	print "\nYou have bad judgement. This results in you being fired."
+	print "\n"
+	exit(0)
 
-<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">you_got_promoted</span></span><span style="color: #990000">():</span>
-<span style="font-style: italic"><span style="color: #9A1900">        """ failure end choice room """</span></span>
-        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"\nYour boss and the community acknowledge how awesome you are and promote you."</span>
-        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"\n"</span>
-        <span style="font-weight: bold"><span style="color: #000000">exit</span></span><span style="color: #990000">(</span><span style="color: #993399">0</span><span style="color: #990000">)</span>
+def you_got_promoted():
+	""" failure end choice room """
+	print "\nYour boss and the community acknowledge how awesome you are and promote you."
+	print "\n"
+	exit(0)
 
-<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">room_start</span></span><span style="color: #990000">():</span>
-        <span style="font-weight: bold"><span style="color: #000000">room_function</span></span><span style="color: #990000">(*</span>room_conference<span style="color: #990000">)</span>
-        <span style="font-weight: bold"><span style="color: #000000">exit</span></span><span style="color: #990000">(</span><span style="color: #993399">0</span><span style="color: #990000">)</span>
+def room_start():
+	room_function(*room_conference)
+	exit(0)
 
-<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">room_day_off</span></span><span style="color: #990000">():</span>
-        <span style="font-weight: bold"><span style="color: #000000">room_function</span></span><span style="color: #990000">(*</span>room_day_off<span style="color: #990000">)</span>
-        <span style="font-weight: bold"><span style="color: #000000">exit</span></span><span style="color: #990000">(</span><span style="color: #993399">0</span><span style="color: #990000">)</span>
+def room_day_off():
+	room_function(*room_day_off)
+	exit(0)
 
-<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">room_delegation</span></span><span style="color: #990000">():</span>
-        <span style="font-weight: bold"><span style="color: #000000">room_function</span></span><span style="color: #990000">(*</span>room_delegation<span style="color: #990000">)</span>
-        <span style="font-weight: bold"><span style="color: #000000">exit</span></span><span style="color: #990000">(</span><span style="color: #993399">0</span><span style="color: #990000">)</span>
+def room_delegation():
+	room_function(*room_delegation)
+	exit(0)
 
-<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">room_just_go</span></span><span style="color: #990000">():</span>
-        <span style="font-weight: bold"><span style="color: #000000">room_function</span></span><span style="color: #990000">(*</span>room_just_go<span style="color: #990000">)</span>
-        <span style="font-weight: bold"><span style="color: #000000">exit</span></span><span style="color: #990000">(</span><span style="color: #993399">0</span><span style="color: #990000">)</span>
-<span style="font-style: italic"><span style="color: #9A1900">## used for troubleshooting only</span></span>
-<span style="font-style: italic"><span style="color: #9A1900">#def print_func_list_names():</span></span>
-<span style="font-style: italic"><span style="color: #9A1900">#       print func_list_name</span></span>
-<span style="font-style: italic"><span style="color: #9A1900">#       print func_action_name</span></span>
+def room_just_go():
+	room_function(*room_just_go)
+	exit(0)
+## used for troubleshooting only
+#def print_func_list_names():
+#	print func_list_name
+#	print func_action_name
 
-<span style="font-style: italic"><span style="color: #9A1900"># room statement</span></span>
+# room statement
 
-room_conference_statement <span style="color: #990000">=</span> <span style="color: #FF0000">"\nYou realize that you have to be at a conference tomorrow. What do you do? \n"</span>
-room_conference_list <span style="color: #990000">=</span> <span style="color: #990000">[</span><span style="color: #FF0000">"Call in sick"</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Send an Employee"</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Rush to get ready"</span><span style="color: #990000">]</span>
-room_conference_list_action <span style="color: #990000">=</span> <span style="color: #990000">[</span>room_day_off<span style="color: #990000">,</span> room_delegation<span style="color: #990000">,</span> room_just_go<span style="color: #990000">]</span>
-room_conference <span style="color: #990000">=</span> <span style="color: #990000">[</span><span style="color: #FF0000">"room_room_conference"</span><span style="color: #990000">,</span> room_conference_statement<span style="color: #990000">,</span> room_conference_list<span style="color: #990000">,</span> room_conference_list_action<span style="color: #990000">]</span>
+room_conference_statement = "\nYou realize that you have to be at a conference tomorrow. What do you do? \n"
+room_conference_list = ["Call in sick", "Send an Employee", "Rush to get ready"]
+room_conference_list_action = [room_day_off, room_delegation, room_just_go]
+room_conference = ["room_room_conference", room_conference_statement, room_conference_list, room_conference_list_action]
 
-room_day_off_statement <span style="color: #990000">=</span> <span style="color: #FF0000">"\nYou called in Sick, taking the day off. What do you do? \n"</span>
-room_day_off_list <span style="color: #990000">=</span> <span style="color: #990000">[</span><span style="color: #FF0000">"Go Golfing"</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Announce you are not avaible but continue to work"</span><span style="color: #990000">,</span> <span style="color: #FF0000">"turn off everything and hide"</span><span style="color: #990000">]</span>
-room_day_off_list_action <span style="color: #990000">=</span> <span style="color: #990000">[</span>you_are_fired<span style="color: #990000">,</span> room_delegation<span style="color: #990000">,</span> you_are_fired<span style="color: #990000">]</span>
-room_day_off <span style="color: #990000">=</span> <span style="color: #990000">[</span><span style="color: #FF0000">"room_room_day_off"</span><span style="color: #990000">,</span> room_day_off_statement<span style="color: #990000">,</span> room_day_off_list<span style="color: #990000">,</span> room_day_off_list_action<span style="color: #990000">]</span>
+room_day_off_statement = "\nYou called in Sick, taking the day off. What do you do? \n"
+room_day_off_list = ["Go Golfing", "Announce you are not avaible but continue to work", "turn off everything and hide"]
+room_day_off_list_action = [you_are_fired, room_delegation, you_are_fired]
+room_day_off = ["room_room_day_off", room_day_off_statement, room_day_off_list, room_day_off_list_action]
 
-room_delegation_statement <span style="color: #990000">=</span> <span style="color: #FF0000">"\nYou decided to delegate your work. What do you do? \n"</span>
-room_delegation_list <span style="color: #990000">=</span> <span style="color: #990000">[</span><span style="color: #FF0000">"Send your best guy"</span><span style="color: #990000">,</span> <span style="color: #FF0000">"send your worst guy"</span><span style="color: #990000">,</span> <span style="color: #FF0000">"send mediocre guy"</span><span style="color: #990000">]</span>
-room_delegation_list_action <span style="color: #990000">=</span> <span style="color: #990000">[</span>you_are_fired<span style="color: #990000">,</span> you_are_fired<span style="color: #990000">,</span> you_got_promoted<span style="color: #990000">]</span>
-room_delegation <span style="color: #990000">=</span> <span style="color: #990000">[</span><span style="color: #FF0000">"room_delegation"</span><span style="color: #990000">,</span> room_delegation_statement<span style="color: #990000">,</span> room_delegation_list<span style="color: #990000">,</span> room_delegation_list_action<span style="color: #990000">]</span>
+room_delegation_statement = "\nYou decided to delegate your work. What do you do? \n"
+room_delegation_list = ["Send your best guy", "send your worst guy", "send mediocre guy"]
+room_delegation_list_action = [you_are_fired, you_are_fired, you_got_promoted]
+room_delegation = ["room_delegation", room_delegation_statement, room_delegation_list, room_delegation_list_action]
 
-room_just_go_statement <span style="color: #990000">=</span> <span style="color: #FF0000">"\nYou decided are just going. What do you do? "</span>
-room_just_go_list <span style="color: #990000">=</span> <span style="color: #990000">[</span><span style="color: #FF0000">"Take the first flight out"</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Push your flight back an hour"</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Push your flight back a day"</span><span style="color: #990000">]</span>
-room_just_go_list_action <span style="color: #990000">=</span> <span style="color: #990000">[</span>you_are_fired<span style="color: #990000">,</span> you_are_fired<span style="color: #990000">,</span> you_are_fired<span style="color: #990000">]</span>
-room_just_go <span style="color: #990000">=</span> <span style="color: #990000">[</span><span style="color: #FF0000">"room_just_go"</span><span style="color: #990000">,</span> room_just_go_statement<span style="color: #990000">,</span> room_just_go_list<span style="color: #990000">,</span> room_just_go_list_action<span style="color: #990000">]</span>
+room_just_go_statement = "\nYou decided are just going. What do you do? "
+room_just_go_list = ["Take the first flight out", "Push your flight back an hour", "Push your flight back a day"]
+room_just_go_list_action = [you_are_fired, you_are_fired, you_are_fired]
+room_just_go = ["room_just_go", room_just_go_statement, room_just_go_list, room_just_go_list_action]
 
-<span style="font-style: italic"><span style="color: #9A1900">#you_are_fired_statement = "You realize that you have to be at a conference tomorrow. What do you do? \n"</span></span>
+#you_are_fired_statement = "You realize that you have to be at a conference tomorrow. What do you do? \n"
 
-<span style="font-style: italic"><span style="color: #9A1900"># start the game</span></span>
-<span style="font-weight: bold"><span style="color: #000000">room_start</span></span><span style="color: #990000">()</span>
-</tt></pre></div></div>
+# start the game
+room_start()
+</code></pre>
 </div>
 </div>
-<div id="footnotes"><hr /></div>
+</div>
+</div>
 <div id="footer">
 <div id="footer-text">
 Last updated 2014-01-25 14:32:21 PST

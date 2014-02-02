@@ -5548,7 +5548,542 @@ Main advantage comes from multiple inheritance.
 <h2 id="_exercise_43_gothons_from_planet_percal__25">43. Exercise_43_Gothons_From_Planet_Percal_#25</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_5">43.1. Lesson Notes</h3>
+<h3 id="_top_down_object_oriented_programmings">43.1. Top down Object Oriented Programmings</h3>
+<div class="paragraph"><p>Overview of "Top Down" Methodology for Programming</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Write or draw the problem
+</p>
+</li>
+<li>
+<p>
+Extract key concepts from #1 and research them
+</p>
+</li>
+<li>
+<p>
+Create a class heirachy and research them
+</p>
+</li>
+<li>
+<p>
+Code the classes and test to run them
+</p>
+</li>
+<li>
+<p>
+Repeat and refine
+</p>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_write_or_draw_the_problem">43.2. Write or draw the problem</h3>
+<div class="paragraph"><p>Methods
+. Create a diagram - UML
+. Mind Map
+. Visio Diagram
+. Cards in Scrivener
+. Write up a series of emails</p></div>
+</div>
+<div class="sect2">
+<h3 id="_harvest_created_content_for_concepts">43.3. Harvest created-content for concepts</h3>
+<div class="literalblock">
+<div class="content">
+<pre><code> Make a list
+. Nouns
+. Verbs
+. *Their Relationships</code></pre>
+</div></div>
+<div class="paragraph"><p>Result - Good list of classes and functions for next step</p></div>
+</div>
+<div class="sect2">
+<h3 id="_create_an_outline_tree">43.4. Create an outline tree</h3>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Concepts
+</p>
+</li>
+<li>
+<p>
+Their relationships as classes
+</p>
+</li>
+</ol></div>
+<div class="paragraph"><p><strong>MindMap would be perfect I think</strong></p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Identify like topics
+</p>
+<div class="olist loweralpha"><ol class="loweralpha">
+<li>
+<p>
+Like topics probably share a parent class
+</p>
+</li>
+</ol></div>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_refine_your_outline_classes">43.5. Refine your outline - Classes</h3>
+<div class="paragraph"><p>Refine parent child relationships of classes and objects until you have a simplified tree.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Take list of nouns. Identify list of nouns that are like one another
+</p>
+</li>
+<li>
+<p>
+Use that commonality to identify a common parent class
+</p>
+</li>
+<li>
+<p>
+Keep iterating until you have a class hierchy
+</p>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_define_your_functions">43.6. Define your functions</h3>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Take the vebs from the list you created
+</p>
+</li>
+<li>
+<p>
+see if those are function names for each class
+</p>
+</li>
+<li>
+<p>
+Put them in your tree
+</p>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_put_together_skeleton_code_framework">43.7. Put together skeleton code framework</h3>
+<div class="paragraph"><p>Consising of <strong>ONLY</strong>
+. Classes
+. Their functions
+. <strong>NOTHING MORE</strong></p></div>
+</div>
+<div class="sect2">
+<h3 id="_write_tests_tdd_in_action">43.8. Write Tests (TDD in action)</h3>
+<div class="paragraph"><p>Write tests
+. Validate Class Functionality
+. Write part of the test, a little code, iterate</p></div>
+</div>
+<div class="sect2">
+<h3 id="_iterate_process_until_code_is_functional">43.9. Iterate process until code is functional</h3>
+<div class="paragraph"><p>Keep going until blocked.
+If you get stuck. Start with diagram, nouns verbs, etc in that section to complete.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_game_design_gothons_from_planet_percel_25">43.10. Game Design - Gothons from Planet Percel #25</h3>
+<div class="paragraph"><p><a href="http://learnpythonthehardway.org/book/ex43.html">http://learnpythonthehardway.org/book/ex43.html</a></p></div>
+</div>
+<div class="sect2">
+<h3 id="_overview">43.11. Overview</h3>
+<div class="paragraph"><p>Aliens have invaded a space ship and our hero has to go through a maze of a rooms defeatin them so he can escape into an escape pod to the planet below. The game will be more like a Zork or Adventure type game with text outputs and funny ways to die. The game will involve an angine that runs a map full of rooms or scense. Each room will print its own description when the player enter it, and tell the enginee what room to run nex ton the map.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_scenes">43.12. Scenes</h3>
+<div class="sect3">
+<h4 id="_scene1">43.12.1. Scene1</h4>
+<div class="paragraph"><p><strong>Death</strong>
+ This is where the player dies and should be funny</p></div>
+<div class="paragraph"><p><strong>Central Corridor</strong>
+Starting point with Gothon already standing there</p></div>
+<div class="paragraph"><p><strong>Laser Weapon Armory</strong>
+This is where the hero gets a neutron bomb to blow up the shoip before getting into the escape pod. It has a keypad he has to guess the number for.</p></div>
+<div class="paragraph"><p>*The Bridge
+Another battle scene with a Gothon where the hero places the bomb</p></div>
+<div class="paragraph"><p><strong>Escape Pod</strong>
+Where the hero escapes but only after guessing the right escape pod</p></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_extract_key_concepts_nouns">43.13. Extract key concepts (Nouns)</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+Alien
+</p>
+</li>
+<li>
+<p>
+Player
+</p>
+</li>
+<li>
+<p>
+Ship
+</p>
+</li>
+<li>
+<p>
+Maze
+</p>
+</li>
+<li>
+<p>
+Room
+</p>
+</li>
+<li>
+<p>
+Scene
+</p>
+</li>
+<li>
+<p>
+Gothon
+</p>
+</li>
+<li>
+<p>
+Escape Pod
+</p>
+</li>
+<li>
+<p>
+Planet
+</p>
+</li>
+<li>
+<p>
+Map
+</p>
+</li>
+<li>
+<p>
+Engine
+</p>
+</li>
+<li>
+<p>
+Death
+</p>
+</li>
+<li>
+<p>
+Central Corridor
+</p>
+</li>
+<li>
+<p>
+Laser Weapon Armory
+</p>
+</li>
+<li>
+<p>
+The Bridge
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_estimate_functional_requirements">43.14. Estimate functional requirements</h3>
+<div class="paragraph"><p>Find a similar implimentation. Figure out how it works
+Identify any shared dependancies (new data layer for example)</p></div>
+<div class="paragraph"><p>Possbly start over at the design side if you have new information that impacts the overall code structure</p></div>
+</div>
+<div class="sect2">
+<h3 id="_create_the_class_heirchy">43.15. Create the Class Heirchy</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+Map
+</p>
+</li>
+<li>
+<p>
+Engine
+</p>
+</li>
+<li>
+<p>
+Scene
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Death
+</p>
+</li>
+<li>
+<p>
+Central Corridor
+</p>
+</li>
+<li>
+<p>
+Laser Weapon Armory
+</p>
+</li>
+<li>
+<p>
+The Bridge
+</p>
+</li>
+<li>
+<p>
+Escape Pod
+</p>
+</li>
+</ul></div>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_figure_out_what_actions_are_necessary">43.16. Figure out what actions are necessary</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+Map
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<em>next_scene</em>
+</p>
+</li>
+<li>
+<p>
+<em>opening_scene</em>
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Engine
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<em>play</em>
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Scene
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<em>enter</em>
+</p>
+</li>
+<li>
+<p>
+Death
+</p>
+</li>
+<li>
+<p>
+Central Corridor
+</p>
+</li>
+<li>
+<p>
+Laser Weapon Armory
+</p>
+</li>
+<li>
+<p>
+The Bridge
+</p>
+</li>
+<li>
+<p>
+Escape Pod
+</p>
+</li>
+</ul></div>
+</li>
+</ul></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="title">Creating your functions from verbs</div>Italisized items are <em>verbs</em> that describe the movement between scenes. These <em>verbs</em> become your functions.</td>
+</tr></table>
+</div>
+<div class="imageblock" id="image">
+<div class="content">
+<img src="../figures/gothon_mind_map.png" alt="../figures/gothon_mind_map.png" />
+</div>
+<div class="title">Figure 4. Mind Map of game</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_code_classes_and_test_to_run_them">43.17. Code Classes and test to run them</h3>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Copy paste the previously created tree
+</p>
+</li>
+<li>
+<p>
+Edit so they become classes
+</p>
+</li>
+<li>
+<p>
+Write a <strong>SIMPLE</strong> test to run the classes
+</p>
+</li>
+</ol></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="title">making an empty class work - pass</div>when you structure your empty classes use the word <code>pass</code> in the function to make it work while empty</td>
+</tr></table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_iterate_above_steps">43.18. Iterate above steps</h3>
+<div class="paragraph"><p>Use this method to improve and explore the code. Building it up stronger and stronger until code complete</p></div>
+</div>
+<div class="sect2">
+<h3 id="_top_down_vs_bottom_up">43.19. Top down vs Bottom up</h3>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Start with the abstract vs the functional
+</p>
+</li>
+<li>
+<p>
+Use for all new problems in the book
+</p>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_simple_checklist">43.20. Simple Checklist</h3>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Take a small piece of the problem; hack on some code and get it to run barely.
+</p>
+</li>
+<li>
+<p>
+Refine the code into something more formal with classes and automated tests.
+</p>
+</li>
+<li>
+<p>
+Extract the key concepts you&#8217;re using and try to find research for them.
+</p>
+</li>
+<li>
+<p>
+Write up a description of what&#8217;s really going on.
+</p>
+</li>
+<li>
+<p>
+Go back and refine the code, possibly throwing it out and starting over.
+</p>
+</li>
+<li>
+<p>
+Repeat, moving on to some other piece of the problem.
+</p>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_game_build_notes">43.21. Game Build Notes</h3>
+<div class="paragraph"><p>building the example game. here are my notes from each step.</p></div>
+<div class="sect3">
+<h4 id="_build_framework">43.21.1. Build framework</h4>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Created MindMap and created class and functions out of nouns and verbs.
+</p>
+</li>
+<li>
+<p>
+Used MindMap as framework to create base classes and function
+</p>
+</li>
+<li>
+<p>
+Put comments around functions that have the notes from created earlier
+</p>
+</li>
+</ol></div>
+</div>
+<div class="sect3">
+<h4 id="_data_layer_choose_data_storage_method">43.21.2. Data Layer - Choose data storage method</h4>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Evaluating Dictionary
+</p>
+</li>
+</ol></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="title">Duplicate Keys in Dictionaries</div>dictionaries alone don&#8217;t support duplicate keys</td>
+</tr></table>
+</div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Storing lists or sets inside the dictionary
+</p>
+</li>
+</ol></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="title">Store multiple lists or sets inside dictionary w/ defaultdict</div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-weight: bold"><span style="color: #000080">from</span></span> collections <span style="font-weight: bold"><span style="color: #000080">import</span></span> defaultdict
+
+data_dict <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">defaultdict</span></span><span style="color: #990000">(</span>list<span style="color: #990000">)</span></tt></pre></div></div>
+<div class="paragraph"><p>you can use the first parameter (list) to then populate or retrieve informatoin about the game</p></div>
+</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>Thoughts
+. scene_name could be the index name
+. Going to need actions and classes for</p></div>
+</div>
 </div>
 </div>
 </div>
@@ -5556,7 +6091,7 @@ Main advantage comes from multiple inheritance.
 <h2 id="_exercise_44_inheritance_vs_composition">44. Exercise_44_Inheritance_Vs_Composition</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_6">44.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_5">44.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -5564,7 +6099,7 @@ Main advantage comes from multiple inheritance.
 <h2 id="_exercise_45_you_make_a_game">45. Exercise_45_You_Make_A_Game</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_7">45.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_6">45.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -5572,7 +6107,7 @@ Main advantage comes from multiple inheritance.
 <h2 id="_exercise_46_a_project_skeleton">46. Exercise_46_A_Project_Skeleton</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_8">46.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_7">46.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -5580,7 +6115,7 @@ Main advantage comes from multiple inheritance.
 <h2 id="_exercise_47_automated_testing">47. Exercise_47_Automated_Testing</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_9">47.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_8">47.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -5588,7 +6123,7 @@ Main advantage comes from multiple inheritance.
 <h2 id="_exercise_48_advanced_user_input">48. Exercise_48_Advanced_User_Input</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_10">48.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_9">48.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -5596,7 +6131,7 @@ Main advantage comes from multiple inheritance.
 <h2 id="_exercise_49_making_sentences">49. Exercise_49_Making_Sentences</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_11">49.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_10">49.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -5604,7 +6139,7 @@ Main advantage comes from multiple inheritance.
 <h2 id="_exercise_50_your_first_website">50. Exercise_50_Your_First_Website</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_12">50.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_11">50.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
@@ -5612,21 +6147,23 @@ Main advantage comes from multiple inheritance.
 <h2 id="_exercise_51_getting_input_from_a_browser">51. Exercise_51_Getting_Input_From_A_Browser</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lesson_notes_13">51.1. Lesson Notes</h3>
+<h3 id="_lesson_notes_12">51.1. Lesson Notes</h3>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_exercise_52_the_start_of_your_web_game">52. Exercise_52_The_Start_Of_Your_Web_Game</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>include::Exercise_52_The_Start_Of_Your_Web_Game/notes.asc[</p></div>
+<div class="sect2">
+<h3 id="_lesson_notes_13">52.1. Lesson Notes</h3>
+</div>
 </div>
 </div>
 </div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-01-29 09:19:24 PST
+Last updated 2014-02-02 06:09:33 PST
 </div>
 </div>
 </body>

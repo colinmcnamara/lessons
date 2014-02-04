@@ -100,14 +100,20 @@ class Actor(object):
 
 	def use_item(self, actor, dictionary_item, target):
 		""" use an item against a target, only if item >= 0, subtract one """
-		print "--- Using %s on %s ---" % (dictionary_item, target)
+		print "\n--- Using %s on %s ---" % (dictionary_item, target)
 		if self.inventory[dictionary_item] >= 1:
-			# subtract one from dictionary item in actor and target
-			print "You have %s uses remaining" % self.inventory[dictionary_item]
+			# read the count of the dictionary_item and subtract 1
+			# set that value as the new dictionary item and as integer
+			i = int(self.inventory[dictionary_item])
+			i -= 1 
+			# update item count with new number
+			self.inventory[dictionary_item] = (i)
+			print "You have %s %s uses remaining" % (self.inventory[dictionary_item], dictionary_item)
+			# subtract one heath from target
 		else:
 			print "You have no uses remaining"
 
-	def use(self, opponents):
+	def use(self, target):
 		""" use item against your opponent"""
 		pass
 
@@ -137,6 +143,7 @@ Luke = Actor('Luke')
 # print inventory of both actors
 Luke.print_inventory()
 Gothon.print_inventory()
+# example attack class / function
 Luke.use_item('Luke','raygun','Gothon')
 
 #experimenting with pyunit

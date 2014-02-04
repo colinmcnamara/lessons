@@ -8,16 +8,12 @@ class Scene(object):
 	def enter(self):
 		pass
 
-
 class Engine(object):
 
 	def __init__(self, scene_map):
 		pass
 
 	def play(self):
-		pass
-
-	def use_item(self, dictionary_item):
 		pass
 
 class Death(Scene):
@@ -28,9 +24,14 @@ class Death(Scene):
 class CentralCorridor(Scene):
 	""" Starting point with Gothon already standing there """
 	def __init__(self, scene_name):
-		info_dict = {
-		'breathes': 'water',
-		'locomotes': 'swiming'
+		# WIP not finished
+		self.options = {
+		'straight': 'sceneA',
+		'left': 'sceneB',
+		'right': 'sceneC',
+		'back': 'sceneD',
+		'taunt': 'taunt_list' # refernce a list or random taunts
+
 }
 	def enter(self):
 		print "You are walking down the Central_Corridor when you see an Gothon standing at the end "
@@ -79,7 +80,7 @@ class Actor(object):
 		self.inventory = {
 		'health': '10',
 		'xp': '1',
-		'raygun': '1',
+		'raygun': '10',
 		'neutron_bomb': '0'
 }
 	def print_inventory(self):
@@ -96,6 +97,15 @@ class Actor(object):
 	def xp_change(self):
 		""" Change XP based on interaction with opponents and scenes """
 		pass 
+
+	def use_item(self, actor, dictionary_item, target):
+		""" use an item against a target, only if item >= 0, subtract one """
+		print "--- Using %s on %s ---" % (dictionary_item, target)
+		if self.inventory[dictionary_item] >= 1:
+			# subtract one from dictionary item in actor and target
+			print "You have %s uses remaining" % self.inventory[dictionary_item]
+		else:
+			print "You have no uses remaining"
 
 	def use(self, opponents):
 		""" use item against your opponent"""
@@ -127,6 +137,7 @@ Luke = Actor('Luke')
 # print inventory of both actors
 Luke.print_inventory()
 Gothon.print_inventory()
+Luke.use_item('Luke','raygun','Gothon')
 
 #experimenting with pyunit
 #class test_inventory_modify(unittest.TestCase):

@@ -1,4 +1,7 @@
 # Game Gothons from Planet Percel #25
+import unittest
+# used into test cases to put random integers into health values
+from random import randrange
 
 class Scene(object):
 
@@ -14,6 +17,8 @@ class Engine(object):
 	def play(self):
 		pass
 
+	def use_item(self, dictionary_item):
+		pass
 
 class Death(Scene):
 	""" This is where the player dies and should be funny """
@@ -22,8 +27,16 @@ class Death(Scene):
 
 class CentralCorridor(Scene):
 	""" Starting point with Gothon already standing there """
+	def __init__(self, scene_name):
+		info_dict = {
+		'breathes': 'water',
+		'locomotes': 'swiming'
+}
 	def enter(self):
-		pass
+		print "You are walking down the Central_Corridor when you see an Gothon standing at the end "
+		print "Do you"
+		print "Pull this from a dictionary, run, attack, taunt, "
+
 
 class LaserWeaponArmory(Scene):
 	""" 
@@ -57,8 +70,110 @@ class Map(object):
 	def open_scene(self):
 		pass
 
+# not positive I can successfully implement my concept here. But it is worth
+# a try. trying to create the actors and items as objects
+class Actor(object):
+	""" Parent class for antagonist / protagonist """
+	def __init__(self,name):
+		self.name = name
+		self.inventory = {
+		'health': '10',
+		'xp': '1',
+		'raygun': '1',
+		'neutron_bomb': '0'
+}
+	def print_inventory(self):
+		print "\n--- %s Inventory ---" % self.name
+#		print "health: %s \nxp: %s \nraygun: %s \nbomb: %s" % (self.inventory['health'],self.inventory['xp'],self.inventory['raygun'],self.inventory['neutron_bomb'])
+		# Much better way of acocmplishing the same print as above
+		for key, value in self.inventory.iteritems():
+			print "%s: %s" % (key, value) 
+
+	def health_change(self, value):
+		""" Change health based on interfaction with items """
+		pass
+
+	def xp_change(self):
+		""" Change XP based on interaction with opponents and scenes """
+		pass 
+
+	def use(self, opponents):
+		""" use item against your opponent"""
+		pass
+
+#class Antagonist(Actor):
+#	""" antagonist alien, openonent of Hero """
+#	def __init__(self, name):
+#		self.name = name
+#	def move(self):
+#		""" not sure, but want to get started. """
+#		pass
+
+#class Hero(Actor):
+#	""" Protagonist Hero, oponent of antagonist alien """
+#	def __init__(self, name):
+#		self.name = name
+#	def move(self):
+#		""" not sure, but want to get started. """
+#		pass
+
 # Test harness
 
 a_map = Map('Central_Corridor')
 a_game = Engine(a_map)
 a_game.play()
+Gothon = Actor('Gothon')
+Luke = Actor('Luke')
+# print inventory of both actors
+Luke.print_inventory()
+Gothon.print_inventory()
+
+#experimenting with pyunit
+#class test_inventory_modify(unittest.TestCase):
+
+#	def setup(self):
+
+
+#	def test_health_modify(self):
+#		pass
+
+# validate that the health change function works
+class Test_inventory_modify(object):
+	def __init__(self,name):
+		self.name = name
+
+	def Test_item_modify(self, dictionary_item):
+		""" Test that items return proper results when modified """
+		TestActor = Actor('TestActor')
+		self.dictionary_item = dictionary_item
+		# In future tests this will pull from functions in game
+		# pull the integer value from the list item
+		# sets variable randomizer in the range of 0-10
+		
+
+		
+		h = TestActor.inventory[dictionary_item]
+		i = int(h) + 1
+		# set the range of the randomizer to be max the current value + 1
+		randomizer = randrange(int(i))
+		# takes integer randomizer and makes it a negative int
+		randomizer = -randomizer
+		y = randomizer
+		result = int(i) + y
+		print "\n--- %s %s results ---" % (self.dictionary_item, self.name)
+ 		print "h = %s \ny = %s" % (h,y)
+ 		print "Result is %s" % result
+ 		if result == int(i) + y and result >= 0:
+ 			print "Test Passed"
+ 			# thinkign 1 = dead. 
+ 		else:
+ 			print "Test failed"
+
+
+# possibly pass a arg flag on runtime where --test=on runs the test suite
+Test1 = Test_inventory_modify('Test1')
+# Possibly write a for loop that loops through all items. 
+Test1.Test_item_modify('health')
+Test1.Test_item_modify('xp')
+
+

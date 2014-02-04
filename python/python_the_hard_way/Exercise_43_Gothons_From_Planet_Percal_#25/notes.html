@@ -510,11 +510,64 @@ data_dict = defaultdict(list)</code></pre>
 . Going to need actions and classes for</p>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_python_tests_and_tooling">Python Tests and Tooling</h4>
+<div class="paragraph">
+<p><a href="http://docs.python-guide.org/en/latest/writing/tests/">python test documentation</a></p>
+</div>
+<div class="sect4">
+<h5 id="_pytest">Pytest</h5>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="title">Pytest</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="python language-python">#install it
+pip install pytest
+
+#example code
+def func(x):
+    return x + 1
+
+def test_answer():
+    assert func(3) == 5</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>run py.test to execute tests.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_nose">Nose</h5>
+<div class="listingblock">
+<div class="content">
+<pre>pip install nose</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Nose provides automatic test discovery to save you the hassle of manually creating test suites.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>It also provides numerous plugins for features such as xUnit-compatible test output, coverage reporting, and test selection.</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-02-02 07:44:06 PST
+Last updated 2014-02-03 21:46:59 EST
 </div>
 </div>
 </body>

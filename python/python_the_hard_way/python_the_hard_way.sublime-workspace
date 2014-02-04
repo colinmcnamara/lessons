@@ -120,37 +120,50 @@
 	"buffers":
 	[
 		{
+			"file": "Exercise_43_Gothons_From_Planet_Percal_#25/notes.asc",
+			"settings":
+			{
+				"buffer_size": 5539,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "notes.asc",
 			"settings":
 			{
-				"buffer_size": 4932,
+				"buffer_size": 5005,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "=== is-a, has-a object and classes\n\n=== Salmon Example\n\nWhat is the difference betweek a fish and a salmon?\n\nFish is a class, Salmon is a class that is contained within the class fish\n\nif you put 3 fish in a bucket, and name 2 of them frank and mary. \n\nAll three are class fish\n\nAll three are in the class salmon\n\nfrank and mary are just an instance of salmon (they are objects)\n\nmary = salmon(her-unique attributes)\n\nThey are created from salmon but have unique attributes\n\n=== Class\n\nClass is not a _real_ thing. But rather a word we attache to instances of things with similar attributes\n\n. fins\n. gills\n. lives in water\n\nprobably in class fish\n\n=== Key concept - Objects are created from classes. \n\nClasses are just the templates that we start with. \n\n=== Figuring out whether something is a class or an object\n\n==== is-a vs has-a\n\nwhen you talk about objects and classes being related to each other by a class relationship you use *is-a*\n\n*Salmon IS-A fish*\n\nwhen an object or class is only related you use \n\n*Salmon HAS-A Gill*\n\nColin *is-a* class human and *has-a* class hand\n\n=== self.name \nor blah.name whatever\n\n\n[source, python]\n----\nself.name = name\n----\n\ngets the object name and sets it as a string. Neet.\n\n\n=== Python Super __init__ method\n. Super lets you avoid referring to the ebase class explicitly.\n\n. Main advantage comes from multiple inheritance. \n\nhttp://www.artima.com/weblogs/viewpost.jsp?thread=236275[Post on super]\n\nhttp://docs.python.org/2/library/functions.html#super[Python Doc's on super]\n\n=== RULE - Python always requires (object) when you make a class\n\nthis is due to some oversight early in the language\n\n=== Python object class\n\n=== Programming Types\nTwo main things, commonly defined as scripting and programmming.\n\n==== Procedural Programming - Scripting\nThis is my past. focus on automating processured which operate on data\n\n==== My future - object oriented programming\nCreating creation of objects that contain both data and functions\n\n\n=== Python class and objects\n\nIneritance is interesting\n\n",
-			"file": "Exercise_42_Is-A_Has-A_Objects_and_Classes/notes.asc",
-			"file_size": 2008,
-			"file_write_time": 130357466600000000,
+			"file": "/Volumes/web/index.asc",
 			"settings":
 			{
-				"buffer_size": 2037,
+				"buffer_size": 738,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Exercise_42_Is-A_Has-A_Objects_and_Classes/ex42.py",
+			"file": "Extra_UML_Modeling/UML_Modeling.asc",
 			"settings":
 			{
-				"buffer_size": 5136,
+				"buffer_size": 20457,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Exercise_32_Loops_And_Lists/ex32.py",
+			"file": "Exercise_43_Gothons_From_Planet_Percal_#25/ex43.py",
 			"settings":
 			{
-				"buffer_size": 804,
+				"buffer_size": 1160,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "figures/UML-Elements.html",
+			"settings":
+			{
+				"buffer_size": 38805,
 				"line_ending": "Unix"
 			}
 		}
@@ -162,11 +175,27 @@
 		"selected_items":
 		[
 			[
+				"push",
+				"Git: Push"
+			],
+			[
 				"com",
 				"Git: Commit"
 			],
 			[
+				"add",
+				"Git: Add..."
+			],
+			[
 				"ad",
+				"Git: Add..."
+			],
+			[
+				"source",
+				"Snippet: source-python"
+			],
+			[
+				"git ad",
 				"Git: Add..."
 			],
 			[
@@ -182,20 +211,12 @@
 				"Git: Add..."
 			],
 			[
-				"push",
-				"Git: Push"
-			],
-			[
 				"git com",
 				"Git: Commit"
 			],
 			[
 				"git stat",
 				"Git: Status"
-			],
-			[
-				"git ad",
-				"Git: Add Current File"
 			],
 			[
 				"sour",
@@ -208,10 +229,6 @@
 			[
 				"git co",
 				"Git: Commit"
-			],
-			[
-				"add",
-				"Git: Add..."
 			],
 			[
 				"git push",
@@ -358,7 +375,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 602.0
+		"width": 489.0
 	},
 	"console":
 	{
@@ -379,6 +396,11 @@
 	},
 	"file_history":
 	[
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/figures/UML-Elements.html",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/figures/UML-Elements-Derived.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Extra_UML_Modeling/UML_Modeling.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_42_Is-A_Has-A_Objects_and_Classes/notes.asc",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_42_Is-A_Has-A_Objects_and_Classes/ex42.py",
 		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Guardfile",
 		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_51_Getting_Input_From_A_Browser/notes.asc",
 		"/Users/cmcnamara/Dropbox/Created-Content/Open-Development-Engineering-Mentorship-Program.asc",
@@ -501,12 +523,7 @@
 		"/Users/cmcnamara/code/pythonthehardway/Exercise_44_Inheritance_Vs._Composition/*",
 		"/Users/cmcnamara/code/pythonthehardway/Exercise_41_Learning_To_Speak_Object_Oriented/*",
 		"/Users/cmcnamara/code/pythonthehardway/Exercise_40_Modules,_Classes,_And_Objects/*",
-		"/Users/cmcnamara/code/pythonthehardway/Exercise_3_Numbers_And_Math/*",
-		"/Users/cmcnamara/code/pythonthehardway/Exercise_38_Doing_Things_To_Lists/*",
-		"/Users/cmcnamara/code/pythonthehardway/Exercise_37_Symbol_Review/*",
-		"/Users/cmcnamara/code/pythonthehardway/Exercise_35_Branches_and_Functions/*",
-		"/Users/cmcnamara/code/pythonthehardway/Exercise_34_Accessing_Elements_Of_Lists/*",
-		"/Users/cmcnamara/code/pythonthehardway/Exercise_33_While_Loops/*"
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_3_Numbers_And_Math/*"
 	],
 	"find":
 	{
@@ -525,6 +542,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"../figures",
+			"====== ",
+			"images::..",
+			"Umbrello UML Modeller showing a State Diagram",
+			"Umbrello UML Modeller showing an Activity Diagram",
+			"Visual representation of an entity in an ER Diagram",
+			"UML Elements_files",
+			"enter():",
+			"width",
 			"class",
 			"question",
 			"lyrics",
@@ -633,24 +659,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "notes.asc",
+					"file": "Exercise_43_Gothons_From_Planet_Percal_#25/notes.asc",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4932,
+						"buffer_size": 5539,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3997,
-								3997
+								5538,
+								5538
 							]
 						],
 						"settings":
@@ -766,24 +792,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "Exercise_42_Is-A_Has-A_Objects_and_Classes/notes.asc",
+					"file": "notes.asc",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2037,
+						"buffer_size": 5005,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2037,
-								2037
+								1272,
+								1272
 							]
 						],
 						"settings":
@@ -896,33 +922,27 @@
 							"syntax": "Packages/User/AsciiDoc/AsciiDoc.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1275.0,
+						"translation.y": 1035.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
+				},
 				{
 					"buffer": 2,
-					"file": "Exercise_42_Is-A_Has-A_Objects_and_Classes/ex42.py",
+					"file": "/Volumes/web/index.asc",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5136,
+						"buffer_size": 738,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3492,
-								3492
+								645,
+								645
 							]
 						],
 						"settings":
@@ -1032,10 +1052,10 @@
 							},
 							"codeintel_tooltips": "popup",
 							"sublime_auto_complete": true,
-							"syntax": "Packages/Python/Python.tmLanguage"
+							"syntax": "Packages/User/AsciiDoc/AsciiDoc.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1400.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1043,31 +1063,303 @@
 				},
 				{
 					"buffer": 3,
-					"file": "Exercise_32_Loops_And_Lists/ex32.py",
-					"semi_transient": true,
+					"file": "Extra_UML_Modeling/UML_Modeling.asc",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 804,
+						"buffer_size": 20457,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								10260,
+								10260
 							]
 						],
 						"settings":
 						{
 							"WordCountShouldRun": true,
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/User/AsciiDoc/AsciiDoc.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 5780.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "Exercise_43_Gothons_From_Planet_Percal_#25/ex43.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1160,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1099,
+								1099
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
 							"syntax": "Packages/Python/Python.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 479.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "figures/UML-Elements.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 38805,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								21298,
+								21298
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 6015.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -1075,7 +1367,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 25.0
+		"height": 35.0
 	},
 	"input":
 	{
@@ -1101,7 +1393,7 @@
 		"cols":
 		[
 			0.0,
-			0.270033276755,
+			0.395979032166,
 			1.0
 		],
 		"rows":
@@ -1113,7 +1405,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 92.0
+		"height": 65.0
 	},
 	"output.find_results":
 	{
@@ -1171,7 +1463,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 190.0,
 	"status_bar_visible": true,
 	"template_settings":

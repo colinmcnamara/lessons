@@ -1,0 +1,216 @@
+
+<!-- saved from url=(0063)http://docs.kde.org/stable/en/kdesdk/umbrello/uml-elements.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>UML Elements</title><link rel="stylesheet" type="text/css" href="./UML-Elements_files/kde-default.css"><link rel="stylesheet" type="text/css" href="./UML-Elements_files/kde-docs.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><meta name="keywords" content="KDE, UML, modelling, diagrams, software development, development"><link rel="home" href="http://docs.kde.org/stable/en/kdesdk/umbrello/index.html" title="Umbrello UML Modeller Handbook"><link rel="up" href="http://docs.kde.org/stable/en/kdesdk/umbrello/uml-basics.html" title="Chapter 2. UML Basics"><link rel="prev" href="http://docs.kde.org/stable/en/kdesdk/umbrello/uml-basics.html" title="Chapter 2. UML Basics"><link rel="next" href="http://docs.kde.org/stable/en/kdesdk/umbrello/working-with-umbrello.html" title="Chapter 3. Working with Umbrello UML Modeller"><meta name="GENERATOR" content="KDE XSL Stylesheet V1.14 using libxslt"><style id="clearly_highlighting_css" type="text/css">/* selection */ html.clearly_highlighting_enabled ::-moz-selection { background: rgba(246, 238, 150, 0.99); } html.clearly_highlighting_enabled ::selection { background: rgba(246, 238, 150, 0.99); } /* cursor */ html.clearly_highlighting_enabled {    /* cursor and hot-spot position -- requires a default cursor, after the URL one */    cursor: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--cursor.png") 14 16, text; } /* highlight tag */ em.clearly_highlight_element {    font-style: inherit !important; font-weight: inherit !important;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow.png");    background-repeat: repeat-x; background-position: top left; background-size: 100% 100%; } /* the delete-buttons are positioned relative to this */ em.clearly_highlight_element.clearly_highlight_first { position: relative; } /* delete buttons */ em.clearly_highlight_element a.clearly_highlight_delete_element {    display: none; cursor: pointer;    padding: 0; margin: 0; line-height: 0;    position: absolute; width: 34px; height: 34px; left: -17px; top: -17px;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite.png"); background-repeat: no-repeat; background-position: 0px 0px; } em.clearly_highlight_element a.clearly_highlight_delete_element:hover { background-position: -34px 0px; } /* retina */ @media (min--moz-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {    em.clearly_highlight_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow@2x.png"); }    em.clearly_highlight_element a.clearly_highlight_delete_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite@2x.png"); background-size: 68px 34px; } } </style><style type="text/css"></style><style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }</style></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="content"><div id="header"><div id="header_content"><div id="header_left"><div id="header_right"><img src="./UML-Elements_files/top-kde.jpg" width="36" height="34"> <acronym class="acronym">UML</acronym> Elements</div></div></div></div><div class="navCenter"><table class="navigation"><tbody><tr><td class="upCell" colspan="3"><a href="http://docs.kde.org/">http://docs.kde.org/</a></td></tr><tr><td class="prevCell"><a accesskey="p" href="http://docs.kde.org/stable/en/kdesdk/umbrello/uml-basics.html">Prev</a></td><td class="upCell"><acronym class="acronym">UML</acronym> Basics</td><td class="nextCell"><a accesskey="n" href="http://docs.kde.org/stable/en/kdesdk/umbrello/working-with-umbrello.html">Next</a></td></tr></tbody></table></div><div id="contentBody"><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="uml-elements"></a><acronym class="acronym">UML</acronym> Elements</h2></div></div></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="use-case-diagram"></a>Use Case Diagram</h3></div></div></div><p>Use Case Diagrams describe the relationships and dependencies between a group of <span class="emphasis"><em>Use Cases</em></span>
+and the Actors participating in the process.</p><p>It is important to notice that Use Case Diagrams are not suited to represent the design,
+and cannot describe the internals of a system. Use Case Diagrams are meant to facilitate the communication
+with the future users of the system, and with the customer, and are specially helpful to determine the required
+features the system is to have. Use Case Diagrams tell, <span class="emphasis"><em>what</em></span> the system
+should do but do not — and cannot — specify <span class="emphasis"><em>how</em></span> this is to be achieved.</p><p>
+</p><div class="screenshot"><div xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="mediaobject"><hr><img src="./UML-Elements_files/use-case-diagram.png" alt="Umbrello UML Modeller showing a Use Case Diagram"><div class="caption"><p><span class="application">Umbrello <acronym class="acronym">UML</acronym> Modeller</span> showing a Use Case Diagram
+	    </p></div><hr></div></div><p>
+</p><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="use-case"></a>Use Case</h4></div></div></div><p>A <span class="emphasis"><em>Use Case</em></span> describes — from the point of view of the actors — a group of activities
+in a system that produces a concrete, tangible result.</p><p>
+Use Cases are descriptions of the typical interactions between the users of a system and the system itself.
+They represent the external interface of the system and specify a form of requirements of what the
+system has to do (remember, only what, not how).
+</p><p>When working with Use Cases, it is important to remember some simple rules:
+ </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Each Use Case is related to at least one actor</p></li><li class="listitem"><p>Each Use Case has an initiator (<abbr class="abbrev">i.e.</abbr> an actor)</p></li><li class="listitem"><p>Each Use Case leads to a relevant result (a result with <span class="quote">“<span class="quote">business value</span>”</span>)</p></li></ul></div><p>
+</p><p>
+Use Cases can also have relationships with other Use Cases. The three most typical types of relationships
+between Use Cases are:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="emphasis"><em>&lt;&lt;include&gt;&gt;</em></span> which specifies that a Use Case takes place <span class="emphasis"><em>inside</em></span>
+another Use Case</p></li><li class="listitem"><p><span class="emphasis"><em>&lt;&lt;extends&gt;&gt;</em></span> which specifies that in certain situations, or at some point (called an
+extension point) a Use Case will be extended by another.</p></li><li class="listitem"><p><span class="emphasis"><em>Generalization</em></span> specifies that a Use Case inherits the characteristics
+of the <span class="quote">“<span class="quote">Super</span>”</span>-Use Case, and can override some of them or add new ones in a similar way as the
+inheritance between classes.
+</p></li></ul></div></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="actor"></a>Actor</h4></div></div></div><p>
+An actor is an external entity (outside of the system) that interacts with the system by participating
+(and often initiating) a Use Case. Actors can be in real life people (for example users of the system),
+other computer systems or external events.
+</p><p>
+Actors do not represent the <span class="emphasis"><em>physical</em></span> people or systems, but their <span class="emphasis"><em>role</em></span>.
+This means that when a person interacts with the system in different ways (assuming different roles) he will be
+represented by several actors. For example a person that gives customer support by the telephone and takes
+orders from the customer into the system would be represented by an actor <span class="quote">“<span class="quote">Support Staff</span>”</span> and
+an actor <span class="quote">“<span class="quote">Sales Representative</span>”</span>
+</p></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="use-case-description"></a>Use Case Description</h4></div></div></div><p>  
+Use Case Descriptions are textual narratives of the Use Case. They usually take the form of a note or
+a document that is somehow linked to the Use Case, and explains the processes or activities that take
+place in the Use Case.
+</p></div></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="class-diagram"></a>Class Diagram</h3></div></div></div><p>
+Class Diagrams show the different classes that make up a system and how they relate to each other. Class Diagrams
+are said to be <span class="quote">“<span class="quote">static</span>”</span> diagrams because they show the classes, along with their methods and
+attributes as well as the static relationships between them: which classes <span class="quote">“<span class="quote">know</span>”</span> about which classes
+or which classes <span class="quote">“<span class="quote">are part</span>”</span> of another class, but do not show the method calls
+between them.
+</p><p>
+</p><div class="screenshot"><div xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="mediaobject"><hr><img src="./UML-Elements_files/class-diagram.png" alt="Umbrello UML Modeller showing a Class Diagram"><div class="caption"><p><span class="application">Umbrello <acronym class="acronym">UML</acronym> Modeller</span> showing a Class Diagram
+	    </p></div><hr></div></div><p>
+</p><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="class"></a>Class</h4></div></div></div><p>
+A Class defines the attributes and the methods of a set of objects. All objects of this class (instances
+of this class) share the same behavior, and have the same set of attributes (each object has its own set).
+The term <span class="quote">“<span class="quote">Type</span>”</span> is sometimes used instead of Class, but it is important to mention that these
+two are not the same, and Type is a more general term.
+</p><p>
+In <acronym class="acronym">UML</acronym>, Classes are represented by rectangles, with the name of the class, and can also show
+the attributes and operations of the class in two other <span class="quote">“<span class="quote">compartments</span>”</span> inside the rectangle.
+</p><p>
+</p><div class="screenshot"><div xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="mediaobject"><hr><img src="./UML-Elements_files/class.png" alt="Visual representation of a Class in UML"><div class="caption"><p>Visual representation of a Class in <acronym class="acronym">UML</acronym>
+	    </p></div><hr></div></div><p>
+</p><div class="sect4"><div class="titlepage"><div><div><h5 class="title"><a name="attribute"></a>Attributes</h5></div></div></div><p>
+In <acronym class="acronym">UML</acronym>, Attributes are shown with at least their name, and can also show their type, initial value and
+other properties.
+Attributes can also be displayed with their visibility:
+</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><code class="literal">+</code>  Stands for <span class="emphasis"><em>public</em></span> attributes</p></li><li class="listitem"><p><code class="literal">#</code>  Stands for <span class="emphasis"><em>protected</em></span> attributes</p></li><li class="listitem"><p><code class="literal">-</code>  Stands for <span class="emphasis"><em>private</em></span> attributes</p></li></ul></div></div><div class="sect4"><div class="titlepage"><div><div><h5 class="title"><a name="operation"></a>Operations</h5></div></div></div><p>
+Operations (methods) are also displayed with at least their name, and can also show their parameters and return
+types.
+Operations can, just as Attributes, display their visibility:
+</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><code class="literal">+</code>  Stands for <span class="emphasis"><em>public</em></span> operations</p></li><li class="listitem"><p><code class="literal">#</code>  Stands for <span class="emphasis"><em>protected</em></span> operations</p></li><li class="listitem"><p><code class="literal">-</code>  Stands for <span class="emphasis"><em>private</em></span> operations</p></li></ul></div><p>
+</p></div><div class="sect4"><div class="titlepage"><div><div><h5 class="title"><a name="templates"></a>Templates</h5></div></div></div><p>
+Classes can have templates, a value which is used for an unspecified class or type.  The template type is specified
+when a class is initiated (<abbr class="abbrev">i.e.</abbr> an object is created).  Templates exist in modern C++ and will be introduced in Java 1.5 where 
+they will be called Generics.
+</p></div></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="class-associations"></a>Class Associations</h4></div></div></div><p>Classes can relate (be associated with) to each other in different ways:</p><div class="sect4"><div class="titlepage"><div><div><h5 class="title"><a name="generalization"></a>Generalization</h5></div></div></div><p>Inheritance is one of the fundamental concepts of Object Oriented programming, in which a class
+<span class="quote">“<span class="quote">gains</span>”</span> all of the attributes and operations of the class it inherits from, and can
+override/modify some of them, as well as add more attributes and operations of its own.</p><p>
+In <acronym class="acronym">UML</acronym>, a <span class="emphasis"><em>Generalization</em></span> association between two classes puts them in a hierarchy
+representing the concept of inheritance of a derived class from a base class. In <acronym class="acronym">UML</acronym>, Generalizations are
+represented by a line connecting the two classes, with an arrow on the side of the base class.
+</p><div class="screenshot"><div xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="mediaobject"><hr><img src="./UML-Elements_files/generalization.png" alt="Visual representation of a generalization in UML"><div class="caption"><p>Visual representation of a generalization in <acronym class="acronym">UML</acronym>
+	    </p></div><hr></div></div><p>
+</p></div><div class="sect4"><div class="titlepage"><div><div><h5 class="title"><a name="uml-associations"></a>Associations</h5></div></div></div><p>An association represents a relationship between classes, and gives the common semantics and structure
+for many types of <span class="quote">“<span class="quote">connections</span>”</span> between objects.</p><p>Associations are the mechanism that allows objects to communicate to each other. It describes the connection
+between different classes (the connection between the actual objects is called object connection, or
+<span class="emphasis"><em>link</em></span>.
+</p><p>
+Associations can have a role that specifies the purpose of the association and can be uni- or bidirectional
+(indicates if the two objects participating in the relationship can send messages to the other, of if only
+one of them knows about the other). Each end of the association also has a multiplicity value, which dictates
+how many objects on this side of the association can relate to one object on the other side.
+</p><p>
+In <acronym class="acronym">UML</acronym>, associations are represented as lines connecting the classes participating in the relationship,
+and can also show the role and the multiplicity of each of the participants. Multiplicity is displayed as a
+range [min..max] of non-negative values, with a star (<code class="literal">*</code>) on the maximum side representing infinite.
+</p><div class="screenshot"><div xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="mediaobject"><hr><img src="./UML-Elements_files/association.png" alt="Visual representation of an Association in UML"><div class="caption"><p>Visual representation of an Association in <acronym class="acronym">UML</acronym>
+	    </p></div><hr></div></div><p>
+</p></div><div class="sect4"><div class="titlepage"><div><div><h5 class="title"><a name="aggregation"></a>Aggregation</h5></div></div></div><p>Aggregations are a special type of associations in which the two participating classes don't have
+an equal status, but make a <span class="quote">“<span class="quote">whole-part</span>”</span> relationship. An Aggregation describes how the class
+that takes the role of the whole, is composed (has) of other classes, which take the role of the parts.
+For Aggregations, the class acting as the whole always has a multiplicity of one.
+</p><p>
+In <acronym class="acronym">UML</acronym>, Aggregations are represented by an association that shows a rhomb on the side of the whole.
+</p><div class="screenshot"><div xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="mediaobject"><hr><img src="./UML-Elements_files/aggregation.png" alt="Visual representation of an Aggregation relationship in UML"><div class="caption"><p>Visual representation of an Aggregation relationship in <acronym class="acronym">UML</acronym>
+	    </p></div><hr></div></div><p>
+</p></div><div class="sect4"><div class="titlepage"><div><div><h5 class="title"><a name="composition"></a>Composition</h5></div></div></div><p>Compositions are associations that represent <span class="emphasis"><em>very strong</em></span> aggregations. This means,
+Compositions form whole-part relationships as well, but the relationship is so strong that the parts cannot
+exist on its own. They exist only inside the whole, and if the whole is destroyed the parts die too.</p><p>In <acronym class="acronym">UML</acronym>, Compositions are represented by a solid rhomb on the side of the whole.
+</p><div class="screenshot"><div xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="mediaobject"><hr><img src="./UML-Elements_files/composition.png" alt="Visual representation of a Composition relationship in UML"><hr></div></div></div></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="other-class-diagram-items"></a>Other Class Diagram Items</h4></div></div></div><p>Class diagrams can contain several other items besides classes.</p><div class="sect4"><div class="titlepage"><div><div><h5 class="title"><a name="interfaces"></a>Interfaces</h5></div></div></div><p>Interfaces are abstract classes which means instances can not be directly created of them.  They can contain operations but no attributes.  Classes can inherit from interfaces (through a realisation association) and instances can then be made of these diagrams.</p></div><div class="sect4"><div class="titlepage"><div><div><h5 class="title"><a name="datatype"></a>Datatypes</h5></div></div></div><p>Datatypes are primitives which are typically built into a programming language.  Common examples include integers and booleans.  
+They can not have relationships to classes but classes can have relationships to them.</p></div><div class="sect4"><div class="titlepage"><div><div><h5 class="title"><a name="enum"></a>Enums</h5></div></div></div><p>Enums are a simple list of values.  A typical example is an enum for days of the week.  The options of an enum are called Enum Literals.
+Like datatypes they can not have relationships to classes but classes can have relationships to them.</p></div><div class="sect4"><div class="titlepage"><div><div><h5 class="title"><a name="package"></a>Packages</h5></div></div></div><p>Packages represent a namespace in a programming language.  In a diagram 
+they are used to represent parts of a system which contain more than one class, maybe hundereds of classes.</p></div></div></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="sequence-diagram"></a>Sequence Diagrams</h3></div></div></div><p> Sequence Diagrams show the message exchange (<abbr class="abbrev">i.e.</abbr> method call)
+between several Objects in a specific time-delimited
+situation. Objects are instances of classes.
+Sequence Diagrams put special emphasis in the order and the
+times in which the messages to the objects are sent.</p><p> 
+In Sequence Diagrams objects are represented through vertical dashed lines, with the name of the Object
+on the top. The time axis is also vertical, increasing downwards, so that messages are sent from one Object
+to another in the form of arrows with the operation and parameters name. 
+</p><div class="screenshot"><div xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="mediaobject"><hr><img src="./UML-Elements_files/sequence-diagram.png" alt="Umbrello UML Modeller showing a Sequence Diagram"><div class="caption"><p><span class="application">Umbrello <acronym class="acronym">UML</acronym> Modeller</span> showing a Sequence Diagram
+	    </p></div><hr></div></div><p>Messages can be either synchronous, the normal type of message call where control is passed to the called object until that
+method has finished running, or asynchronous where control is passed back directly to the calling object.  Synchronous messages have
+a vertical box on the side of the called object to show the flow of program control.</p></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="collaboration-diagram"></a>Collaboration Diagrams</h3></div></div></div><p>Collaboration Diagrams show the interactions occurring between the objects participating in a specific
+situation. This is more or less the same information shown by Sequence Diagrams but there the emphasis is
+put on how the interactions occur in time while the Collaboration Diagrams 
+put the relationships between the objects and their topology in the foreground.</p><p>In Collaboration Diagrams messages sent from one object to another are represented by arrows, showing
+the message name, parameters, and the sequence of the message. Collaboration Diagrams are specially well suited
+to showing a specific program flow or situation and are one of the best diagram types to quickly demonstrate
+or explain one process in the program logic.
+</p><div class="screenshot"><div xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="mediaobject"><hr><img src="./UML-Elements_files/collaboration-diagram.png" alt="Umbrello UML Modeller showing a Collaboration Diagram"><div class="caption"><p><span class="application">Umbrello <acronym class="acronym">UML</acronym> Modeller</span> showing a Collaboration Diagram
+	    </p></div><hr></div></div></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="state-diagram"></a>State Diagram</h3></div></div></div><p>State Diagrams show the different states of an Object during its life and the stimuli that
+cause the Object to change its state.
+</p><p>State Diagrams view Objects as <span class="emphasis"><em>state machines</em></span> or finite automates that can
+be in one of a set of finite states and that can change its state via one of a finite set of stimuli. For example
+an Object of type <span class="emphasis"><em>NetServer</em></span> can be in one of following states during its life:
+</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Ready</p></li><li class="listitem"><p>Listening</p></li><li class="listitem"><p>Working</p></li><li class="listitem"><p>Stopped</p></li></ul></div><p>and the events that can cause the Object to change states are</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Object is created</p></li><li class="listitem"><p>Object receives message listen</p></li><li class="listitem"><p>A Client requests a connection over the network</p></li><li class="listitem"><p>A Client terminates a request</p></li><li class="listitem"><p>The request is executed and terminated</p></li><li class="listitem"><p>Object receives message stop</p></li><li class="listitem"><p>etc</p></li></ul></div><p>
+</p><div class="screenshot"><div xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="mediaobject"><hr><img src="./UML-Elements_files/state-diagram.png" alt="Umbrello UML Modeller showing a State Diagram"><div class="caption"><p><span class="application">Umbrello <acronym class="acronym">UML</acronym> Modeller</span> showing a State Diagram
+	    </p></div><hr></div></div><p>
+</p><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="state"></a>State</h4></div></div></div><p>States are the building block of State Diagrams. A State belongs to exactly one class and represents
+a summary of the values the attributes of a class can take. A <acronym class="acronym">UML</acronym> State describes the internal state of an 
+object of one particular class
+</p><p>Note that not every change in one of the attributes of an object should be represented by a State
+but only those changes that can significantly affect the workings of the object</p><p> 
+There are two special types of States: Start and End. They are special in that there is no event that 
+can cause an Object to return to its Start state, in the same way as there is no event that can possible take
+an Object out of its End state once it has reached it.
+</p></div></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="activity-diagram"></a>Activity Diagram</h3></div></div></div><p>Activity Diagrams describe the sequence of activities in a system with the
+help of Activities. Activity Diagrams are a special form of State Diagrams, that only (or mostly) contains
+Activities.
+</p><p>
+</p><div class="screenshot"><div xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="mediaobject"><hr><img src="./UML-Elements_files/activity-diagram.png" alt="Umbrello UML Modeller showing an Activity Diagram"><div class="caption"><p><span class="application">Umbrello <acronym class="acronym">UML</acronym> Modeller</span> showing an Activity Diagram
+	    </p></div><hr></div></div><p>
+</p><p>Activity Diagrams are similar to procedural Flux Diagrams, with the difference that all Activities
+are clearly attached to Objects.</p><p>Activity Diagrams are always associated to a
+<span class="emphasis"><em>Class</em></span>, an <span class="emphasis"><em>Operation</em></span> or a
+<span class="emphasis"><em>Use Case</em></span>.</p><p>Activity Diagrams support sequential as well as parallel Activities. Parallel execution is represented
+via Fork/Wait icons, and for the Activities running
+in parallel, it is not important the order in which they are carried out (they can be executed at the same
+time or one after the other)</p><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="activity"></a>Activity</h4></div></div></div><p>An Activity is a single step in a process. One Activity is one state
+in the system with internal activity and, at least, one outgoing transition. Activities can also have
+more than one outgoing transition if they have different conditions.
+</p><p>Activities can form hierarchies, this means that an Activity can be composed of several <span class="quote">“<span class="quote">detail</span>”</span>
+Activities, in which case the incoming and outgoing transitions should match the incoming and outgoing transitions
+of the detail diagram.
+</p></div></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="helper-elements"></a>Helper Elements</h3></div></div></div><p>There are a few elements in <acronym class="acronym">UML</acronym> that have no real semantic value for the model, but help to clarify
+parts of the diagram. These elements are </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Text lines</p></li><li class="listitem"><p>Text Notes and anchors</p></li><li class="listitem"><p>Boxes</p></li></ul></div><p>
+Text lines are useful to add short text information to a diagram. It is free-standing text and has no 
+meaning to the Model itself.
+</p><p> 
+Notes are useful to add more detailed information about an
+object or a specific situation. They have the great advantage that
+notes can be anchored to <acronym class="acronym">UML</acronym> Elements to show that the note
+<span class="quote">“<span class="quote">belongs</span>”</span> to a specific object or situation.  
+</p><p>Boxes are free-standing rectangles which can be used to group items together to make diagrams more readable.  They
+have no logical meaning in the model.</p></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="component-diagram"></a>Component Diagrams</h3></div></div></div><p>Component Diagrams show the software components (either component technologies such as KParts, CORBA components or Java Beans or 
+just sections of the system which are clearly distinguishable) and the artifacts they
+are made out of such as source code files, programming libraries or relational database tables.</p><p>Components can have interfaces (<abbr class="abbrev">i.e.</abbr> abstract classes with operations) that allow associations between components.</p></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="deployment-diagram"></a>Deployment Diagrams</h3></div></div></div><p>Deployment diagrams show the runtime component instances and their
+associations.  They include Nodes which are physical resources,
+typically a single computer.  They also show interfaces and objects (class instances).</p></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="entity-relationship-diagram"></a>Entity Relationship Diagrams</h3></div></div></div><p>Entity Relationship Diagrams (ER Diagrams) show the conceptual design of database applications. They depict the
+various entities (concepts) in the information system and the existing relationships and constraints between them.
+An extension of Entity Relationship Diagrams named 'Extended Entity Relationship Diagrams' or 'Enhanced Entity Relationship Diagrams' (EER), are used to incorporate Object Oriented design techniques in ER Diagrams. </p><p>
+</p><div class="screenshot"><div xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="mediaobject"><hr><img src="./UML-Elements_files/entity-relationship-diagram.png" alt="Umbrello showing an Entity Relationship Diagram"><div class="caption"><p>Umbrello showing an Entity Relationship Diagram
+	    </p></div><hr></div></div><p>
+</p><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="entity"></a>Entity</h4></div></div></div><p>An <span class="emphasis"><em>Entity</em></span> is any concept in the real world with an independent existence. It may be an object with a physical existence ( example, Computer, Robot) or it may be an object with a conceptual existence ( eq: University Course). Each entity has a set of attributes which describe the properties of the Entity.</p><p>
+<span class="emphasis"><em>Note:</em></span> No standard notations exist for depicting ER Diagrams. Different texts on this subject use different notations. The concepts and notations for EER diagrams used in Umbrello are from the following book :
+<span class="emphasis"><em>Elmasri R. and Navathe S. (2004). Fundamentals of Database Systems 4th edn. Addison Wesley</em></span>
+</p><p>
+In an ER Diagram, Entities are represented by rectangles, with the name of the entity at the top, and can also show
+the attributes of the entity in another <span class="quote">“<span class="quote">compartment</span>”</span> inside the rectangle.
+</p><p>
+</p><div class="screenshot"><div xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="mediaobject"><hr><img src="./UML-Elements_files/entity.png" alt="Visual representation of an entity in an ER Diagram"><div class="caption"><p>Visual representation of an entity in an ER Diagram
+	    </p></div><hr></div></div><p>
+</p><div class="sect4"><div class="titlepage"><div><div><h5 class="title"><a name="entity-attribute"></a>Entity Attributes</h5></div></div></div><p>
+In ER Diagrams , Entity Attributes are shown with their name in a different compartment of the Entity to which they belong.
+</p></div><div class="sect4"><div class="titlepage"><div><div><h5 class="title"><a name="constraint"></a>Constraints</h5></div></div></div><p> Constraints in ER Diagrams specify the restrictions on data in the information schema. 
+</p><p>There are four types of constraints supported in Umbrello :
+ </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>
+     <span class="emphasis"><em>Primary Key:</em></span> The set of attributes declared as <span class="emphasis"><em>primary key</em></span> are unique to the entity. There can be only one primary key in an Entity and none of its constituent attributes can be NULL.
+    </p></li><li class="listitem"><p>
+     <span class="emphasis"><em>Unique Key:</em></span> The set of attributes declared as <span class="emphasis"><em>unique</em></span> are unique to the entity. There can be many unique constraints on an Entity. Its constituent attributes can be NULL. 
+     Unique Keys and Primary Keys uniquely identify a row in a table ( entity )</p></li><li class="listitem"><p>
+      <span class="emphasis"><em>Foreign Key:</em></span>  A Foreign Key is a referential constraint between two tables. The foreign key identifies a column or a set of columns in one (referencing) table that refers to a column or set of columns in another (referenced) table. The columns in the referenced table must form a primary key or unique key.
+     </p></li><li class="listitem"><p>
+      <span class="emphasis"><em>Check Constraint:</em></span> A check constraint (also known as table check constraint) is a condition that defines valid data when adding or updating an entry in a table of a relational database. A check constraint is applied to each row in the table. The constraint must be a predicate. It can refer to a single or multiple columns of the table.
+     </p><p>
+      Example:   price &gt;= 0     
+     </p></li></ul></div><p>
+</p></div></div></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="extended-entity-relationship-concepts"></a>Extended Entity Relationship (EER) Diagram Concepts</h3></div></div></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="specialization"></a>Specialization</h4></div></div></div><p> Specialization is a way to form new entities using entities that have already been defined. The new entities, known as derived entities, take over (or inherit) attributes of the pre-existing entities, which are referred to as base entities . It is intended to help reuse existing data with little or no modification.</p><p> In Umbrello, one can specify Disjoint and Overlapping Specialization</p><div class="sect4"><div class="titlepage"><div><div><h5 class="title"><a name="disjoint-specialization"></a>Disjoint Specialization</h5></div></div></div><p>Disjoint Specialization specifies that the subclasses of the specialization must be disjoint. This means that an entity can be a member of at most one of the derived entities of the specialization</p><p>
+   </p><div class="screenshot"><div xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="mediaobject"><hr><img src="./UML-Elements_files/disjoint-specialization.png" alt="Visual representation of Disjoint Specialization in EER Diagram"><div class="caption"><p>Visual representation of Disjoint Specialization in EER Diagram
+	    </p></div><hr></div></div><p>
+    </p></div><div class="sect4"><div class="titlepage"><div><div><h5 class="title"><a name="overlapping-specialization"></a>Overlapping Specialization</h5></div></div></div><p>When the derived entities are not constrained to be disjoint, their set of entities are said to be in overlapping specialization. This means that the same real world entity may be a member of more than one derived entity of the specialization</p><p>
+   </p><div class="screenshot"><div xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="mediaobject"><hr><img src="./UML-Elements_files/overlapping-specialization.png" alt="Visual representation of Overlapping Specialization in EER Diagram"><div class="caption"><p>Visual representation of Overlapping Specialization in EER Diagram
+	    </p></div><hr></div></div><p>
+  </p></div><div class="sect4"><div class="titlepage"><div><div><h5 class="title"><a name="category"></a>Category</h5></div></div></div><p>
+  A derived Entity is said to be a <span class="emphasis"><em>Category</em></span> when it represents a collection of objects that is a subset of Union of the distinct entity types. A Category is modelled when the need arises for a single superclass/subclass relationship with more than one superclass, where the superclasses represent different entity types. ( Much like multiple inheritance in Object Oriented Programming ).
+ </p><p>
+   </p><div class="screenshot"><div xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="mediaobject"><hr><img src="./UML-Elements_files/category.png" alt="Visual representation of a Category in EER Diagram"><div class="caption"><p>Visual representation of a Category in EER Diagram</p></div><hr></div></div><p>
+  </p></div></div></div></div></div><div id="footer"><div class="navCenter"><table class="navigation"><tbody><tr><td class="prevCell"><a accesskey="p" href="http://docs.kde.org/stable/en/kdesdk/umbrello/uml-basics.html">Prev</a></td><td class="upCell"><a accesskey="h" href="http://docs.kde.org/stable/en/kdesdk/umbrello/index.html">Contents</a></td><td class="nextCell"><a accesskey="n" href="http://docs.kde.org/stable/en/kdesdk/umbrello/working-with-umbrello.html">Next</a></td></tr><tr><td class="prevCell"><acronym class="acronym">UML</acronym> Basics&nbsp;</td><td class="upCell"><acronym class="acronym">UML</acronym> Basics</td><td class="nextCell">&nbsp;Working with <span class="application">Umbrello <acronym class="acronym">UML</acronym> Modeller</span></td></tr><tr><td class="upCell" colspan="3"><a href="http://docs.kde.org/">http://docs.kde.org/</a></td></tr></tbody></table></div></div></div>
+</body></html>

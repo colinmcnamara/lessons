@@ -78,9 +78,9 @@ class Actor(object):
 	def __init__(self,name):
 		self.name = name
 		self.inventory = {
-		'health': '10',
+		'health': '1',
 		'xp': '1',
-		'raygun': '10',
+		'raygun': '1',
 		'neutron_bomb': '0'
 }
 	def print_inventory(self):
@@ -107,6 +107,9 @@ class Actor(object):
 			self.inventory[dictionary_item] = (i)
 			print "You have %s %s uses remaining" % (self.inventory[dictionary_item], dictionary_item)
 			# how the fuck do I pass target as value to the target.Gothon.inventory....)
+			j = int(target.inventory['health'])
+			j -= 1 
+			target.inventory['health'] = (j)
 			print "The %s has %s health remaining" % (target.name, target.inventory['health'])
 			# subtract one heath from target
 #			print .inventory['health'] 

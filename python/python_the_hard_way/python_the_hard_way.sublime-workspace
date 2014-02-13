@@ -4,6 +4,50 @@
 		"selected_items":
 		[
 			[
+				"dictio",
+				"dictionary_item_value"
+			],
+			[
+				"dictiona",
+				"dictionary_item"
+			],
+			[
+				"Go",
+				"Gothon"
+			],
+			[
+				"dict",
+				"dictionary_item"
+			],
+			[
+				"dic",
+				"dictionary_item"
+			],
+			[
+				"ran",
+				"randomizer"
+			],
+			[
+				"rand",
+				"randrange"
+			],
+			[
+				"test",
+				"Test_health_modify"
+			],
+			[
+				"Test",
+				"Test_health_modify"
+			],
+			[
+				"Test_",
+				"Test_inventory_modify"
+			],
+			[
+				"prin",
+				"print_inventory"
+			],
+			[
 				"va",
 				"variant_report  (function)"
 			],
@@ -58,10 +102,6 @@
 			[
 				"action",
 				"action_name"
-			],
-			[
-				"prin",
-				"print_list_names"
 			],
 			[
 				"oh_",
@@ -120,26 +160,21 @@
 	"buffers":
 	[
 		{
-			"file": "Exercise_43_Gothons_From_Planet_Percal_#25/notes.asc",
-			"settings":
-			{
-				"buffer_size": 5539,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "notes.asc",
 			"settings":
 			{
-				"buffer_size": 5005,
+				"buffer_size": 5017,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Volumes/web/index.asc",
+			"contents": "=== is-a, has-a object and classes\n\n=== Salmon Example\n\nWhat is the difference betweek a fish and a salmon?\n\nFish is a class, Salmon is a class that is contained within the class fish\n\nif you put 3 fish in a bucket, and name 2 of them frank and mary. \n\nAll three are class fish\n\nAll three are in the class salmon\n\nfrank and mary are just an instance of salmon (they are objects)\n\nmary = salmon(her-unique attributes)\n\nThey are created from salmon but have unique attributes\n\n=== Class\n\nClass is not a _real_ thing. But rather a word we attache to instances of things with similar attributes\n\n. fins\n. gills\n. lives in water\n\nprobably in class fish\n\n=== Key concept - Objects are created from classes. \n\nClasses are just the templates that we start with. \n\n=== Figuring out whether something is a class or an object\n\n==== is-a vs has-a\n\nwhen you talk about objects and classes being related to each other by a class relationship you use *is-a*\n\n*Salmon IS-A fish*\n\nwhen an object or class is only related you use \n\n*Salmon HAS-A Gill*\n\nColin *is-a* class human and *has-a* class hand\n\n=== self.name \nor blah.name whatever\n\n\n[source, python]\n----\nself.name = name\n----\n\ngets the object name and sets it as a string. Neet.\n\n\n=== Python Super __init__ method\n. Super lets you avoid referring to the ebase class explicitly.\n\n. Main advantage comes from multiple inheritance. \n\nhttp://www.artima.com/weblogs/viewpost.jsp?thread=236275[Post on super]\n\nhttp://docs.python.org/2/library/functions.html#super[Python Doc's on super]\n\n=== RULE - Python always requires (object) when you make a class\n\nthis is due to some oversight early in the language\n\n=== Python object class\n\n=== Programming Types\nTwo main things, commonly defined as scripting and programmming.\n\n==== Procedural Programming - Scripting\nThis is my past. focus on automating processured which operate on data\n\n==== My future - object oriented programming\nCreating creation of objects that contain both data and functions\n\n\n=== Python class and objects\n\nIneritance is interesting\n\n=== Class inheritance \n",
+			"file": "Exercise_42_Is-A_Has-A_Objects_and_Classes/notes.asc",
+			"file_size": 2037,
+			"file_write_time": 130357783710000000,
 			"settings":
 			{
-				"buffer_size": 738,
+				"buffer_size": 2060,
 				"line_ending": "Unix"
 			}
 		},
@@ -155,15 +190,39 @@
 			"file": "Exercise_43_Gothons_From_Planet_Percal_#25/ex43.py",
 			"settings":
 			{
-				"buffer_size": 1160,
+				"buffer_size": 5435,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "figures/UML-Elements.html",
+			"file": "/Users/cmcnamara/code/nexus/nexus-sdn/scripts/Jenkins/aws.sh",
 			"settings":
 			{
-				"buffer_size": 38805,
+				"buffer_size": 2331,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Exercise_40_Modules_Classes_And_Objects/ex40-song-class.py",
+			"settings":
+			{
+				"buffer_size": 1413,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Exercise_42_Is-A_Has-A_Objects_and_Classes/ex42.py",
+			"settings":
+			{
+				"buffer_size": 5136,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Exercise_40_Modules_Classes_And_Objects/ex40-classes.py",
+			"settings":
+			{
+				"buffer_size": 361,
 				"line_ending": "Unix"
 			}
 		}
@@ -175,28 +234,56 @@
 		"selected_items":
 		[
 			[
-				"push",
-				"Git: Push"
+				"git ",
+				"Git: Log Current File"
+			],
+			[
+				"git:",
+				"Git: Gui"
+			],
+			[
+				"git",
+				"Git: Toggle Annotations"
 			],
 			[
 				"com",
 				"Git: Commit"
 			],
 			[
-				"add",
-				"Git: Add..."
+				"git ad",
+				"Git: Add Current File"
 			],
 			[
 				"ad",
 				"Git: Add..."
 			],
 			[
-				"source",
-				"Snippet: source-python"
+				"git lo",
+				"Git: Log All"
 			],
 			[
-				"git ad",
+				"git status",
+				"Git: Status"
+			],
+			[
+				"git co",
+				"Git: Commit"
+			],
+			[
+				"git stast",
+				"Git: Status"
+			],
+			[
+				"add",
 				"Git: Add..."
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"source",
+				"Snippet: source-python"
 			],
 			[
 				"pu",
@@ -225,10 +312,6 @@
 			[
 				"stac",
 				"Stackoverflow: Search Selection"
-			],
-			[
-				"git co",
-				"Git: Commit"
 			],
 			[
 				"git push",
@@ -267,10 +350,6 @@
 				"Git: Commit history"
 			],
 			[
-				"git",
-				"Git: Commit history"
-			],
-			[
 				"QUI",
 				"Git: Quick Commit"
 			],
@@ -305,10 +384,6 @@
 			[
 				"ame",
 				"Git: Amend Commit"
-			],
-			[
-				"git ",
-				"Git: Commit"
 			],
 			[
 				"git  qui",
@@ -375,7 +450,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 489.0
+		"width": 602.0
 	},
 	"console":
 	{
@@ -396,11 +471,16 @@
 	},
 	"file_history":
 	[
+		"/Users/cmcnamara/code/nexus/nexus-sdn/doc/pom.xml",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_40_Modules_Classes_And_Objects/ex40.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_40_Modules_Classes_And_Objects/ex40-song-class.py",
+		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_42_Is-A_Has-A_Objects_and_Classes/ex42.py",
+		"/Users/cmcnamara/code/nexus/nexus-puppet/etc/puppet/manifests/nodes/cobbler.nexusis.com.pp",
 		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/figures/UML-Elements.html",
+		"/Volumes/web/index.asc",
 		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/figures/UML-Elements-Derived.asc",
 		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Extra_UML_Modeling/UML_Modeling.asc",
 		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_42_Is-A_Has-A_Objects_and_Classes/notes.asc",
-		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_42_Is-A_Has-A_Objects_and_Classes/ex42.py",
 		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Guardfile",
 		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_51_Getting_Input_From_A_Browser/notes.asc",
 		"/Users/cmcnamara/Dropbox/Created-Content/Open-Development-Engineering-Mentorship-Program.asc",
@@ -412,13 +492,10 @@
 		"/Users/cmcnamara/code/openstack/horizon/horizon/openstack_dashboard/dashboards/project/instances",
 		"/Users/cmcnamara/code/openstack/horizon/horizon/users.py",
 		"/Users/cmcnamara/code/openstack/horizon/horizon/templates/horizon/client_side/template.html",
-		"/Users/cmcnamara/code/nexus/nexus-puppet/etc/puppet/manifests/nodes/cobbler.nexusis.com.pp",
 		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_41_Learning_To_Speak_Object_Oriented/notes.asc",
 		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_34_Accessing_Elements_Of_Lists/ex34.py",
 		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_41_Learning_To_Speak_Object_Oriented/ex41-flashcards.py",
-		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_40_Modules_Classes_And_Objects/ex40.py",
 		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_40_Modules_Classes_And_Objects/ex40-classes.py",
-		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_40_Modules_Classes_And_Objects/ex40-song-class.py",
 		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_40_Modules_Classes_And_Objects/ex40-network-interface.py",
 		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_40_Modules_Classes_And_Objects/mystuff.py",
 		"/Users/cmcnamara/code/pythonthehardway/lessons/python/python_the_hard_way/Exercise_40_Modules_Classes_And_Objects/notes.asc",
@@ -521,13 +598,11 @@
 		"/Users/cmcnamara/code/pythonthehardway/Exercise_46_A_Project_Skeleton/*",
 		"/Users/cmcnamara/code/pythonthehardway/Exercise_45_You_Make_A_Game/*",
 		"/Users/cmcnamara/code/pythonthehardway/Exercise_44_Inheritance_Vs._Composition/*",
-		"/Users/cmcnamara/code/pythonthehardway/Exercise_41_Learning_To_Speak_Object_Oriented/*",
-		"/Users/cmcnamara/code/pythonthehardway/Exercise_40_Modules,_Classes,_And_Objects/*",
-		"/Users/cmcnamara/code/pythonthehardway/Exercise_3_Numbers_And_Math/*"
+		"/Users/cmcnamara/code/pythonthehardway/Exercise_41_Learning_To_Speak_Object_Oriented/*"
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 54.0
 	},
 	"find_in_files":
 	{
@@ -542,6 +617,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"run py.test to execute tests.\n",
+			"2",
+			"info_dict",
+			"note",
+			"Gothon",
 			"../figures",
 			"====== ",
 			"images::..",
@@ -659,24 +739,290 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Exercise_43_Gothons_From_Planet_Percal_#25/notes.asc",
+					"file": "notes.asc",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5539,
+						"buffer_size": 5017,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5538,
-								5538
+								249,
+								249
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/User/AsciiDoc/AsciiDoc.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Exercise_42_Is-A_Has-A_Objects_and_Classes/notes.asc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2060,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2059,
+								2059
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/User/AsciiDoc/AsciiDoc.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1901.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Extra_UML_Modeling/UML_Modeling.asc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 20457,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								250,
+								250
 							]
 						],
 						"settings":
@@ -794,405 +1140,6 @@
 					},
 					"stack_index": 2,
 					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "notes.asc",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5005,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1272,
-								1272
-							]
-						],
-						"settings":
-						{
-							"WordCountShouldRun": true,
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_live": true,
-							"codeintel_live_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_max_recursive_dir_depth": 10,
-							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"codeintel_tooltips": "popup",
-							"sublime_auto_complete": true,
-							"syntax": "Packages/User/AsciiDoc/AsciiDoc.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1035.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/Volumes/web/index.asc",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 738,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								645,
-								645
-							]
-						],
-						"settings":
-						{
-							"WordCountShouldRun": true,
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_live": true,
-							"codeintel_live_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_max_recursive_dir_depth": 10,
-							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"codeintel_tooltips": "popup",
-							"sublime_auto_complete": true,
-							"syntax": "Packages/User/AsciiDoc/AsciiDoc.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Extra_UML_Modeling/UML_Modeling.asc",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 20457,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								10260,
-								10260
-							]
-						],
-						"settings":
-						{
-							"WordCountShouldRun": true,
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_live": true,
-							"codeintel_live_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_max_recursive_dir_depth": 10,
-							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"codeintel_tooltips": "popup",
-							"sublime_auto_complete": true,
-							"syntax": "Packages/User/AsciiDoc/AsciiDoc.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 5780.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
 				}
 			]
 		},
@@ -1201,20 +1148,20 @@
 			"sheets":
 			[
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "Exercise_43_Gothons_From_Planet_Percal_#25/ex43.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1160,
+						"buffer_size": 5435,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1099,
-								1099
+								3173,
+								3173
 							]
 						],
 						"settings":
@@ -1323,43 +1270,135 @@
 								"Python Django": "Python"
 							},
 							"codeintel_tooltips": "popup",
+							"live_git_annotations": true,
 							"sublime_auto_complete": true,
-							"syntax": "Packages/Python/Python.tmLanguage"
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 479.0,
+						"translation.y": 1886.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "figures/UML-Elements.html",
+					"buffer": 4,
+					"file": "/Users/cmcnamara/code/nexus/nexus-sdn/scripts/Jenkins/aws.sh",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 38805,
+						"buffer_size": 2331,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								21298,
-								21298
+								0,
+								0
 							]
 						],
 						"settings":
 						{
 							"WordCountShouldRun": true,
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 6015.0,
+						"translation.x": 4.0,
+						"translation.y": 343.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Exercise_40_Modules_Classes_And_Objects/ex40-song-class.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1413,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "Exercise_42_Is-A_Has-A_Objects_and_Classes/ex42.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5136,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 15.0,
+						"translation.y": 1282.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Exercise_40_Modules_Classes_And_Objects/ex40-classes.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 361,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"WordCountShouldRun": true,
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -1367,7 +1406,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 35.0
+		"height": 54.0
 	},
 	"input":
 	{
@@ -1393,7 +1432,7 @@
 		"cols":
 		[
 			0.0,
-			0.395979032166,
+			0.306796811332,
 			1.0
 		],
 		"rows":
@@ -1405,7 +1444,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 65.0
+		"height": 203.0
 	},
 	"output.find_results":
 	{
@@ -1440,7 +1479,7 @@
 		[
 			[
 				"",
-				"~/Documents/nexus-sdn.sublime-project"
+				"~/code/pythonthehardway/pythonthehardway.sublime-project"
 			]
 		],
 		"width": 380.0

@@ -90,17 +90,14 @@ class Actor(object):
 		for key, value in self.inventory.iteritems():
 			print "%s: %s" % (key, value) 
 
-	def health_change(self, value):
+	def effect_target(dictionary_item, target):
 		""" Change health based on interfaction with items """
 		pass
-
-	def xp_change(self):
-		""" Change XP based on interaction with opponents and scenes """
-		pass 
 
 	def use_item(self, actor, dictionary_item, target):
 		""" use an item against a target, only if item >= 0, subtract one """
 		print "\n--- Using %s on %s ---" % (dictionary_item, target)
+
 		if self.inventory[dictionary_item] >= 1:
 			# read the count of the dictionary_item and subtract 1
 			# set that value as the new dictionary item and as integer
@@ -109,13 +106,19 @@ class Actor(object):
 			# update item count with new number
 			self.inventory[dictionary_item] = (i)
 			print "You have %s %s uses remaining" % (self.inventory[dictionary_item], dictionary_item)
+			# how the fuck do I pass target as value to the target.Gothon.inventory....)
+			print "The %s has %s health remaining" % (target.name, target.inventory['health'])
 			# subtract one heath from target
+#			print .inventory['health'] 
+# wip			print "%s health = %s" % (target, target.inventory['health'])
+
 		else:
 			print "You have no uses remaining"
 
-	def use(self, target):
-		""" use item against your opponent"""
-		pass
+
+#	def use(self, target):
+#		""" use item against your opponent"""
+#		pass
 
 #class Antagonist(Actor):
 #	""" antagonist alien, openonent of Hero """
@@ -144,7 +147,8 @@ Luke = Actor('Luke')
 Luke.print_inventory()
 Gothon.print_inventory()
 # example attack class / function
-Luke.use_item('Luke','raygun','Gothon')
+Luke.use_item('Luke','raygun',Gothon)
+Gothon.print_inventory()
 
 #experimenting with pyunit
 #class test_inventory_modify(unittest.TestCase):

@@ -1,11 +1,735 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="generator" content="Asciidoctor 0.1.4">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UML Modeling</title>
-<link rel="stylesheet" href="./asciidoctor.css">
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title></title>
+<style type="text/css">
+/* Shared CSS for AsciiDoc xhtml11 and html5 backends */
+
+/* Default font. */
+body {
+  font-family: Georgia,serif;
+}
+
+/* Title font. */
+h1, h2, h3, h4, h5, h6,
+div.title, caption.title,
+thead, p.table.header,
+#toctitle,
+#author, #revnumber, #revdate, #revremark,
+#footer {
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+  color: navy;
+}
+
+strong {
+  font-weight: bold;
+  color: #083194;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1, h2, h3 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  padding-top: 0.5em;
+}
+h3 {
+  float: left;
+}
+h3 + * {
+  clear: left;
+}
+h5 {
+  font-size: 1.0em;
+}
+
+div.sectionbody {
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul, ol, li > p {
+  margin-top: 0;
+}
+ul > li     { color: #aaa; }
+ul > li > * { color: black; }
+
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
+  padding: 0;
+  margin: 0;
+}
+pre {
+  white-space: pre-wrap;
+}
+
+#author {
+  color: #527bbd;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+#email {
+}
+#revnumber, #revdate, #revremark {
+}
+
+#footer {
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+#preamble {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.0em;
+  margin-bottom: 2.0em;
+  margin-right: 10%;
+  color: #606060;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  color: #527bbd;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid #dddddd;
+  border-left: 4px solid #f0f0f0;
+  padding: 0.5em;
+}
+
+div.listingblock > div.content {
+  border: 1px solid #dddddd;
+  border-left: 5px solid #f0f0f0;
+  background: #f8f8f8;
+  padding: 0.5em;
+}
+
+div.quoteblock, div.verseblock {
+  padding-left: 1.0em;
+  margin-left: 1.0em;
+  margin-right: 10%;
+  border-left: 5px solid #f0f0f0;
+  color: #888;
+}
+
+div.quoteblock > div.attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
+
+div.verseblock > pre.content {
+  font-family: inherit;
+  font-size: inherit;
+}
+div.verseblock > div.attribution {
+  padding-top: 0.75em;
+  text-align: left;
+}
+/* DEPRECATED: Pre version 8.2.7 verse style literal block. */
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 3px solid #dddddd;
+}
+
+div.exampleblock > div.content {
+  border-left: 3px solid #dddddd;
+  padding-left: 0.5em;
+}
+
+div.imageblock div.content { padding-left: 0; }
+span.image img { border-style: none; vertical-align: text-bottom; }
+a.image:visited { color: white; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: normal;
+  color: navy;
+}
+dd > *:first-child {
+  margin-top: 0.1em;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.arabic {
+  list-style-type: decimal;
+}
+ol.loweralpha {
+  list-style-type: lower-alpha;
+}
+ol.upperalpha {
+  list-style-type: upper-alpha;
+}
+ol.lowerroman {
+  list-style-type: lower-roman;
+}
+ol.upperroman {
+  list-style-type: upper-roman;
+}
+
+div.compact ul, div.compact ol,
+div.compact p, div.compact p,
+div.compact div, div.compact div {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+tfoot {
+  font-weight: bold;
+}
+td > div.verse {
+  white-space: pre;
+}
+
+div.hdlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+div.hdlist tr {
+  padding-bottom: 15px;
+}
+dt.hdlist1.strong, td.hdlist1.strong {
+  font-weight: bold;
+}
+td.hdlist1 {
+  vertical-align: top;
+  font-style: normal;
+  padding-right: 0.8em;
+  color: navy;
+}
+td.hdlist2 {
+  vertical-align: top;
+}
+div.hdlist.compact tr {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.comment {
+  background: yellow;
+}
+
+.footnote, .footnoteref {
+  font-size: 0.8em;
+}
+
+span.footnote, span.footnoteref {
+  vertical-align: super;
+}
+
+#footnotes {
+  margin: 20px 0 20px 0;
+  padding: 7px 0 0 0;
+}
+
+#footnotes div.footnote {
+  margin: 0 0 5px 0;
+}
+
+#footnotes hr {
+  border: none;
+  border-top: 1px solid silver;
+  height: 1px;
+  text-align: left;
+  margin-left: 0;
+  width: 20%;
+  min-width: 100px;
+}
+
+div.colist td {
+  padding-right: 0.5em;
+  padding-bottom: 0.3em;
+  vertical-align: top;
+}
+div.colist td img {
+  margin-top: 0.3em;
+}
+
+@media print {
+  #footer-badges { display: none; }
+}
+
+#toc {
+  margin-bottom: 2.5em;
+}
+
+#toctitle {
+  color: #527bbd;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel0, div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.toclevel2 {
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+div.toclevel3 {
+  margin-left: 4em;
+  font-size: 0.9em;
+}
+div.toclevel4 {
+  margin-left: 6em;
+  font-size: 0.9em;
+}
+
+span.aqua { color: aqua; }
+span.black { color: black; }
+span.blue { color: blue; }
+span.fuchsia { color: fuchsia; }
+span.gray { color: gray; }
+span.green { color: green; }
+span.lime { color: lime; }
+span.maroon { color: maroon; }
+span.navy { color: navy; }
+span.olive { color: olive; }
+span.purple { color: purple; }
+span.red { color: red; }
+span.silver { color: silver; }
+span.teal { color: teal; }
+span.white { color: white; }
+span.yellow { color: yellow; }
+
+span.aqua-background { background: aqua; }
+span.black-background { background: black; }
+span.blue-background { background: blue; }
+span.fuchsia-background { background: fuchsia; }
+span.gray-background { background: gray; }
+span.green-background { background: green; }
+span.lime-background { background: lime; }
+span.maroon-background { background: maroon; }
+span.navy-background { background: navy; }
+span.olive-background { background: olive; }
+span.purple-background { background: purple; }
+span.red-background { background: red; }
+span.silver-background { background: silver; }
+span.teal-background { background: teal; }
+span.white-background { background: white; }
+span.yellow-background { background: yellow; }
+
+span.big { font-size: 2em; }
+span.small { font-size: 0.6em; }
+
+span.underline { text-decoration: underline; }
+span.overline { text-decoration: overline; }
+span.line-through { text-decoration: line-through; }
+
+div.unbreakable { page-break-inside: avoid; }
+
+
+/*
+ * xhtml11 specific
+ *
+ * */
+
+div.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead, p.table.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.table {
+  margin-top: 0;
+}
+/* Because the table frame attribute is overriden by CSS in most browsers. */
+div.tableblock > table[frame="void"] {
+  border-style: none;
+}
+div.tableblock > table[frame="hsides"] {
+  border-left-style: none;
+  border-right-style: none;
+}
+div.tableblock > table[frame="vsides"] {
+  border-top-style: none;
+  border-bottom-style: none;
+}
+
+
+/*
+ * html5 specific
+ *
+ * */
+
+table.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+thead, p.tableblock.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.tableblock {
+  margin-top: 0;
+}
+table.tableblock {
+  border-width: 3px;
+  border-spacing: 0px;
+  border-style: solid;
+  border-color: #527bbd;
+  border-collapse: collapse;
+}
+th.tableblock, td.tableblock {
+  border-width: 1px;
+  padding: 4px;
+  border-style: solid;
+  border-color: #527bbd;
+}
+
+table.tableblock.frame-topbot {
+  border-left-style: hidden;
+  border-right-style: hidden;
+}
+table.tableblock.frame-sides {
+  border-top-style: hidden;
+  border-bottom-style: hidden;
+}
+table.tableblock.frame-none {
+  border-style: hidden;
+}
+
+th.tableblock.halign-left, td.tableblock.halign-left {
+  text-align: left;
+}
+th.tableblock.halign-center, td.tableblock.halign-center {
+  text-align: center;
+}
+th.tableblock.halign-right, td.tableblock.halign-right {
+  text-align: right;
+}
+
+th.tableblock.valign-top, td.tableblock.valign-top {
+  vertical-align: top;
+}
+th.tableblock.valign-middle, td.tableblock.valign-middle {
+  vertical-align: middle;
+}
+th.tableblock.valign-bottom, td.tableblock.valign-bottom {
+  vertical-align: bottom;
+}
+
+
+/*
+ * manpage specific
+ *
+ * */
+
+body.manpage h1 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top: 2px solid silver;
+  border-bottom: 2px solid silver;
+}
+body.manpage h2 {
+  border-style: none;
+}
+body.manpage div.sectionbody {
+  margin-left: 3em;
+}
+
+@media print {
+  body.manpage div#toc { display: none; }
+}
+
+
+</style>
+<script type="text/javascript">
+/*<![CDATA[*/
+var asciidoc = {  // Namespace.
+
+/////////////////////////////////////////////////////////////////////
+// Table Of Contents generator
+/////////////////////////////////////////////////////////////////////
+
+/* Author: Mihai Bazon, September 2002
+ * http://students.infoiasi.ro/~mishoo
+ *
+ * Table Of Content generator
+ * Version: 0.4
+ *
+ * Feel free to use this script under the terms of the GNU General Public
+ * License, as long as you do not remove or alter this notice.
+ */
+
+ /* modified by Troy D. Hanson, September 2006. License: GPL */
+ /* modified by Stuart Rackham, 2006, 2009. License: GPL */
+
+// toclevels = 1..4.
+toc: function (toclevels) {
+
+  function getText(el) {
+    var text = "";
+    for (var i = el.firstChild; i != null; i = i.nextSibling) {
+      if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
+        text += i.data;
+      else if (i.firstChild != null)
+        text += getText(i);
+    }
+    return text;
+  }
+
+  function TocEntry(el, text, toclevel) {
+    this.element = el;
+    this.text = text;
+    this.toclevel = toclevel;
+  }
+
+  function tocEntries(el, toclevels) {
+    var result = new Array;
+    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
+    // Function that scans the DOM tree for header elements (the DOM2
+    // nodeIterator API would be a better technique but not supported by all
+    // browsers).
+    var iterate = function (el) {
+      for (var i = el.firstChild; i != null; i = i.nextSibling) {
+        if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
+          var mo = re.exec(i.tagName);
+          if (mo && (i.getAttribute("class") || i.getAttribute("className")) != "float") {
+            result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
+          }
+          iterate(i);
+        }
+      }
+    }
+    iterate(el);
+    return result;
+  }
+
+  var toc = document.getElementById("toc");
+  if (!toc) {
+    return;
+  }
+
+  // Delete existing TOC entries in case we're reloading the TOC.
+  var tocEntriesToRemove = [];
+  var i;
+  for (i = 0; i < toc.childNodes.length; i++) {
+    var entry = toc.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div'
+     && entry.getAttribute("class")
+     && entry.getAttribute("class").match(/^toclevel/))
+      tocEntriesToRemove.push(entry);
+  }
+  for (i = 0; i < tocEntriesToRemove.length; i++) {
+    toc.removeChild(tocEntriesToRemove[i]);
+  }
+
+  // Rebuild TOC entries.
+  var entries = tocEntries(document.getElementById("content"), toclevels);
+  for (var i = 0; i < entries.length; ++i) {
+    var entry = entries[i];
+    if (entry.element.id == "")
+      entry.element.id = "_toc_" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var div = document.createElement("div");
+    div.appendChild(a);
+    div.className = "toclevel" + entry.toclevel;
+    toc.appendChild(div);
+  }
+  if (entries.length == 0)
+    toc.parentNode.removeChild(toc);
+},
+
+
+/////////////////////////////////////////////////////////////////////
+// Footnotes generator
+/////////////////////////////////////////////////////////////////////
+
+/* Based on footnote generation code from:
+ * http://www.brandspankingnew.net/archive/2005/07/format_footnote.html
+ */
+
+footnotes: function () {
+  // Delete existing footnote entries in case we're reloading the footnodes.
+  var i;
+  var noteholder = document.getElementById("footnotes");
+  if (!noteholder) {
+    return;
+  }
+  var entriesToRemove = [];
+  for (i = 0; i < noteholder.childNodes.length; i++) {
+    var entry = noteholder.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
+      entriesToRemove.push(entry);
+  }
+  for (i = 0; i < entriesToRemove.length; i++) {
+    noteholder.removeChild(entriesToRemove[i]);
+  }
+
+  // Rebuild footnote entries.
+  var cont = document.getElementById("content");
+  var spans = cont.getElementsByTagName("span");
+  var refs = {};
+  var n = 0;
+  for (i=0; i<spans.length; i++) {
+    if (spans[i].className == "footnote") {
+      n++;
+      var note = spans[i].getAttribute("data-note");
+      if (!note) {
+        // Use [\s\S] in place of . so multi-line matches work.
+        // Because JavaScript has no s (dotall) regex flag.
+        note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+        spans[i].innerHTML =
+          "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+        spans[i].setAttribute("data-note", note);
+      }
+      noteholder.innerHTML +=
+        "<div class='footnote' id='_footnote_" + n + "'>" +
+        "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
+        n + "</a>. " + note + "</div>";
+      var id =spans[i].getAttribute("id");
+      if (id != null) refs["#"+id] = n;
+    }
+  }
+  if (n == 0)
+    noteholder.parentNode.removeChild(noteholder);
+  else {
+    // Process footnoterefs.
+    for (i=0; i<spans.length; i++) {
+      if (spans[i].className == "footnoteref") {
+        var href = spans[i].getElementsByTagName("a")[0].getAttribute("href");
+        href = href.match(/#.*/)[0];  // Because IE return full URL.
+        n = refs[href];
+        spans[i].innerHTML =
+          "[<a href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+      }
+    }
+  }
+},
+
+install: function(toclevels) {
+  var timerId;
+
+  function reinstall() {
+    asciidoc.footnotes();
+    if (toclevels) {
+      asciidoc.toc(toclevels);
+    }
+  }
+
+  function reinstallAndRemoveTimer() {
+    clearInterval(timerId);
+    reinstall();
+  }
+
+  timerId = setInterval(reinstall, 500);
+  if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", reinstallAndRemoveTimer, false);
+  else
+    window.onload = reinstallAndRemoveTimer;
+}
+
+}
+asciidoc.install();
+/*]]>*/
+</script>
 </head>
 <body class="article">
 <div id="header">
@@ -14,334 +738,257 @@
 <div class="sect1">
 <h2 id="_uml_modeling">UML Modeling</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p><a href="http://www.sparxsystems.com/resources/uml2_tutorial/index.html">UML 2.0 Learning tutorial</a></p>
-</div>
-<div class="paragraph">
-<p><a href="http://docs.kde.org/stable/en/kdesdk/umbrello/uml-elements.html">Umbrello documentation. Goes over UML Element Types</a></p>
-</div>
+<div class="paragraph"><p><a href="http://www.sparxsystems.com/resources/uml2_tutorial/index.html">UML 2.0 Learning tutorial</a></p></div>
+<div class="paragraph"><p><a href="http://docs.kde.org/stable/en/kdesdk/umbrello/uml-elements.html">Umbrello documentation. Goes over UML Element Types</a></p></div>
 <div class="sect2">
 <h3 id="_uml_modeling_tools">UML Modeling Tools</h3>
-<div class="paragraph">
-<p><a href="http://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools">Wikipedia - UML Modeling tools</a></p>
-</div>
+<div class="paragraph"><p><a href="http://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools">Wikipedia - UML Modeling tools</a></p></div>
 </div>
 <div class="sect2">
 <h3 id="_uml_elements">UML Elements</h3>
-
 </div>
 <div class="sect2">
 <h3 id="_use_case_diagram">Use Case Diagram</h3>
-<div class="paragraph">
-<p>Use Case Diagrams describe the relationships and dependencies between a group of Use Cases and the Actors participating in the process.</p>
-</div>
-<div class="paragraph">
-<p>It is important to notice that Use Case Diagrams are not suited to represent the design, and cannot describe the internals of a system. Use Case Diagrams are meant to facilitate the communication with the future users of the system, and with the customer, and are specially helpful to determine the required features the system is to have. Use Case Diagrams tell, what the system should do but do not <code>and cannot</code> specify how this is to be achieved.</p>
-</div>
-<div id="image" class="imageblock">
+<div class="paragraph"><p>Use Case Diagrams describe the relationships and dependencies between a group of Use Cases and the Actors participating in the process.</p></div>
+<div class="paragraph"><p>It is important to notice that Use Case Diagrams are not suited to represent the design, and cannot describe the internals of a system. Use Case Diagrams are meant to facilitate the communication with the future users of the system, and with the customer, and are specially helpful to determine the required features the system is to have. Use Case Diagrams tell, what the system should do but do not <code>and cannot</code> specify how this is to be achieved.</p></div>
+<div class="imageblock" id="image">
 <div class="content">
-<img src="./figures/UML-Elements_files/use-case-diagram.png" alt="use case diagram">
+<img src="./figures/UML-Elements_files/use-case-diagram.png" alt="./figures/UML-Elements_files/use-case-diagram.png" />
 </div>
 <div class="title">Figure 1. Umbrello UML Modeller showing a Use Case Diagram</div>
 </div>
 <div class="sect3">
 <h4 id="_use_case">Use Case</h4>
-<div class="paragraph">
-<p>A Use Case describes — from the point of view of the actors — a group of activities in a system that produces a concrete, tangible result.</p>
-</div>
-<div class="paragraph">
-<p>Use Cases are descriptions of the typical interactions between the users of a system and the system itself. They represent the external interface of the system and specify a form of requirements of what the system has to do (remember, only what, not how).</p>
-</div>
-<div class="paragraph">
-<p>When working with Use Cases, it is important to remember some simple rules:</p>
-</div>
-<div class="ulist">
-<ul>
+<div class="paragraph"><p>A Use Case describes — from the point of view of the actors — a group of activities in a system that produces a concrete, tangible result.</p></div>
+<div class="paragraph"><p>Use Cases are descriptions of the typical interactions between the users of a system and the system itself. They represent the external interface of the system and specify a form of requirements of what the system has to do (remember, only what, not how).</p></div>
+<div class="paragraph"><p>When working with Use Cases, it is important to remember some simple rules:</p></div>
+<div class="ulist"><ul>
 <li>
-<p>Each Use Case is related to at least one actor</p>
+<p>
+Each Use Case is related to at least one actor
+</p>
 </li>
 <li>
-<p>Each Use Case has an initiator (i.e. an actor)</p>
+<p>
+Each Use Case has an initiator (i.e. an actor)
+</p>
 </li>
 <li>
-<p>Each Use Case leads to a relevant result (a result with “business value”)</p>
+<p>
+Each Use Case leads to a relevant result (a result with “business value”)
+</p>
 </li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Use Cases can also have relationships with other Use Cases. The three most typical types of relationships between Use Cases are:</p>
-</div>
-<div class="paragraph">
-<p><a href="#include">[include]</a> which specifies that a Use Case takes place inside another Use Case</p>
-</div>
-<div class="paragraph">
-<p><a href="#extends">[extends]</a> which specifies that in certain situations, or at some point (called an extension point) a Use Case will be extended by another.</p>
-</div>
-<div class="paragraph">
-<p>Generalization specifies that a Use Case inherits the characteristics of the “Super”-Use Case, and can override some of them or add new ones in a similar way as the inheritance between classes.</p>
-</div>
+</ul></div>
+<div class="paragraph"><p>Use Cases can also have relationships with other Use Cases. The three most typical types of relationships between Use Cases are:</p></div>
+<div class="paragraph"><p><a href="#include">[include]</a> which specifies that a Use Case takes place inside another Use Case</p></div>
+<div class="paragraph"><p><a href="#extends">[extends]</a> which specifies that in certain situations, or at some point (called an extension point) a Use Case will be extended by another.</p></div>
+<div class="paragraph"><p>Generalization specifies that a Use Case inherits the characteristics of the “Super”-Use Case, and can override some of them or add new ones in a similar way as the inheritance between classes.</p></div>
 <div class="sect4">
 <h5 id="_actor">Actor</h5>
-<div class="paragraph">
-<p>An actor is an external entity (outside of the system) that interacts with the system by participating (and often initiating) a Use Case. Actors can be in real life people (for example users of the system), other computer systems or external events.</p>
-</div>
-<div class="paragraph">
-<p>Actors do not represent the physical people or systems, but their role. This means that when a person interacts with the system in different ways (assuming different roles) he will be represented by several actors. For example a person that gives customer support by the telephone and takes orders from the customer into the system would be represented by an actor “Support Staff” and an actor “Sales Representative”</p>
-</div>
+<div class="paragraph"><p>An actor is an external entity (outside of the system) that interacts with the system by participating (and often initiating) a Use Case. Actors can be in real life people (for example users of the system), other computer systems or external events.</p></div>
+<div class="paragraph"><p>Actors do not represent the physical people or systems, but their role. This means that when a person interacts with the system in different ways (assuming different roles) he will be represented by several actors. For example a person that gives customer support by the telephone and takes orders from the customer into the system would be represented by an actor “Support Staff” and an actor “Sales Representative”</p></div>
 </div>
 <div class="sect4">
 <h5 id="_use_case_description">Use Case Description</h5>
-<div class="paragraph">
-<p>Use Case Descriptions are textual narratives of the Use Case. They usually take the form of a note or a document that is somehow linked to the Use Case, and explains the processes or activities that take place in the Use Case.</p>
-</div>
+<div class="paragraph"><p>Use Case Descriptions are textual narratives of the Use Case. They usually take the form of a note or a document that is somehow linked to the Use Case, and explains the processes or activities that take place in the Use Case.</p></div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_class_diagram">Class Diagram</h4>
-<div class="paragraph">
-<p>Class Diagrams show the different classes that make up a system and how they relate to each other. Class Diagrams are said to be “static” diagrams because they show the classes, along with their methods and attributes as well as the static relationships between them: which classes “know” about which classes or which classes “are part” of another class, but do not show the method calls between them.</p>
-</div>
+<div class="paragraph"><p>Class Diagrams show the different classes that make up a system and how they relate to each other. Class Diagrams are said to be “static” diagrams because they show the classes, along with their methods and attributes as well as the static relationships between them: which classes “know” about which classes or which classes “are part” of another class, but do not show the method calls between them.</p></div>
 <div class="imageblock">
 <div class="content">
-<img src="./figures/UML-Elements_files/class-diagram.png" alt="Umbrello UML Modeller showing a Class Diagram">
+<img src="./figures/UML-Elements_files/class-diagram.png" alt="Umbrello UML Modeller showing a Class Diagram" />
 </div>
 <div class="title">Figure 2. Umbrello UML Modeller showing a Class Diagram</div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_class">Class</h4>
-<div class="paragraph">
-<p>A Class defines the attributes and the methods of a set of objects. All objects of this class (instances of this class) share the same behavior, and have the same set of attributes (each object has its own set). The term “Type” is sometimes used instead of Class, but it is important to mention that these two are not the same, and Type is a more general term.</p>
-</div>
-<div class="paragraph">
-<p>In UML, Classes are represented by rectangles, with the name of the class, and can also show the attributes and operations of the class in two other “compartments” inside the rectangle.</p>
-</div>
+<div class="paragraph"><p>A Class defines the attributes and the methods of a set of objects. All objects of this class (instances of this class) share the same behavior, and have the same set of attributes (each object has its own set). The term “Type” is sometimes used instead of Class, but it is important to mention that these two are not the same, and Type is a more general term.</p></div>
+<div class="paragraph"><p>In UML, Classes are represented by rectangles, with the name of the class, and can also show the attributes and operations of the class in two other “compartments” inside the rectangle.</p></div>
 <div class="imageblock">
 <div class="content">
-<img src="./figures/UML-Elements_files/class.png" alt="class">
+<img src="./figures/UML-Elements_files/class.png" alt="./figures/UML-Elements_files/class.png" />
 </div>
 <div class="title">Figure 3. Visual representation of a Class in UML</div>
 </div>
 <div class="sect4">
 <h5 id="_attributes">Attributes</h5>
-<div class="paragraph">
-<p>In UML, Attributes are shown with at least their name, and can also show their type, initial value and other properties. Attributes can also be displayed with their visibility:</p>
-</div>
+<div class="paragraph"><p>In UML, Attributes are shown with at least their name, and can also show their type, initial value and other properties. Attributes can also be displayed with their visibility:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre>+ Stands for public attributes
+<pre><code>+ Stands for public attributes
 
 # Stands for protected attributes
 
-- Stands for private attributes</pre>
-</div>
-</div>
+- Stands for private attributes</code></pre>
+</div></div>
 </div>
 <div class="sect4">
 <h5 id="_operations">Operations</h5>
-<div class="paragraph">
-<p>Operations (methods) are also displayed with at least their name, and can also show their parameters and return types. Operations can, just as Attributes, display their visibility:</p>
-</div>
+<div class="paragraph"><p>Operations (methods) are also displayed with at least their name, and can also show their parameters and return types. Operations can, just as Attributes, display their visibility:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre>+ Stands for public operations
+<pre><code>+ Stands for public operations
 
 # Stands for protected operations
 
-- Stands for private operations</pre>
-</div>
-</div>
+- Stands for private operations</code></pre>
+</div></div>
 </div>
 <div class="sect4">
 <h5 id="_templates">Templates</h5>
-<div class="paragraph">
-<p>Classes can have templates, a value which is used for an unspecified class or type. The template type is specified when a class is initiated (i.e. an object is created). Templates exist in modern C++ and will be introduced in Java 1.5 where they will be called Generics.</p>
-</div>
+<div class="paragraph"><p>Classes can have templates, a value which is used for an unspecified class or type. The template type is specified when a class is initiated (i.e. an object is created). Templates exist in modern C++ and will be introduced in Java 1.5 where they will be called Generics.</p></div>
 </div>
 <div class="sect4">
 <h5 id="_class_associations">Class Associations</h5>
-<div class="paragraph">
-<p>Classes can relate (be associated with) to each other in different ways:</p>
-</div>
+<div class="paragraph"><p>Classes can relate (be associated with) to each other in different ways:</p></div>
 </div>
 <div class="sect4">
 <h5 id="_generalization">Generalization</h5>
-<div class="paragraph">
-<p>Inheritance is one of the fundamental concepts of Object Oriented programming, in which a class “gains” all of the attributes and operations of the class it inherits from, and can override/modify some of them, as well as add more attributes and operations of its own.</p>
-</div>
-<div class="paragraph">
-<p>In UML, a Generalization association between two classes puts them in a hierarchy representing the concept of inheritance of a derived class from a base class. In UML, Generalizations are represented by a line connecting the two classes, with an arrow on the side of the base class.</p>
-</div>
+<div class="paragraph"><p>Inheritance is one of the fundamental concepts of Object Oriented programming, in which a class “gains” all of the attributes and operations of the class it inherits from, and can override/modify some of them, as well as add more attributes and operations of its own.</p></div>
+<div class="paragraph"><p>In UML, a Generalization association between two classes puts them in a hierarchy representing the concept of inheritance of a derived class from a base class. In UML, Generalizations are represented by a line connecting the two classes, with an arrow on the side of the base class.</p></div>
 <div class="imageblock">
 <div class="content">
-<img src="./figures/UML-Elements_files/generalization.png" alt="generalization">
+<img src="./figures/UML-Elements_files/generalization.png" alt="./figures/UML-Elements_files/generalization.png" />
 </div>
 <div class="title">Figure 4. Visual representation of a generalization in UML</div>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_associations">Associations</h5>
-<div class="paragraph">
-<p>An association represents a relationship between classes, and gives the common semantics and structure for many types of “connections” between objects.</p>
-</div>
-<div class="paragraph">
-<p>Associations are the mechanism that allows objects to communicate to each other. It describes the connection between different classes (the connection between the actual objects is called object connection, or link.</p>
-</div>
-<div class="paragraph">
-<p>Associations can have a role that specifies the purpose of the association and can be uni- or bidirectional (indicates if the two objects participating in the relationship can send messages to the other, of if only one of them knows about the other). Each end of the association also has a multiplicity value, which dictates how many objects on this side of the association can relate to one object on the other side.</p>
-</div>
-<div class="paragraph">
-<p>In UML, associations are represented as lines connecting the classes participating in the relationship, and can also show the role and the multiplicity of each of the participants. Multiplicity is displayed as a range [min..max] of non-negative values, with a star (\*) on the maximum side representing infinite.</p>
-</div>
-<div class="paragraph">
-<div class="title">Visual representation of an Association in UML</div>
-<p><span class="image"><img src="./figures/UML-Elements_files/association.png" alt="association"></span></p>
-</div>
+<div class="paragraph"><p>An association represents a relationship between classes, and gives the common semantics and structure for many types of “connections” between objects.</p></div>
+<div class="paragraph"><p>Associations are the mechanism that allows objects to communicate to each other. It describes the connection between different classes (the connection between the actual objects is called object connection, or link.</p></div>
+<div class="paragraph"><p>Associations can have a role that specifies the purpose of the association and can be uni- or bidirectional (indicates if the two objects participating in the relationship can send messages to the other, of if only one of them knows about the other). Each end of the association also has a multiplicity value, which dictates how many objects on this side of the association can relate to one object on the other side.</p></div>
+<div class="paragraph"><p>In UML, associations are represented as lines connecting the classes participating in the relationship, and can also show the role and the multiplicity of each of the participants. Multiplicity is displayed as a range [min..max] of non-negative values, with a star (\*) on the maximum side representing infinite.</p></div>
+<div class="paragraph"><div class="title">Visual representation of an Association in UML</div><p><span class="image">
+<img src="./figures/UML-Elements_files/association.png" alt="./figures/UML-Elements_files/association.png" />
+</span></p></div>
 </div>
 <div class="sect4">
 <h5 id="_aggregation">Aggregation</h5>
-<div class="paragraph">
-<p>Aggregations are a special type of associations in which the two participating classes don&#8217;t have an equal status, but make a “whole-part” relationship. An Aggregation describes how the class that takes the role of the whole, is composed (has) of other classes, which take the role of the parts. For Aggregations, the class acting as the whole always has a multiplicity of one.</p>
-</div>
-<div class="paragraph">
-<p>In UML, Aggregations are represented by an association that shows a rhomb on the side of the whole.</p>
-</div>
+<div class="paragraph"><p>Aggregations are a special type of associations in which the two participating classes don&#8217;t have an equal status, but make a “whole-part” relationship. An Aggregation describes how the class that takes the role of the whole, is composed (has) of other classes, which take the role of the parts. For Aggregations, the class acting as the whole always has a multiplicity of one.</p></div>
+<div class="paragraph"><p>In UML, Aggregations are represented by an association that shows a rhomb on the side of the whole.</p></div>
 <div class="imageblock">
 <div class="content">
-<img src="./figures/UML-Elements_files/aggregation.png" alt="aggregation">
+<img src="./figures/UML-Elements_files/aggregation.png" alt="./figures/UML-Elements_files/aggregation.png" />
 </div>
 <div class="title">Figure 5. Visual representation of an Aggregation relationship in UML</div>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_composition">Composition</h5>
-<div class="paragraph">
-<p>Compositions are associations that represent very strong aggregations. This means, Compositions form whole-part relationships as well, but the relationship is so strong that the parts cannot exist on its own. They exist only inside the whole, and if the whole is destroyed the parts die too.</p>
-</div>
-<div class="paragraph">
-<p>In UML, Compositions are represented by a solid rhomb on the side of the whole.</p>
-</div>
+<div class="paragraph"><p>Compositions are associations that represent very strong aggregations. This means, Compositions form whole-part relationships as well, but the relationship is so strong that the parts cannot exist on its own. They exist only inside the whole, and if the whole is destroyed the parts die too.</p></div>
+<div class="paragraph"><p>In UML, Compositions are represented by a solid rhomb on the side of the whole.</p></div>
 <div class="imageblock">
 <div class="content">
-<img src="./figures/UML-Elements_files/composition.png" alt="composition">
+<img src="./figures/UML-Elements_files/composition.png" alt="./figures/UML-Elements_files/composition.png" />
 </div>
 <div class="title">Figure 6. Visual representation of a Composition relationship in UML</div>
 </div>
-<div class="paragraph">
-<p>Other Class Diagram Items</p>
-</div>
-<div class="paragraph">
-<p>Class diagrams can contain several other items besides classes.</p>
-</div>
+<div class="paragraph"><p>Other Class Diagram Items</p></div>
+<div class="paragraph"><p>Class diagrams can contain several other items besides classes.</p></div>
 </div>
 <div class="sect4">
 <h5 id="_interfaces">Interfaces</h5>
-<div class="paragraph">
-<p>Interfaces are abstract classes which means instances can not be directly created of them. They can contain operations but no attributes. Classes can inherit from interfaces (through a realisation association) and instances can then be made of these diagrams.</p>
-</div>
+<div class="paragraph"><p>Interfaces are abstract classes which means instances can not be directly created of them. They can contain operations but no attributes. Classes can inherit from interfaces (through a realisation association) and instances can then be made of these diagrams.</p></div>
 </div>
 <div class="sect4">
 <h5 id="_datatypes">Datatypes</h5>
-<div class="paragraph">
-<p>Datatypes are primitives which are typically built into a programming language. Common examples include integers and booleans. They can not have relationships to classes but classes can have relationships to them.</p>
-</div>
+<div class="paragraph"><p>Datatypes are primitives which are typically built into a programming language. Common examples include integers and booleans. They can not have relationships to classes but classes can have relationships to them.</p></div>
 </div>
 <div class="sect4">
 <h5 id="_enums">Enums</h5>
-<div class="paragraph">
-<p>Enums are a simple list of values. A typical example is an enum for days of the week. The options of an enum are called Enum Literals. Like datatypes they can not have relationships to classes but classes can have relationships to them.</p>
-</div>
+<div class="paragraph"><p>Enums are a simple list of values. A typical example is an enum for days of the week. The options of an enum are called Enum Literals. Like datatypes they can not have relationships to classes but classes can have relationships to them.</p></div>
 </div>
 <div class="sect4">
 <h5 id="_packages">Packages</h5>
-<div class="paragraph">
-<p>Packages represent a namespace in a programming language. In a diagram they are used to represent parts of a system which contain more than one class, maybe hundereds of classes.</p>
-</div>
+<div class="paragraph"><p>Packages represent a namespace in a programming language. In a diagram they are used to represent parts of a system which contain more than one class, maybe hundereds of classes.</p></div>
 </div>
 <div class="sect4">
 <h5 id="_sequence_diagrams">Sequence Diagrams</h5>
-<div class="paragraph">
-<p>Sequence Diagrams show the message exchange (i.e. method call) between several Objects in a specific time-delimited situation. Objects are instances of classes. Sequence Diagrams put special emphasis in the order and the times in which the messages to the objects are sent.</p>
-</div>
-<div class="paragraph">
-<p>In Sequence Diagrams objects are represented through vertical dashed lines, with the name of the Object on the top. The time axis is also vertical, increasing downwards, so that messages are sent from one Object to another in the form of arrows with the operation and parameters name.</p>
-</div>
-<div class="paragraph">
-<div class="title">Umbrello UML Modeller showing a Sequence Diagram</div>
-<p><span class="image"><img src="./figures/UML-Elements_files/sequence-diagram.png" alt="sequence-diagram"></span></p>
-</div>
-<div class="paragraph">
-<p>Messages can be either synchronous, the normal type of message call where control is passed to the called object until that method has finished running, or asynchronous where control is passed back directly to the calling object. Synchronous messages have a vertical box on the side of the called object to show the flow of program control.</p>
-</div>
+<div class="paragraph"><p>Sequence Diagrams show the message exchange (i.e. method call) between several Objects in a specific time-delimited situation. Objects are instances of classes. Sequence Diagrams put special emphasis in the order and the times in which the messages to the objects are sent.</p></div>
+<div class="paragraph"><p>In Sequence Diagrams objects are represented through vertical dashed lines, with the name of the Object on the top. The time axis is also vertical, increasing downwards, so that messages are sent from one Object to another in the form of arrows with the operation and parameters name.</p></div>
+<div class="paragraph"><div class="title">Umbrello UML Modeller showing a Sequence Diagram</div><p><span class="image">
+<img src="./figures/UML-Elements_files/sequence-diagram.png" alt="./figures/UML-Elements_files/sequence-diagram.png" />
+</span></p></div>
+<div class="paragraph"><p>Messages can be either synchronous, the normal type of message call where control is passed to the called object until that method has finished running, or asynchronous where control is passed back directly to the calling object. Synchronous messages have a vertical box on the side of the called object to show the flow of program control.</p></div>
 </div>
 <div class="sect4">
 <h5 id="_collaboration_diagrams">Collaboration Diagrams</h5>
-<div class="paragraph">
-<p>Collaboration Diagrams show the interactions occurring between the objects participating in a specific situation. This is more or less the same information shown by Sequence Diagrams but there the emphasis is put on how the interactions occur in time while the Collaboration Diagrams put the relationships between the objects and their topology in the foreground.</p>
-</div>
-<div class="paragraph">
-<p>In Collaboration Diagrams messages sent from one object to another are represented by arrows, showing the message name, parameters, and the sequence of the message. Collaboration Diagrams are specially well suited to showing a specific program flow or situation and are one of the best diagram types to quickly demonstrate or explain one process in the program logic.</p>
-</div>
-<div class="paragraph">
-<p>Umbrello UML Modeller showing a Collaboration Diagram
-Umbrello UML Modeller showing a Collaboration Diagram</p>
-</div>
+<div class="paragraph"><p>Collaboration Diagrams show the interactions occurring between the objects participating in a specific situation. This is more or less the same information shown by Sequence Diagrams but there the emphasis is put on how the interactions occur in time while the Collaboration Diagrams put the relationships between the objects and their topology in the foreground.</p></div>
+<div class="paragraph"><p>In Collaboration Diagrams messages sent from one object to another are represented by arrows, showing the message name, parameters, and the sequence of the message. Collaboration Diagrams are specially well suited to showing a specific program flow or situation and are one of the best diagram types to quickly demonstrate or explain one process in the program logic.</p></div>
+<div class="paragraph"><p>Umbrello UML Modeller showing a Collaboration Diagram
+Umbrello UML Modeller showing a Collaboration Diagram</p></div>
 </div>
 <div class="sect4">
 <h5 id="_state_diagram">State Diagram</h5>
-<div class="paragraph">
-<p>State Diagrams show the different states of an Object during its life and the stimuli that cause the Object to change its state.</p>
-</div>
-<div class="paragraph">
-<p>State Diagrams view Objects as state machines or finite automates that can be in one of a set of finite states and that can change its state via one of a finite set of stimuli. For example an Object of type NetServer can be in one of following states during its life:</p>
-</div>
-<div class="ulist">
-<ul>
+<div class="paragraph"><p>State Diagrams show the different states of an Object during its life and the stimuli that cause the Object to change its state.</p></div>
+<div class="paragraph"><p>State Diagrams view Objects as state machines or finite automates that can be in one of a set of finite states and that can change its state via one of a finite set of stimuli. For example an Object of type NetServer can be in one of following states during its life:</p></div>
+<div class="ulist"><ul>
 <li>
-<p>Ready</p>
+<p>
+Ready
+</p>
 </li>
 <li>
-<p>Listening</p>
+<p>
+Listening
+</p>
 </li>
 <li>
-<p>Working</p>
+<p>
+Working
+</p>
 </li>
 <li>
-<p>Stopped</p>
+<p>
+Stopped
+</p>
 </li>
-</ul>
-</div>
-<div class="paragraph">
-<p>and the events that can cause the Object to change states are</p>
-</div>
-<div class="ulist">
-<ul>
+</ul></div>
+<div class="paragraph"><p>and the events that can cause the Object to change states are</p></div>
+<div class="ulist"><ul>
 <li>
-<p>Object is created*</p>
-</li>
-<li>
-<p>Object receives message listen</p>
+<p>
+Object is created*
+</p>
 </li>
 <li>
-<p>A Client requests a connection over the network</p>
+<p>
+Object receives message listen
+</p>
 </li>
 <li>
-<p>A Client terminates a request*</p>
+<p>
+A Client requests a connection over the network
+</p>
 </li>
 <li>
-<p>The request is executed and terminated</p>
+<p>
+A Client terminates a request*
+</p>
 </li>
 <li>
-<p>Object receives message stop</p>
+<p>
+The request is executed and terminated
+</p>
 </li>
 <li>
-<p>etc</p>
+<p>
+Object receives message stop
+</p>
 </li>
-</ul>
-</div>
+<li>
+<p>
+etc
+</p>
+</li>
+</ul></div>
 <div class="imageblock">
 <div class="content">
-<img src="./figures/UML-Elements_files/state-diagram.png" alt="state diagram">
+<img src="./figures/UML-Elements_files/state-diagram.png" alt="./figures/UML-Elements_files/state-diagram.png" />
 </div>
 <div class="title">Figure 7. Umbrello UML Modeller showing a State Diagram</div>
 </div>
@@ -350,188 +997,114 @@ Umbrello UML Modeller showing a Collaboration Diagram</p>
 </div>
 <div class="sect2">
 <h3 id="_state">State</h3>
-<div class="paragraph">
-<p>States are the building block of State Diagrams. A State belongs to exactly one class and represents a summary of the values the attributes of a class can take. A UML State describes the internal state of an object of one particular class</p>
-</div>
-<div class="paragraph">
-<p>Note that not every change in one of the attributes of an object should be represented by a State but only those changes that can significantly affect the workings of the object</p>
-</div>
-<div class="paragraph">
-<p>There are two special types of States: Start and End. They are special in that there is no event that can cause an Object to return to its Start state, in the same way as there is no event that can possible take an Object out of its End state once it has reached it.</p>
-</div>
+<div class="paragraph"><p>States are the building block of State Diagrams. A State belongs to exactly one class and represents a summary of the values the attributes of a class can take. A UML State describes the internal state of an object of one particular class</p></div>
+<div class="paragraph"><p>Note that not every change in one of the attributes of an object should be represented by a State but only those changes that can significantly affect the workings of the object</p></div>
+<div class="paragraph"><p>There are two special types of States: Start and End. They are special in that there is no event that can cause an Object to return to its Start state, in the same way as there is no event that can possible take an Object out of its End state once it has reached it.</p></div>
 <div class="sect3">
 <h4 id="_activity_diagram">Activity Diagram</h4>
-<div class="paragraph">
-<p>Activity Diagrams describe the sequence of activities in a system with the help of Activities. Activity Diagrams are a special form of State Diagrams, that only (or mostly) contains Activities.</p>
-</div>
+<div class="paragraph"><p>Activity Diagrams describe the sequence of activities in a system with the help of Activities. Activity Diagrams are a special form of State Diagrams, that only (or mostly) contains Activities.</p></div>
 <div class="imageblock">
 <div class="content">
-<img src="./figures/UML-Elements_files/activity-diagram.png" alt="activity diagram">
+<img src="./figures/UML-Elements_files/activity-diagram.png" alt="./figures/UML-Elements_files/activity-diagram.png" />
 </div>
 <div class="title">Figure 8. Umbrello UML Modeller showing an Activity Diagram</div>
 </div>
-<div class="paragraph">
-<p>Activity Diagrams are similar to procedural Flux Diagrams, with the difference that all Activities are clearly attached to Objects.</p>
-</div>
-<div class="paragraph">
-<p>Activity Diagrams are always associated to a Class, an Operation or a Use Case.</p>
-</div>
-<div class="paragraph">
-<p>Activity Diagrams support sequential as well as parallel Activities. Parallel execution is represented via Fork/Wait icons, and for the Activities running in parallel, it is not important the order in which they are carried out (they can be executed at the same time or one after the other)</p>
-</div>
+<div class="paragraph"><p>Activity Diagrams are similar to procedural Flux Diagrams, with the difference that all Activities are clearly attached to Objects.</p></div>
+<div class="paragraph"><p>Activity Diagrams are always associated to a Class, an Operation or a Use Case.</p></div>
+<div class="paragraph"><p>Activity Diagrams support sequential as well as parallel Activities. Parallel execution is represented via Fork/Wait icons, and for the Activities running in parallel, it is not important the order in which they are carried out (they can be executed at the same time or one after the other)</p></div>
 <div class="sect4">
 <h5 id="_activity">Activity</h5>
-<div class="paragraph">
-<p>An Activity is a single step in a process. One Activity is one state in the system with internal activity and, at least, one outgoing transition. Activities can also have more than one outgoing transition if they have different conditions.</p>
-</div>
-<div class="paragraph">
-<p>Activities can form hierarchies, this means that an Activity can be composed of several “detail” Activities, in which case the incoming and outgoing transitions should match the incoming and outgoing transitions of the detail diagram.</p>
-</div>
+<div class="paragraph"><p>An Activity is a single step in a process. One Activity is one state in the system with internal activity and, at least, one outgoing transition. Activities can also have more than one outgoing transition if they have different conditions.</p></div>
+<div class="paragraph"><p>Activities can form hierarchies, this means that an Activity can be composed of several “detail” Activities, in which case the incoming and outgoing transitions should match the incoming and outgoing transitions of the detail diagram.</p></div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_helper_elements">Helper Elements</h4>
-<div class="paragraph">
-<p>There are a few elements in UML that have no real semantic value for the model, but help to clarify parts of the diagram. These elements are</p>
-</div>
-<div class="paragraph">
-<p>Text lines</p>
-</div>
-<div class="paragraph">
-<p>Text Notes and anchors</p>
-</div>
-<div class="paragraph">
-<p>Boxes</p>
-</div>
-<div class="paragraph">
-<p>Text lines are useful to add short text information to a diagram. It is free-standing text and has no meaning to the Model itself.</p>
-</div>
-<div class="paragraph">
-<p>Notes are useful to add more detailed information about an object or a specific situation. They have the great advantage that notes can be anchored to UML Elements to show that the note “belongs” to a specific object or situation.</p>
-</div>
-<div class="paragraph">
-<p>Boxes are free-standing rectangles which can be used to group items together to make diagrams more readable. They have no logical meaning in the model.</p>
-</div>
+<div class="paragraph"><p>There are a few elements in UML that have no real semantic value for the model, but help to clarify parts of the diagram. These elements are</p></div>
+<div class="paragraph"><p>Text lines</p></div>
+<div class="paragraph"><p>Text Notes and anchors</p></div>
+<div class="paragraph"><p>Boxes</p></div>
+<div class="paragraph"><p>Text lines are useful to add short text information to a diagram. It is free-standing text and has no meaning to the Model itself.</p></div>
+<div class="paragraph"><p>Notes are useful to add more detailed information about an object or a specific situation. They have the great advantage that notes can be anchored to UML Elements to show that the note “belongs” to a specific object or situation.</p></div>
+<div class="paragraph"><p>Boxes are free-standing rectangles which can be used to group items together to make diagrams more readable. They have no logical meaning in the model.</p></div>
 </div>
 <div class="sect3">
 <h4 id="_component_diagrams">Component Diagrams</h4>
-<div class="paragraph">
-<p>Component Diagrams show the software components (either component technologies such as KParts, CORBA components or Java Beans or just sections of the system which are clearly distinguishable) and the artifacts they are made out of such as source code files, programming libraries or relational database tables.</p>
-</div>
-<div class="paragraph">
-<p>Components can have interfaces (i.e. abstract classes with operations) that allow associations between components.</p>
-</div>
+<div class="paragraph"><p>Component Diagrams show the software components (either component technologies such as KParts, CORBA components or Java Beans or just sections of the system which are clearly distinguishable) and the artifacts they are made out of such as source code files, programming libraries or relational database tables.</p></div>
+<div class="paragraph"><p>Components can have interfaces (i.e. abstract classes with operations) that allow associations between components.</p></div>
 </div>
 <div class="sect3">
 <h4 id="_deployment_diagrams">Deployment Diagrams</h4>
-<div class="paragraph">
-<p>Deployment diagrams show the runtime component instances and their associations. They include Nodes which are physical resources, typically a single computer. They also show interfaces and objects (class instances).</p>
-</div>
+<div class="paragraph"><p>Deployment diagrams show the runtime component instances and their associations. They include Nodes which are physical resources, typically a single computer. They also show interfaces and objects (class instances).</p></div>
 </div>
 <div class="sect3">
 <h4 id="_entity_relationship_diagrams">Entity Relationship Diagrams</h4>
-<div class="paragraph">
-<p>Entity Relationship Diagrams (ER Diagrams) show the conceptual design of database applications. They depict the various entities (concepts) in the information system and the existing relationships and constraints between them. An extension of Entity Relationship Diagrams named <em>Extended Entity Relationship Diagrams</em> or <em>Enhanced Entity Relationship Diagrams</em> (EER), are used to incorporate Object Oriented design techniques in ER Diagrams.</p>
-</div>
+<div class="paragraph"><p>Entity Relationship Diagrams (ER Diagrams) show the conceptual design of database applications. They depict the various entities (concepts) in the information system and the existing relationships and constraints between them. An extension of Entity Relationship Diagrams named <em>Extended Entity Relationship Diagrams</em> or <em>Enhanced Entity Relationship Diagrams</em> (EER), are used to incorporate Object Oriented design techniques in ER Diagrams.</p></div>
 <div class="imageblock">
 <div class="content">
-<img src="./figures/UML-Elements_files/entity-relationship-diagram.png" alt="entity relationship diagram">
+<img src="./figures/UML-Elements_files/entity-relationship-diagram.png" alt="./figures/UML-Elements_files/entity-relationship-diagram.png" />
 </div>
 <div class="title">Figure 9. Umbrello showing an Entity Relationship Diagram</div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_entity">Entity</h4>
-<div class="paragraph">
-<p>An Entity is any concept in the real world with an independent existence. It may be an object with a physical existence ( example, Computer, Robot) or it may be an object with a conceptual existence ( eq: University Course). Each entity has a set of attributes which describe the properties of the Entity.</p>
-</div>
-<div class="paragraph">
-<p>Note: No standard notations exist for depicting ER Diagrams. Different texts on this subject use different notations. The concepts and notations for EER diagrams used in Umbrello are from the following book : Elmasri R. and Navathe S. (2004). Fundamentals of Database Systems 4th edn. Addison Wesley</p>
-</div>
-<div class="paragraph">
-<p>In an ER Diagram, Entities are represented by rectangles, with the name of the entity at the top, and can also show the attributes of the entity in another “compartment” inside the rectangle.</p>
-</div>
+<div class="paragraph"><p>An Entity is any concept in the real world with an independent existence. It may be an object with a physical existence ( example, Computer, Robot) or it may be an object with a conceptual existence ( eq: University Course). Each entity has a set of attributes which describe the properties of the Entity.</p></div>
+<div class="paragraph"><p>Note: No standard notations exist for depicting ER Diagrams. Different texts on this subject use different notations. The concepts and notations for EER diagrams used in Umbrello are from the following book : Elmasri R. and Navathe S. (2004). Fundamentals of Database Systems 4th edn. Addison Wesley</p></div>
+<div class="paragraph"><p>In an ER Diagram, Entities are represented by rectangles, with the name of the entity at the top, and can also show the attributes of the entity in another “compartment” inside the rectangle.</p></div>
 <div class="imageblock">
 <div class="content">
-<img src="./figures/UML-Elements_files/entity.png" alt="entity">
+<img src="./figures/UML-Elements_files/entity.png" alt="./figures/UML-Elements_files/entity.png" />
 </div>
 <div class="title">Figure 10. Visual representation of an entity in an ER Diagram</div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_entity_attributes">Entity Attributes</h4>
-<div class="paragraph">
-<p>In ER Diagrams , Entity Attributes are shown with their name in a different compartment of the Entity to which they belong.</p>
-</div>
+<div class="paragraph"><p>In ER Diagrams , Entity Attributes are shown with their name in a different compartment of the Entity to which they belong.</p></div>
 </div>
 <div class="sect3">
 <h4 id="_constraints">Constraints</h4>
-<div class="paragraph">
-<p>Constraints in ER Diagrams specify the restrictions on data in the information schema.</p>
-</div>
-<div class="paragraph">
-<p>There are four types of constraints supported in Umbrello :</p>
-</div>
-<div class="paragraph">
-<p>Primary Key: The set of attributes declared as primary key are unique to the entity. There can be only one primary key in an Entity and none of its constituent attributes can be NULL.</p>
-</div>
-<div class="paragraph">
-<p>Unique Key: The set of attributes declared as unique are unique to the entity. There can be many unique constraints on an Entity. Its constituent attributes can be NULL. Unique Keys and Primary Keys uniquely identify a row in a table ( entity )</p>
-</div>
-<div class="paragraph">
-<p>Foreign Key: A Foreign Key is a referential constraint between two tables. The foreign key identifies a column or a set of columns in one (referencing) table that refers to a column or set of columns in another (referenced) table. The columns in the referenced table must form a primary key or unique key.</p>
-</div>
-<div class="paragraph">
-<p>Check Constraint: A check constraint (also known as table check constraint) is a condition that defines valid data when adding or updating an entry in a table of a relational database. A check constraint is applied to each row in the table. The constraint must be a predicate. It can refer to a single or multiple columns of the table.</p>
-</div>
-<div class="paragraph">
-<p>Example: price &gt;= 0</p>
-</div>
-<div class="paragraph">
-<p>Extended Entity Relationship (EER) Diagram Concepts</p>
-</div>
+<div class="paragraph"><p>Constraints in ER Diagrams specify the restrictions on data in the information schema.</p></div>
+<div class="paragraph"><p>There are four types of constraints supported in Umbrello :</p></div>
+<div class="paragraph"><p>Primary Key: The set of attributes declared as primary key are unique to the entity. There can be only one primary key in an Entity and none of its constituent attributes can be NULL.</p></div>
+<div class="paragraph"><p>Unique Key: The set of attributes declared as unique are unique to the entity. There can be many unique constraints on an Entity. Its constituent attributes can be NULL. Unique Keys and Primary Keys uniquely identify a row in a table ( entity )</p></div>
+<div class="paragraph"><p>Foreign Key: A Foreign Key is a referential constraint between two tables. The foreign key identifies a column or a set of columns in one (referencing) table that refers to a column or set of columns in another (referenced) table. The columns in the referenced table must form a primary key or unique key.</p></div>
+<div class="paragraph"><p>Check Constraint: A check constraint (also known as table check constraint) is a condition that defines valid data when adding or updating an entry in a table of a relational database. A check constraint is applied to each row in the table. The constraint must be a predicate. It can refer to a single or multiple columns of the table.</p></div>
+<div class="paragraph"><p>Example: price &gt;= 0</p></div>
+<div class="paragraph"><p>Extended Entity Relationship (EER) Diagram Concepts</p></div>
 </div>
 <div class="sect3">
 <h4 id="_specialization">Specialization</h4>
-<div class="paragraph">
-<p>Specialization is a way to form new entities using entities that have already been defined. The new entities, known as derived entities, take over (or inherit) attributes of the pre-existing entities, which are referred to as base entities . It is intended to help reuse existing data with little or no modification.</p>
-</div>
-<div class="paragraph">
-<p>In Umbrello, one can specify Disjoint and Overlapping Specialization</p>
-</div>
+<div class="paragraph"><p>Specialization is a way to form new entities using entities that have already been defined. The new entities, known as derived entities, take over (or inherit) attributes of the pre-existing entities, which are referred to as base entities . It is intended to help reuse existing data with little or no modification.</p></div>
+<div class="paragraph"><p>In Umbrello, one can specify Disjoint and Overlapping Specialization</p></div>
 </div>
 <div class="sect3">
 <h4 id="_disjoint_specialization">Disjoint Specialization</h4>
-<div class="paragraph">
-<p>Disjoint Specialization specifies that the subclasses of the specialization must be disjoint. This means that an entity can be a member of at most one of the derived entities of the specialization</p>
-</div>
+<div class="paragraph"><p>Disjoint Specialization specifies that the subclasses of the specialization must be disjoint. This means that an entity can be a member of at most one of the derived entities of the specialization</p></div>
 <div class="imageblock">
 <div class="content">
-<img src="./figures/UML-Elements_files/disjoint-specialization.png" alt="disjoint specialization">
+<img src="./figures/UML-Elements_files/disjoint-specialization.png" alt="./figures/UML-Elements_files/disjoint-specialization.png" />
 </div>
 <div class="title">Figure 11. Visual representation of Disjoint Specialization in EER Diagram</div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_overlapping_specialization">Overlapping Specialization</h4>
-<div class="paragraph">
-<p>When the derived entities are not constrained to be disjoint, their set of entities are said to be in overlapping specialization. This means that the same real world entity may be a member of more than one derived entity of the specialization</p>
-</div>
+<div class="paragraph"><p>When the derived entities are not constrained to be disjoint, their set of entities are said to be in overlapping specialization. This means that the same real world entity may be a member of more than one derived entity of the specialization</p></div>
 <div class="imageblock">
 <div class="content">
-<img src="./figures/UML-Elements_files/overlapping-specialization.png" alt="overlapping specialization">
+<img src="./figures/UML-Elements_files/overlapping-specialization.png" alt="./figures/UML-Elements_files/overlapping-specialization.png" />
 </div>
 <div class="title">Figure 12. Visual representation of Overlapping Specialization in EER Diagram</div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_category">Category</h4>
-<div class="paragraph">
-<p>A derived Entity is said to be a Category when it represents a collection of objects that is a subset of Union of the distinct entity types. A Category is modelled when the need arises for a single superclass/subclass relationship with more than one superclass, where the superclasses represent different entity types. ( Much like multiple inheritance in Object Oriented Programming ).</p>
-</div>
+<div class="paragraph"><p>A derived Entity is said to be a Category when it represents a collection of objects that is a subset of Union of the distinct entity types. A Category is modelled when the need arises for a single superclass/subclass relationship with more than one superclass, where the superclasses represent different entity types. ( Much like multiple inheritance in Object Oriented Programming ).</p></div>
 <div class="imageblock">
 <div class="content">
-<img src="./figures/UML-Elements_files/category.png" alt="category">
+<img src="./figures/UML-Elements_files/category.png" alt="./figures/UML-Elements_files/category.png" />
 </div>
 <div class="title">Figure 13. Visual representation of a Category in EER Diagram</div>
 </div>
@@ -540,9 +1113,10 @@ Umbrello UML Modeller showing a Collaboration Diagram</p>
 </div>
 </div>
 </div>
+<div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-02-02 12:10:24 PST
+Last updated 2014-02-02 15:10:24 EST
 </div>
 </div>
 </body>

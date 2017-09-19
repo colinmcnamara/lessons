@@ -3,7 +3,7 @@
 == Overview
 Each folder contains a master lesson
 
-==== Contents
+== Contents
 * Repository coding excersizes
 * Notes
 * Sample configurations 

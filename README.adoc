@@ -1,0 +1,10 @@
+= lessons
+
+== Overview
+Each folder contains a master lesson
+
+==== Contents
+* Repository coding excersizes
+* Notes
+* Sample configurations 
+* Code Examples
